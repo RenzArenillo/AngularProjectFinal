@@ -1,0 +1,47 @@
+<div class="p-20 pt-32">
+  <div class="w-80% space-y-12">
+    <!-- best sellers -->
+    <div *ngIf="userType == 'Admin'">
+      <div class="text-center py-4">
+        <span class="text-3xl leading-10 text-cyan-600"> Best Sellers </span>
+      </div>
+      <div
+        class="grid gap-3 lg:gap-0 md:grid-cols-3 lg:grid-cols-5 place-items-center w-full min-h-[200px]"
+      >
+        <div
+          *ngFor="let product of products"
+          class="bg-gray-100 w-full h-[300px] border-2 cursor-pointer hover:scale-105 duration-100"
+        >
+          <app-product [product]="product"></app-product>
+        </div>
+      </div>
+    </div>
+
+    <!-- categories -->
+    <div>
+      <div
+        class="h-16 bg-gray-100 flex items-center border border-b-0 border-teal-200"
+      >
+        <span class="ml-5 text-cyan-600 uppercase">Categories</span>
+      </div>
+
+      <div
+        class="grid sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-10 bg-gray-100"
+      >
+        <div
+          *ngFor="let category of categories"
+          class="cursor-pointer py-2 h-36 border border-teal-200 hover:shadow-md hover:border-teal-700 duration-200"
+        >
+          <app-category [category]="category"></app-category>
+        </div>
+      </div>
+    </div>
+
+    <!-- products -->
+    <div class="grid place-items-center w-full min-h-[400px] bg-cyan-500">
+      <div class="font-bold text-4xl leading-10 uppercase text-orange-500">
+        products
+      </div>
+    </div>
+  </div>
+</div>
