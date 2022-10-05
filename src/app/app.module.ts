@@ -8,6 +8,8 @@ import { HeaderComponent } from './shared/header/header.component';
 import { CategoryComponent } from './dashboard/components/category/category.component';
 import { ProductComponent } from './dashboard/components/product/product.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './shared/footer/footer/footer.component';
+import { ProductModalComponent } from './shared/modals/product-modal/product-modal.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,11 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     CategoryComponent,
     ProductComponent,
+    FooterComponent,
+    ProductModalComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

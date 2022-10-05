@@ -4,5 +4,5 @@ export interface Product {
   productPrice: number,
   productCategory: string,
   productImage: string,
-  unitsSold?: number,
+  unitsSold: number,
 }

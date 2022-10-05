@@ -1,15 +1,31 @@
-<div class="p-20 pt-32">
-  <div class="w-80% space-y-12">
+<div class="px-20 py-10">
+  <div class="w-80% space-y-8">
+    <!-- Search -->
+
+    <div class="mr-auto rounded-md overflow-hidden w-full flex justify-end">
+      <input
+        type="text"
+        class="px-2 py-1 rounded-l-md focus:outline-0 w-[200px]"
+        placeholder="Search product"
+      />
+      <button class="bg-[#FC6A03] hover:bg-orange-600 px-2 py-1">
+        <i class="fa fa-search text-white"></i>
+      </button>
+    </div>
+
     <!-- best sellers -->
     <div *ngIf="userType == 'Admin'">
-      <div class="text-center py-4">
-        <span class="text-3xl leading-10 text-cyan-600"> Best Sellers </span>
-      </div>
       <div
-        class="grid gap-3 lg:gap-0 md:grid-cols-3 lg:grid-cols-5 place-items-center w-full min-h-[200px]"
+        class="h-16 bg-gray-100 flex items-center border border-b-0 border-cyan-200"
+      >
+        <span class="ml-5 text-cyan-600 uppercase">Best Sellers</span>
+      </div>
+
+      <div
+        class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 bg-gray-100"
       >
         <div
-          *ngFor="let product of products"
+          *ngFor="let product of bestSellers"
           class="bg-gray-100 w-full h-[300px] border-2 cursor-pointer hover:scale-105 duration-100"
         >
           <app-product [product]="product"></app-product>
@@ -20,17 +36,17 @@
     <!-- categories -->
     <div>
       <div
-        class="h-16 bg-gray-100 flex items-center border border-b-0 border-teal-200"
+        class="h-16 bg-gray-100 flex items-center border border-b-0 border-cyan-200"
       >
         <span class="ml-5 text-cyan-600 uppercase">Categories</span>
       </div>
 
       <div
-        class="grid sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-10 bg-gray-100"
+        class="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 bg-gray-100"
       >
         <div
           *ngFor="let category of categories"
-          class="cursor-pointer py-2 h-36 border border-teal-200 hover:shadow-md hover:border-teal-700 duration-200"
+          class="cursor-pointer py-2 h-36 border border-cyan-200 hover:shadow-md hover:border-cyan-700 duration-200"
         >
           <app-category [category]="category"></app-category>
         </div>
@@ -38,9 +54,30 @@
     </div>
 
     <!-- products -->
-    <div class="grid place-items-center w-full min-h-[400px] bg-cyan-500">
-      <div class="font-bold text-4xl leading-10 uppercase text-orange-500">
-        products
+    <div>
+      <div
+        class="h-16 bg-gray-100 flex items-center border border-b-0 border-cyan-200"
+      >
+        <span class="ml-5 text-cyan-600 uppercase">Products</span>
+
+        <div class="ml-auto mr-4">
+          <span
+            class="ml-5 text-cyan-600 uppercase cursor-pointer hover:text-blue-500 hover:underline"
+            title="Filter"
+            ><i class="fa-solid fa-filter"></i
+          ></span>
+        </div>
+      </div>
+
+      <div
+        class="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 bg-gray-100"
+      >
+        <div
+          *ngFor="let product of products"
+          class="bg-gray-100 w-full h-[300px] border-2 hover:scale-105 duration-100"
+        >
+          <app-product [product]="product"></app-product>
+        </div>
       </div>
     </div>
   </div>

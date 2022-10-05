@@ -1,14 +1,39 @@
-<div class="w-full h-full">
+<div class="w-full h-full text-gray-800" title="{{ product.productName }}">
   <div class="grid place-items-center h-[63%] overflow-hidden">
-    <!-- <div class="rounded-full bg-gray-300">
-    </div> -->
-    <img class="h-full w-full" src="{{ product.productImage }}" alt="" />
+    <img
+      class="h-full w-full"
+      src="{{ product.productImage }}"
+      alt="{{ product.productName }}"
+    />
   </div>
-  <div class="h-[37%] px-2 lg:pt-6">
-    <div class="text-center grid">
-      <span class=" font-semibold text-xl">{{ product.productName }}</span>
-      <span>{{ product.productCategory }}</span>
-      <span>{{ product.productPrice | currency: "PHP":"symbol" }}</span>
+  <div class="h-[37%] px-4 py-1 grid text-xs">
+    <div class="grid place-items-center">
+      <span class="font-semibold text-xl truncate overflow-hidden">{{
+        product.productName
+      }}</span>
+    </div>
+    <div class="grid grid-cols-2">
+      <div class="grid">
+        <span
+          class="hover:text-blue-500 cursor-pointer hover:underline"
+          title="{{ product.productCategory }}"
+          >{{ product.productCategory }}</span
+        >
+        <span>{{ product.productPrice | currency: "PHP":"symbol" }}</span>
+        <span
+          ><span class="font-semibold">{{ product.unitsSold }}</span
+          >&nbsp;sold</span
+        >
+      </div>
+      <div class="grid place-items-center">
+        <button
+          class="bg-[#FC6A03] px-2 py-1 rounded-sm border-2 border-orange-300 hover:bg-orange-600 hover:border-orange-700"
+        >
+          <span class="text-white font-bold">
+            <i class="fa fa-shopping-cart"></i> Add To Cart</span
+          >
+        </button>
+      </div>
     </div>
   </div>
 </div>
