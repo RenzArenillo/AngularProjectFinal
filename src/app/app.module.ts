@@ -8,6 +8,9 @@ import { CheckoutItemsComponent } from './checkout/checkout-items/checkout-items
 import { PendingOrdersPageComponent } from './pending-orders/pending-orders-page/pending-orders-page.component';
 import { PendingOrdersItemsComponent } from './pending-orders/pending-orders-items/pending-orders-items.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { TesthomeComponent } from './testhome/testhome.component';
+import { CheckoutConfirmedComponent } from './checkout/checkout-confirmed/checkout-confirmed.component';
 
 
 @NgModule({
@@ -16,12 +19,15 @@ import { HttpClientModule } from '@angular/common/http';
     CheckoutPageComponent,
     CheckoutItemsComponent,
     PendingOrdersPageComponent,
-    PendingOrdersItemsComponent
+    PendingOrdersItemsComponent,
+    TesthomeComponent,
+    CheckoutConfirmedComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
     ],
   providers: [],
   bootstrap: [AppComponent]

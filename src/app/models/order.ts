@@ -6,5 +6,6 @@ export interface Order {
     orderQuantity: number,
     orderedItems: Product[],
     orderTotalPrice: number,
+    orderDate: string,
     orderStatus: string
 }

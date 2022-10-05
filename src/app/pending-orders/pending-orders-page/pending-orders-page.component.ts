@@ -11,12 +11,15 @@ export class PendingOrdersPageComponent implements OnInit {
 
   public orders: Order[] = []
 
+  //input to from somewhere
+  public userId: string = "USER001"
+
+
   constructor(private orderService: OrdersService) {
   }
 
-
   ngOnInit(): void {
-    this.orderService.getOrders().subscribe(data => {this.orders = data;})
+    this.orderService.getOrders(this.userId).subscribe(data => {this.orders = data;})
     console.log(this.orders)
   }
 }

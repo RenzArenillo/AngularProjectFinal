@@ -11,11 +11,12 @@ export class OrdersService {
 
   constructor(private http:HttpClient) { }
 
-  getOrders(): Observable<Order[]> {
+  getOrders(userId:string): Observable<Order[]> {
 
     return this.http.get<Order[]>(`${environment.url}/order`).pipe<Order[]>(  
       map((data:Order[]) => {
-        return data
+
+        return data.filter(x => x.orderStatus === "Pending" && x.userId === userId)
       }
     ))
   }
