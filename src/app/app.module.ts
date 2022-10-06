@@ -9,7 +9,9 @@ import { CategoryComponent } from './dashboard/components/category/category.comp
 import { ProductComponent } from './dashboard/components/product/product.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './shared/footer/footer/footer.component';
-import { ProductModalComponent } from './shared/modals/product-modal/product-modal.component';
+import { ProductModalComponent } from './dashboard/components/product-modal/product-modal.component';
+import { ProductsComponent } from './products/products.component';
+import { TableComponent } from './products/components/table/table.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +20,10 @@ import { ProductModalComponent } from './shared/modals/product-modal/product-mod
     HeaderComponent,
     CategoryComponent,
     ProductComponent,
+    ProductsComponent,
     FooterComponent,
-    ProductModalComponent
+    ProductModalComponent,
+    TableComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

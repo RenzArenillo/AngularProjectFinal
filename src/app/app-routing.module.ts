@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ProductComponent } from './product/product.component';
-import { ProductModalComponent } from './shared/modals/product-modal/product-modal.component';
+import { ProductsComponent } from './products/products.component';
 
 const routes: Routes = [
   {
@@ -15,16 +14,12 @@ const routes: Routes = [
   },
   {
     path: 'product',
-    component: ProductComponent,
+    component: ProductsComponent,
   },
-  {
-    path: 'product/product-modal',
-    component: ProductModalComponent,
-  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

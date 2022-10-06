@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 import { Category } from '../../../assets/models/category';
 
 
@@ -11,9 +11,17 @@ export class CategoryComponent implements OnInit {
 
   @Input()
   category!: Category;
+
+  @Output() emittter = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  emit(category: Category){
+    this.emittter.emit(category);
+  }
+
 }
+
+

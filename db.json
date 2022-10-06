@@ -66,7 +66,7 @@
     },
     {
       "productId": 9,
-      "productName": "Washing Machine 2",
+      "productName": "Washing Machine 2 Washing Machine 2 Washing Machine 2 Washing Machine 2",
       "productPrice": 9000,
       "productCategory": "Appliances",
       "productImage": "https://ph.sharp/sites/default/files/uploads/2021-05/washing%20machine%20design-%20SHARP.png",
@@ -105,12 +105,12 @@
     },
     {
       "id" : 5,
-      "name": "Home Appliances",
+      "name": "Appliances",
       "image": "https://cf.shopee.ph/file/d31d29d2f160baeb7592964cd9090a52_tn"
     },
     {
       "id" : 6,
-      "name": "Sports & Travel",
+      "name": "Sports",
       "image": "https://cf.shopee.ph/file/f12cfed5944ad868e181c6583a5a4426_tn"
     }
   ]

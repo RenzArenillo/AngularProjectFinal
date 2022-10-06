@@ -1,7 +1,6 @@
 <div class="px-20 py-10">
   <div class="w-80% space-y-8">
     <!-- Search -->
-
     <div class="mr-auto rounded-md overflow-hidden w-full flex justify-end">
       <input
         type="text"
@@ -48,7 +47,10 @@
           *ngFor="let category of categories"
           class="cursor-pointer py-2 h-36 border border-cyan-200 hover:shadow-md hover:border-cyan-700 duration-200"
         >
-          <app-category [category]="category"></app-category>
+          <app-category
+            [category]="category"
+            (emittter)="action($event)"
+          ></app-category>
         </div>
       </div>
     </div>
@@ -69,16 +71,24 @@
         </div>
       </div>
 
-      <div
+      <div *ngIf="products.length > 0"
         class="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 bg-gray-100"
       >
         <div
           *ngFor="let product of products"
           class="bg-gray-100 w-full h-[300px] border-2 hover:scale-105 duration-100"
         >
-          <app-product [product]="product"></app-product>
+          <app-product [product]="product" (emitter)="productSelected($event)"></app-product>
         </div>
       </div>
+
+      <div *ngIf="products.length === 0" class="grid place-items-center w-full h-[400px] bg-gray-100">
+        <span class="text-3xl font-semibold uppercase leading-10 text-gray-700">no products found</span>
+      </div>
+    </div>
+
+    <div *ngIf="showModal && selectedProduct">
+      <app-product-modal (emitter)="showModal = $event" [selectedProduct]="selectedProduct != undefined? selectedProduct: products[1]" ></app-product-modal>
     </div>
   </div>
 </div>
