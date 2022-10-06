@@ -3,7 +3,7 @@ import { Product } from '../../models/product';
 
 
 @Component({
-  selector: '[app-checkout-items]',
+selector: '[app-checkout-items]',
   templateUrl: './checkout-items.component.html',
   styleUrls: ['./checkout-items.component.scss']
 })
