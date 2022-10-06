@@ -47,18 +47,19 @@
     </div>
     <br>
     <div class="formbuilder-text form-group field-username">
-        <label for="username" class="formbuilder-text-label" style="color: white">&nbsp;&nbsp;Username</label><br>
-        <input type="text" placeholder="Enter your username" class="form-control" name="username"><br>
-        <label for="email" class="formbuilder-text-label" style="color: white">&nbsp;&nbsp;Email</label><br>
-        <input type="text" placeholder="Enter your email address" class="form-control" name="email"><br>
-        <label for="mobile" class="formbuilder-text-label" style="color: white">&nbsp;&nbsp;Mobile Number</label><br>
-        <input type="text" placeholder="Enter your mobile number" class="form-control" name="mobile">
+        <form [formGroup]="forgetForm" (ngSubmit)="submitButton()">
+            <label for="username" class="formbuilder-text-label" style="color: white">&nbsp;&nbsp;Username</label><br>
+            <input formControlName="userName" type="text" placeholder="Enter your username" class="form-control" id="userName"><br>
+            <label for="email" class="formbuilder-text-label" style="color: white">&nbsp;&nbsp;Email</label><br>
+            <input formControlName="email" type="text" placeholder="Enter your email address" class="form-control" id="email"><br>
+            <label for="mobile" class="formbuilder-text-label" style="color: white">&nbsp;&nbsp;Mobile Number</label><br>
+            <input formControlName="mobileNumber" type="text" placeholder="Enter your mobile number" class="form-control" id="mobileNumber"><br>
+            <div class="button">
+                <button>Help Me Get My Password!</button>
+            </div>
+        </form>
     </div>
     <br>
-    <div class="button">
-        <button type="button" class="btn-default btn" name="reset"
-        (click)="resetButton()">Reset Password</button>
-    </div>
     <div class="button">
         <button type="button" class="btn-default btn" name="login" id="login"
         (click)="loginRedirect()">Log In</button>

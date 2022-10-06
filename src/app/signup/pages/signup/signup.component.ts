@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -17,37 +17,35 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
     this.signUpForm = this.fb.group({
-      userName: [''],
-      email: [''],
-      mobileNumber: [''],
-      userPassword: ['']
+      userName: ['', [Validators.required, Validators.minLength(5)]],
+      email: ['', [Validators.required, Validators.minLength(5)]],
+      mobileNumber: ['', [Validators.required, Validators.minLength(5)]],
+      userPassword: ['', [Validators.required, Validators.minLength(5)]],
+      confirmPassword: ['', [Validators.required, Validators.minLength(5)]]
     })
   }
 
-  submitButton(){
-    // alert('Submit button works')
-    // console.log(this.signUpForm.value)
-    this.http.post<any>("http://localhost:3000/users",this.signUpForm.value)
-    .subscribe(res=>{
-      // alert('Sign up succesful! Redirecting you to login');
-      // this.signUpForm.reset()
-      // this.router.navigate(["login"])
-        // const user = res.find((a:any)=>{
-        //   return a.userName !== null && a.email !== null && a.mobileNumber !== null 
-        //   && a.userPassword !== null
-        // });
-        const user = this.signUpForm.pristine || this.signUpForm.touched
-        if(!user){
-          alert('Signup successful! Redirecting you to login.');
-          this.signUpForm.reset()
-          this.router.navigate(["login"])
-        }else{
-          alert("Please fill up all the fields.")
-        }
-    },err=>{
-      alert("Something went wrong.")
-    })
-  }
+  submitButton(){  
+      this.http.post<any>("http://localhost:3000/users",this.signUpForm.value)
+      .subscribe(res=>{
+          const user = this.signUpForm.pristine ||
+            (this.signUpForm.value.userName === ' ' || this.signUpForm.value.email === ' ' || 
+              this.signUpForm.value.mobileNumber === ' ' || this.signUpForm.value.userPassword === ' ' || this.signUpForm.value.confirmPassword === ' ') 
+          if(!user){
+            if(this.signUpForm.value.userPassword != this.signUpForm.value.confirmPassword){
+              alert('Passwords do not match.')
+            }else{
+              alert('Signup successful! Redirecting you to login.');
+              this.signUpForm.reset()
+              this.router.navigate(["login"])
+            }
+          }else {
+            alert("Please fill up all the fields.")
+          }
+      },err=>{
+        alert("Something went wrong.")
+      })
+    }
 
   loginRedirect(){
     this.router.navigate(['login'])

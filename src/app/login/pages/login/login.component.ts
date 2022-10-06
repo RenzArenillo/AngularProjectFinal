@@ -28,8 +28,7 @@ export class LoginComponent implements OnInit {
     this.http.get<any>("http://localhost:3000/users")
     .subscribe(res=>{
       const user = res.find((a:any)=>{
-        return a.userName === this.loginForm.value.userName && a.userPassword === this.loginForm.value.userPassword 
-        && !(this.loginForm.pristine) && !(this.loginForm.touched)
+        return a.userName === this.loginForm.value.userName && a.userPassword === this.loginForm.value.userPassword
       });
       if(user){
         alert('Login Successful');
@@ -37,7 +36,6 @@ export class LoginComponent implements OnInit {
         // this.router.navigate(["home"])
       }else{
         alert("The username or password you entered is incorrect, or you didn't fill up all the fields.")
-        this.loginForm.reset()
       }
     },err=>{
       alert("Something went wrong.")

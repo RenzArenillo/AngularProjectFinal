@@ -48,19 +48,24 @@
     <form [formGroup]="signUpForm" (ngSubmit)="submitButton()">
         <div class="form-group">
             <label for="username" class="formbuilder-text-label" style="color: white">&nbsp;&nbsp;Username</label><br>
-            <input formControlName="userName" type="text" placeholder="Enter your username" class="form-control" ng-model="userName" required><br>
+            <input formControlName="userName" type="text" placeholder="Enter your username" required><br>
             <label for="email" class="formbuilder-text-label" style="color: white">&nbsp;&nbsp;Email</label><br>
-            <input formControlName="email" type="text" placeholder="Enter your email address" class="form-control" id="email" required><br>
+            <input formControlName="email" type="text" placeholder="Enter your email address" class="form-control" id="email" [(ngModel)]="signUpForm.value.email"><br>
             <label for="mobile" class="formbuilder-text-label" style="color: white">&nbsp;&nbsp;Mobile Number</label><br>
-            <input formControlName="mobileNumber" type="text" placeholder="Enter your mobile number" class="form-control" id="mobileNumber" pattern="[0-9]" required><br>
+            <input formControlName="mobileNumber" type="text" placeholder="Enter your mobile number" class="form-control" id="mobileNumber" pattern="[0-9]{2,11}" required><br>
+           
+            <div>
             <label for="pw" class="formbuilder-text-label" style="color: white">&nbsp;&nbsp;Password</label><br>
-            <input formControlName="userPassword" type="password" placeholder="Enter your password" class="form-control" id="userPassword" required>
+            <input formControlName="userPassword" type="password" placeholder="Enter your password" class="form-control" id="userPassword" required><br>
+            <span><label for="pw" class="formbuilder-text-label" style="color: white">&nbsp;&nbsp;Confirm Password</label><br>
+            <input formControlName="confirmPassword" type="password" placeholder="Confirm password" class="form-control" id="confirmPassword" required>
+            <p *ngIf="signUpForm.value.userPassword != signUpForm.value.confirmPassword" style="color: white">&nbsp;&nbsp;Passwords do not match</p></span><br>
+            </div>
         </div>
         <div class="button">
             <button>Sign Up</button>
         </div>
     </form>
-    <br><br><br>
     <p style="color: white">&nbsp;&nbsp;Already have an account?</p>
     <div class="button">
         <button type="button" class="btn-default btn" name="login" id="login"

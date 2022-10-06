@@ -16,7 +16,7 @@ import { SignupModule } from './signup/signup.module';
     AppRoutingModule,
     LoginModule,
     ForgetPwModule,
-    SignupModule
+    SignupModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
