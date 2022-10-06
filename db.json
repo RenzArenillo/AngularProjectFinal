@@ -182,237 +182,71 @@
       ],
       "orderQuantity": 8,
       "orderTotalPrice": 680,
-      "orderDate": "2022/10/05",
+      "orderDate": "2022/10/06",
       "orderStatus": "Pending",
-      "id": "z0HAiFx"
+      "id": "dj0POqS"
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "userName": "catdog",
+      "userPassword": "catdog",
+      "firstName": "Jose",
+      "middleName": "Some",
+      "lastName": "Rizal",
+      "mobileNumber": 9163842995,
+      "email": "joserizal@gmail.com",
+      "birthdate": "1998/11/05",
+      "interestsLists": [
+        "Clothes"
+      ],
+      "active": false
     },
     {
-      "userId": "USER001",
-      "orderedItems": [
-        {
-          "productId": "1000",
-          "productName": "Item1",
-          "productQuantity": 1,
-          "productPrice": 50,
-          "productCategory": "Category1"
-        },
-        {
-          "productId": "1033",
-          "productName": "Item2",
-          "productQuantity": 2,
-          "productPrice": 200,
-          "productCategory": "Category2"
-        },
-        {
-          "productId": "1823",
-          "productName": "Item3",
-          "productQuantity": 1,
-          "productPrice": 150,
-          "productCategory": "Category2"
-        },
-        {
-          "productId": "2823",
-          "productName": "Item6",
-          "productQuantity": 4,
-          "productPrice": 20,
-          "productCategory": "Category2"
-        }
+      "id": 2,
+      "userName": "batrat",
+      "userPassword": "batrat",
+      "firstName": "Josie",
+      "middleName": "Thing",
+      "lastName": "Li",
+      "mobileNumber": 9626712905,
+      "email": "josiel@gmail.com",
+      "birthdate": "1993/02/25",
+      "interestsLists": [
+        "Clothes"
       ],
-      "orderQuantity": 8,
-      "orderTotalPrice": 680,
-      "orderDate": "2022/10/05",
-      "orderStatus": "Pending",
-      "id": "K4FomSv"
+      "active": true
     },
     {
-      "userId": "USER001",
-      "orderedItems": [
-        {
-          "productId": "1000",
-          "productName": "Item1",
-          "productQuantity": 1,
-          "productPrice": 50,
-          "productCategory": "Category1"
-        },
-        {
-          "productId": "1033",
-          "productName": "Item2",
-          "productQuantity": 2,
-          "productPrice": 200,
-          "productCategory": "Category2"
-        },
-        {
-          "productId": "1823",
-          "productName": "Item3",
-          "productQuantity": 1,
-          "productPrice": 150,
-          "productCategory": "Category2"
-        },
-        {
-          "productId": "2823",
-          "productName": "Item6",
-          "productQuantity": 4,
-          "productPrice": 20,
-          "productCategory": "Category2"
-        }
+      "id": 3,
+      "userName": "cowsheep",
+      "userPassword": "cowsheep",
+      "firstName": "Moe",
+      "middleName": "Otme",
+      "lastName": "Ral",
+      "mobileNumber": 9563842885,
+      "email": "cowsheep@gmail.com",
+      "birthdate": "1988/06/05",
+      "interestsLists": [
+        "Clothes"
       ],
-      "orderQuantity": 8,
-      "orderTotalPrice": 680,
-      "orderDate": "2022/10/05",
-      "orderStatus": "Pending",
-      "id": "Z15JB7_"
+      "active": false
     },
     {
-      "userId": "USER001",
-      "orderedItems": [
-        {
-          "productId": "1000",
-          "productName": "Item1",
-          "productQuantity": 1,
-          "productPrice": 50,
-          "productCategory": "Category1"
-        },
-        {
-          "productId": "1033",
-          "productName": "Item2",
-          "productQuantity": 2,
-          "productPrice": 200,
-          "productCategory": "Category2"
-        },
-        {
-          "productId": "1823",
-          "productName": "Item3",
-          "productQuantity": 1,
-          "productPrice": 150,
-          "productCategory": "Category2"
-        },
-        {
-          "productId": "2823",
-          "productName": "Item6",
-          "productQuantity": 4,
-          "productPrice": 20,
-          "productCategory": "Category2"
-        }
+      "id": 34,
+      "userName": "liontiger",
+      "userPassword": "liontiger",
+      "firstName": "Don",
+      "middleName": "Mon",
+      "lastName": "Ron",
+      "mobileNumber": 9544842885,
+      "email": "liontiger@gmail.com",
+      "birthdate": "1933/01/01",
+      "interestsLists": [
+        "Clothes"
       ],
-      "orderQuantity": 8,
-      "orderTotalPrice": 680,
-      "orderDate": "2022/10/05",
-      "orderStatus": "Pending",
-      "id": "4fh1fq2"
-    },
-    {
-      "userId": "USER001",
-      "orderedItems": [
-        {
-          "productId": "1000",
-          "productName": "Item1",
-          "productQuantity": 1,
-          "productPrice": 50,
-          "productCategory": "Category1"
-        },
-        {
-          "productId": "1033",
-          "productName": "Item2",
-          "productQuantity": 2,
-          "productPrice": 200,
-          "productCategory": "Category2"
-        },
-        {
-          "productId": "1823",
-          "productName": "Item3",
-          "productQuantity": 1,
-          "productPrice": 150,
-          "productCategory": "Category2"
-        },
-        {
-          "productId": "2823",
-          "productName": "Item6",
-          "productQuantity": 4,
-          "productPrice": 20,
-          "productCategory": "Category2"
-        }
-      ],
-      "orderQuantity": 8,
-      "orderTotalPrice": 680,
-      "orderDate": "2022/10/05",
-      "orderStatus": "Pending",
-      "id": "JKBw5Tj"
-    },
-    {
-      "userId": "USER001",
-      "orderedItems": [
-        {
-          "productId": "1000",
-          "productName": "Item1",
-          "productQuantity": 1,
-          "productPrice": 50,
-          "productCategory": "Category1"
-        },
-        {
-          "productId": "1033",
-          "productName": "Item2",
-          "productQuantity": 2,
-          "productPrice": 200,
-          "productCategory": "Category2"
-        },
-        {
-          "productId": "1823",
-          "productName": "Item3",
-          "productQuantity": 1,
-          "productPrice": 150,
-          "productCategory": "Category2"
-        },
-        {
-          "productId": "2823",
-          "productName": "Item6",
-          "productQuantity": 4,
-          "productPrice": 20,
-          "productCategory": "Category2"
-        }
-      ],
-      "orderQuantity": 8,
-      "orderTotalPrice": 680,
-      "orderDate": "2022/10/05",
-      "orderStatus": "Pending",
-      "id": "bOI2uZh"
-    },
-    {
-      "userId": "USER001",
-      "orderedItems": [
-        {
-          "productId": "1000",
-          "productName": "Item1",
-          "productQuantity": 1,
-          "productPrice": 50,
-          "productCategory": "Category1"
-        },
-        {
-          "productId": "1033",
-          "productName": "Item2",
-          "productQuantity": 2,
-          "productPrice": 200,
-          "productCategory": "Category2"
-        },
-        {
-          "productId": "1823",
-          "productName": "Item3",
-          "productQuantity": 1,
-          "productPrice": 150,
-          "productCategory": "Category2"
-        },
-        {
-          "productId": "2823",
-          "productName": "Item6",
-          "productQuantity": 4,
-          "productPrice": 20,
-          "productCategory": "Category2"
-        }
-      ],
-      "orderQuantity": 8,
-      "orderTotalPrice": 680,
-      "orderDate": "2022/10/05",
-      "orderStatus": "Pending",
-      "id": "ndVBKuc"
+      "active": true
     }
   ]
 }

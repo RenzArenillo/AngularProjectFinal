@@ -11,7 +11,7 @@ export class PendingOrdersPageComponent implements OnInit {
 
   public orders: Order[] = []
 
-  //input to from somewhere
+  //input ito from somewhere
   public userId: string = "USER001"
 
 
@@ -20,6 +20,5 @@ export class PendingOrdersPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.orderService.getOrders(this.userId).subscribe(data => {this.orders = data;})
-    console.log(this.orders)
   }
 }
