@@ -48,6 +48,7 @@ const routes: Routes = [
     path: "adduser",
     component: AddUserComponent
   },
+  //Aldrin
   {
     path: 'dashboard',
     component: DashboardComponent,
