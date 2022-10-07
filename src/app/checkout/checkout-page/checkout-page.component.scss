@@ -1,0 +1,19 @@
+border {
+    border-style: solid; 
+    border-width: thin; 
+    border-color: #14b8a6;
+  }
+
+  button:disabled {
+    background-color: rgb(152, 150, 150);
+    color: rgb(220, 218, 218)
+ }
+
+ input:disabled {
+  background-color: rgb(152, 150, 150);
+}
+
+.radios > span
+{
+    white-space: nowrap;
+}

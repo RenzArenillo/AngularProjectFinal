@@ -1,0 +1,317 @@
+{
+  "order": [
+    {
+      "id": "RD0001",
+      "userId": "USER001",
+      "orderQuantity": 1,
+      "orderedItems": [
+        {
+          "productId": "1200",
+          "productName": "Item5",
+          "productQuantity": 1,
+          "productPrice": 450,
+          "productCategory": "Category3"
+        }
+      ],
+      "orderTotalPrice": 450,
+      "orderAddress": "Quezon City",
+      "orderDate": "2022/09/09",
+      "paymentMethod": "Cash",
+      "orderStatus": "Pending"
+    },
+    {
+      "userId": "USER001",
+      "orderedItems": [
+        {
+          "productId": "1000",
+          "productName": "Item1",
+          "productQuantity": 1,
+          "productPrice": 50,
+          "productCategory": "Category1"
+        },
+        {
+          "productId": "1033",
+          "productName": "Item2",
+          "productQuantity": 2,
+          "productPrice": 200,
+          "productCategory": "Category2"
+        },
+        {
+          "productId": "1823",
+          "productName": "Item3",
+          "productQuantity": 1,
+          "productPrice": 150,
+          "productCategory": "Category2"
+        }
+      ],
+      "orderQuantity": 4,
+      "orderTotalPrice": 600,
+      "orderAddress": "Quezon City",
+      "orderDate": "2022/10/05",
+      "paymentMethod": "Cash",
+      "orderStatus": "Pending",
+      "id": "FrNV-P9"
+    },
+    {
+      "userId": "USER201",
+      "orderedItems": [
+        {
+          "productId": "1000",
+          "productName": "Item1",
+          "productQuantity": 1,
+          "productPrice": 50,
+          "productCategory": "Category1"
+        },
+        {
+          "productId": "1033",
+          "productName": "Item2",
+          "productQuantity": 2,
+          "productPrice": 200,
+          "productCategory": "Category2"
+        },
+        {
+          "productId": "1823",
+          "productName": "Item3",
+          "productQuantity": 1,
+          "productPrice": 150,
+          "productCategory": "Category2"
+        }
+      ],
+      "orderQuantity": 4,
+      "orderTotalPrice": 600,
+      "orderAddress": "Quezon City",
+      "orderDate": "2022/10/05",
+      "orderStatus": "Pending",
+      "id": "vXZ0gtp"
+    },
+    {
+      "userId": "USER201",
+      "orderedItems": [
+        {
+          "productId": "1000",
+          "productName": "Item1",
+          "productQuantity": 1,
+          "productPrice": 50,
+          "productCategory": "Category1"
+        },
+        {
+          "productId": "1033",
+          "productName": "Item2",
+          "productQuantity": 2,
+          "productPrice": 200,
+          "productCategory": "Category2"
+        },
+        {
+          "productId": "1823",
+          "productName": "Item3",
+          "productQuantity": 1,
+          "productPrice": 150,
+          "productCategory": "Category2"
+        }
+      ],
+      "orderQuantity": 4,
+      "orderTotalPrice": 600,
+      "orderAddress": "Quezon City",
+      "orderDate": "2022/10/05",
+      "paymentMethod": "Cash",
+      "orderStatus": "Pending",
+      "id": "evnIeqc"
+    },
+    {
+      "userId": "USER001",
+      "orderedItems": [
+        {
+          "productId": "1000",
+          "productName": "Item1",
+          "productQuantity": 1,
+          "productPrice": 50,
+          "productCategory": "Category1"
+        },
+        {
+          "productId": "1033",
+          "productName": "Item2",
+          "productQuantity": 2,
+          "productPrice": 200,
+          "productCategory": "Category2"
+        },
+        {
+          "productId": "1823",
+          "productName": "Item3",
+          "productQuantity": 1,
+          "productPrice": 150,
+          "productCategory": "Category2"
+        },
+        {
+          "productId": "2823",
+          "productName": "Item6",
+          "productQuantity": 4,
+          "productPrice": 20,
+          "productCategory": "Category2"
+        }
+      ],
+      "orderQuantity": 8,
+      "orderTotalPrice": 680,
+      "orderAddress": "Quezon City",
+      "orderDate": "2022/10/05",
+      "paymentMethod": "Cash",
+      "orderStatus": "Completed",
+      "id": "NofTl-8"
+    },
+    {
+      "userId": "USER001",
+      "orderedItems": [
+        {
+          "productId": "1000",
+          "productName": "Item1",
+          "productQuantity": 1,
+          "productPrice": 50,
+          "productCategory": "Category1"
+        },
+        {
+          "productId": "1033",
+          "productName": "Item2",
+          "productQuantity": 2,
+          "productPrice": 200,
+          "productCategory": "Category2"
+        },
+        {
+          "productId": "1823",
+          "productName": "Item3",
+          "productQuantity": 1,
+          "productPrice": 150,
+          "productCategory": "Category2"
+        },
+        {
+          "productId": "2823",
+          "productName": "Item6",
+          "productQuantity": 4,
+          "productPrice": 20,
+          "productCategory": "Category2"
+        }
+      ],
+      "orderQuantity": 8,
+      "orderTotalPrice": 680,
+      "orderDate": "2022/10/06",
+      "paymentMethod": "Cash",
+      "orderStatus": "Pending",
+      "id": "dj0POqS"
+    },
+    {
+      "userId": "USER001",
+      "orderedItems": [
+        {
+          "productId": "1000",
+          "productName": "Item1",
+          "productQuantity": 1,
+          "productPrice": 50,
+          "productCategory": "Category1"
+        },
+        {
+          "productId": "1033",
+          "productName": "Item2",
+          "productQuantity": 2,
+          "productPrice": 200,
+          "productCategory": "Category2"
+        },
+        {
+          "productId": "1823",
+          "productName": "Item3",
+          "productQuantity": 1,
+          "productPrice": 150,
+          "productCategory": "Category2"
+        },
+        {
+          "productId": "2823",
+          "productName": "Item6",
+          "productQuantity": 4,
+          "productPrice": 20,
+          "productCategory": "Category2"
+        }
+      ],
+      "orderQuantity": 8,
+      "orderTotalPrice": 680,
+      "orderAddress": "Manila",
+      "orderDate": "2022/10/06",
+      "paymentMethod": "Cash",
+      "orderStatus": "Pending",
+      "id": "vwyvsfb"
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "userName": "catdog",
+      "userPassword": "catdog",
+      "firstName": "Jose",
+      "middleName": "Some",
+      "lastName": "Rizal",
+      "mobileNumber": 9163842995,
+      "email": "joserizal@gmail.com",
+      "birthdate": "1998/11/05",
+      "interestsLists": [
+        "Clothes"
+      ],
+      "active": false
+    },
+    {
+      "id": 2,
+      "userName": "batrat",
+      "userPassword": "batrat",
+      "firstName": "Josie",
+      "middleName": "Thing",
+      "lastName": "Li",
+      "mobileNumber": 9626712905,
+      "email": "josiel@gmail.com",
+      "birthdate": "1993/02/25",
+      "interestsLists": [
+        "Clothes"
+      ],
+      "active": true
+    },
+    {
+      "id": 3,
+      "userName": "cowsheep",
+      "userPassword": "cowsheep",
+      "firstName": "Moe",
+      "middleName": "Otme",
+      "lastName": "Ral",
+      "mobileNumber": 9563842885,
+      "email": "cowsheep@gmail.com",
+      "birthdate": "1988/06/05",
+      "interestsLists": [
+        "Clothes"
+      ],
+      "active": true
+    },
+    {
+      "id": 4,
+      "userName": "liontiger",
+      "userPassword": "liontiger",
+      "firstName": "Don",
+      "middleName": "Mon",
+      "lastName": "Ron",
+      "mobileNumber": 9544842885,
+      "email": "liontiger@gmail.com",
+      "birthdate": "1933/01/01",
+      "interestsLists": [
+        "Clothes"
+      ],
+      "active": true
+    },
+    {
+      "id": 5,
+      "userName": "liontiger2",
+      "userPassword": "liontiger2",
+      "firstName": "Dek",
+      "middleName": "Mon",
+      "lastName": "Vie",
+      "mobileNumber": 9544842885,
+      "email": "lion2tiger@gmail.com",
+      "birthdate": "1943/01/01",
+      "interestsLists": [
+        "Clothes"
+      ],
+      "active": true
+    }
+  ]
+}
