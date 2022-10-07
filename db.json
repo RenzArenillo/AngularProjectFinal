@@ -14,7 +14,9 @@
         }
       ],
       "orderTotalPrice": 450,
+      "orderAddress": "Quezon City",
       "orderDate": "2022/09/09",
+      "paymentMethod": "Cash",
       "orderStatus": "Pending"
     },
     {
@@ -44,7 +46,9 @@
       ],
       "orderQuantity": 4,
       "orderTotalPrice": 600,
+      "orderAddress": "Quezon City",
       "orderDate": "2022/10/05",
+      "paymentMethod": "Cash",
       "orderStatus": "Pending",
       "id": "FrNV-P9"
     },
@@ -75,6 +79,7 @@
       ],
       "orderQuantity": 4,
       "orderTotalPrice": 600,
+      "orderAddress": "Quezon City",
       "orderDate": "2022/10/05",
       "orderStatus": "Pending",
       "id": "vXZ0gtp"
@@ -106,7 +111,9 @@
       ],
       "orderQuantity": 4,
       "orderTotalPrice": 600,
+      "orderAddress": "Quezon City",
       "orderDate": "2022/10/05",
+      "paymentMethod": "Cash",
       "orderStatus": "Pending",
       "id": "evnIeqc"
     },
@@ -144,7 +151,9 @@
       ],
       "orderQuantity": 8,
       "orderTotalPrice": 680,
+      "orderAddress": "Quezon City",
       "orderDate": "2022/10/05",
+      "paymentMethod": "Cash",
       "orderStatus": "Completed",
       "id": "NofTl-8"
     },
@@ -183,8 +192,49 @@
       "orderQuantity": 8,
       "orderTotalPrice": 680,
       "orderDate": "2022/10/06",
+      "paymentMethod": "Cash",
       "orderStatus": "Pending",
       "id": "dj0POqS"
+    },
+    {
+      "userId": "USER001",
+      "orderedItems": [
+        {
+          "productId": "1000",
+          "productName": "Item1",
+          "productQuantity": 1,
+          "productPrice": 50,
+          "productCategory": "Category1"
+        },
+        {
+          "productId": "1033",
+          "productName": "Item2",
+          "productQuantity": 2,
+          "productPrice": 200,
+          "productCategory": "Category2"
+        },
+        {
+          "productId": "1823",
+          "productName": "Item3",
+          "productQuantity": 1,
+          "productPrice": 150,
+          "productCategory": "Category2"
+        },
+        {
+          "productId": "2823",
+          "productName": "Item6",
+          "productQuantity": 4,
+          "productPrice": 20,
+          "productCategory": "Category2"
+        }
+      ],
+      "orderQuantity": 8,
+      "orderTotalPrice": 680,
+      "orderAddress": "Manila",
+      "orderDate": "2022/10/06",
+      "paymentMethod": "Cash",
+      "orderStatus": "Pending",
+      "id": "vwyvsfb"
     }
   ],
   "user": [

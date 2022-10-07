@@ -15,7 +15,15 @@ export class OrdersService {
 
     return this.http.get<Order[]>(`${environment.url}/order`).pipe<Order[]>(  
       map((data:Order[]) => {
-        return data.filter(x => x.orderStatus === "Pending" && x.userId === userId)
+        return data.filter(x => x.userId === userId)
+      }
+    ))
+  }
+  getFilteredOrders(userId:string, filter:string): Observable<Order[]> {
+
+    return this.http.get<Order[]>(`${environment.url}/order`).pipe<Order[]>(  
+      map((data:Order[]) => {
+        return data.filter(x => x.orderStatus === filter && x.userId === userId)
       }
     ))
   }

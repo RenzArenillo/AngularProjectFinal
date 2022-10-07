@@ -21,4 +21,14 @@ export class PendingOrdersPageComponent implements OnInit {
   ngOnInit(): void {
     this.orderService.getOrders(this.userId).subscribe(data => {this.orders = data;})
   }
+
+  allOrders() {
+    this.orderService.getOrders(this.userId).subscribe(data => {this.orders = data;})
+  }
+
+  filteredOrders(filter:string) {
+    this.orderService.getFilteredOrders(this.userId, filter).subscribe(data => {this.orders = data;})
+  }
+
+
 }

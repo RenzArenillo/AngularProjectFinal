@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from '../models/users';
 import { UserService } from '../user.service';
 
@@ -20,36 +21,13 @@ export class AdminUserlistComponent implements OnInit {
   }
 
   deactivateUser(data: User) {
-    // var updateUser: User = data
     data.active = false
     this.userService.update(data)
   }
 
 
   addUser() {
-    this.router.navigate(['/confirmed']);
+    this.router.navigate(['/adduser']);
   }
-  // deactivateUser(id?:number) {
-
-  //   // for (let i = 0; i < this.users.length; i++) {
-  //   //   if(this.users[i]["id"] == id){
-  //   //     this.selectedUser = this.users[i];
-  //   //   } else {}
-  //   // }
-  //   // const userDeactivate = {
-  //   //   id: this.selectedUser?.id,
-  //   //   userName: this.selectedUser?.userName,
-  //   //   userPassword: this.selectedUser?.userPassword,
-  //   //   firstName: this.selectedUser?.firstName,
-  //   //   middleName: this.selectedUser?.middleName,
-  //   //   lastName: this.selectedUser?.lastName,
-  //   //   mobileNumber: this.selectedUser?.mobileNumber,
-  //   //   email: this.selectedUser?.email,
-  //   //   birthdate: this.selectedUser?.birthdate,
-  //   //   interestsLists: this.selectedUser?.interestsLists,
-  //   //   active: false
-  //   // }
-  //   this.userService.update(userDeactivate)
-  // }
 
 }

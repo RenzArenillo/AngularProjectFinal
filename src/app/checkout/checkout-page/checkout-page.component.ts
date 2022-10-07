@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { Product } from 'src/app/models/product';
 import { OrdersService } from 'src/app/orders.service';
@@ -11,6 +12,7 @@ import { PassOrdersService } from 'src/app/pass-orders.service';
 })
 export class CheckoutPageComponent implements OnInit {
 
+  checkoutForm: FormGroup
 
   total = 0
   quantity = 0
@@ -20,8 +22,12 @@ export class CheckoutPageComponent implements OnInit {
   public products : Product[] = [];
 
   constructor(private orderService: OrdersService, private route:ActivatedRoute, 
-    private listService:PassOrdersService, private router:Router) { 
+    private listService:PassOrdersService, private router:Router, fb:FormBuilder) { 
     this.products = this.listService.retrieveList()
+    this.checkoutForm = fb.group({
+      address: [{value: '', disabled: !this.products.length}, Validators.required],
+      paymentMethod: [{value: '', disabled: !this.products.length}, Validators.required]
+    })
   }
 
   ngOnInit(): void {
@@ -37,8 +43,6 @@ export class CheckoutPageComponent implements OnInit {
       this.quantity = Quantity;
       this.total = Price;
     } 
-
-
   }
   
   createOrder() {
@@ -47,13 +51,20 @@ export class CheckoutPageComponent implements OnInit {
       orderedItems: this.products,
       orderQuantity: this.quantity,
       orderTotalPrice: this.total,
+      orderAddress: this.checkoutForm.get('address')?.value,
       orderDate: this.dateToday,
+      paymentMethod: this.checkoutForm.get('paymentMethod')?.value,
       orderStatus: "Pending"
     }
     this.orderService.create(order)
     this.listService.saveList("")
     this.router.navigate(['/confirmed']);
 
+  }
+
+  cancelOrder() {
+    this.listService.saveList("")
+    this.router.navigate(['/home']);
   }
 
 }
