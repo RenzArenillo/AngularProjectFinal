@@ -1,0 +1,38 @@
+<div class="w-full h-full text-gray-800 thover:text-orange-500" title="{{ product.productName }}" (click)="emit(product)">
+  <div class="grid place-items-center h-[63%] overflow-hidden">
+    <img
+      class="h-full w-full"
+      src="{{ product.productImage }}"
+      alt="{{ product.productName }}"
+    />
+  </div>
+  <div class="h-[37%] px-4 py-1 grid text-xs">
+    <div class="grid place-items-center truncate">
+      <span class="font-semibold text-xl">{{ product.productName }}</span>
+    </div>
+    <div class="grid grid-cols-2">
+      <div class="grid">
+        <span
+          class="hover:text-blue-500 cursor-pointer hover:underline"
+          title="{{ product.productCategory }}"
+          >{{ product.productCategory }}</span
+        >
+        <span>{{ product.productPrice | currency: "PHP":"symbol" }}</span>
+        <span
+          ><span class="font-semibold">{{ product.unitsSold }}</span
+          >&nbsp;sold</span
+        >
+
+      </div>
+      <div class="grid place-items-center">
+        <button
+          class="bg-[#FC6A03] px-2 py-1 rounded-sm border-2 border-orange-300 hover:bg-orange-600 hover:border-orange-700"
+        >
+          <span class="text-white font-bold">
+            <i class="fa fa-shopping-cart"></i> Add To Cart</span
+          >
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

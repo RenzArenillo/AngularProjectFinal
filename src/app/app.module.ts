@@ -1,23 +1,39 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { AddUserComponent } from './admin-userlist/add-user/add-user.component';
+import { AdminUserlistComponent } from './admin-userlist/admin-userlist.component';
+import { SearchPipe } from './admin-userlist/search.pipe';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CheckoutPageComponent } from './checkout/checkout-page/checkout-page.component';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CheckoutConfirmedComponent } from './checkout/checkout-confirmed/checkout-confirmed.component';
-import { AdminUserlistComponent } from './admin-userlist/admin-userlist.component';
-import { TesthomeComponent } from './testhome/testhome.component';
 import { CheckoutItemsComponent } from './checkout/checkout-items/checkout-items.component';
+import { CheckoutPageComponent } from './checkout/checkout-page/checkout-page.component';
+import { CategoryComponent } from './dashboard/components/category/category.component';
+import { ProductModalComponent } from './dashboard/components/product-modal/product-modal.component';
+import { ProductComponent } from './dashboard/components/product/product.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { PendingOrdersItemsComponent } from './pending-orders/pending-orders-items/pending-orders-items.component';
 import { PendingOrdersPageComponent } from './pending-orders/pending-orders-page/pending-orders-page.component';
-import { AddUserComponent } from './admin-userlist/add-user/add-user.component';
-import { SearchPipe } from './admin-userlist/search.pipe';
+import { TableComponent } from './products/components/table/table.component';
+import { ProductsComponent } from './products/products.component';
+import { FooterComponent } from './shared/footer/footer/footer.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { TesthomeComponent } from './testhome/testhome.component';
 
 //test
 @NgModule({
   declarations: [
     AppComponent,
+    DashboardComponent,
+    HeaderComponent,
+    CategoryComponent,
+    ProductComponent,
+    ProductsComponent,
+    FooterComponent,
+    ProductModalComponent,
+    TableComponent,
     CheckoutPageComponent,
     CheckoutItemsComponent,
     PendingOrdersPageComponent,
@@ -28,14 +44,11 @@ import { SearchPipe } from './admin-userlist/search.pipe';
     AddUserComponent,
     SearchPipe
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
+  imports: [BrowserModule, AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
-  ],
+    FormsModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

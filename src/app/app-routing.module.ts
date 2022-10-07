@@ -8,13 +8,19 @@ import { AdminUserlistComponent } from './admin-userlist/admin-userlist.componen
 import { PendingOrdersPageComponent } from './pending-orders/pending-orders-page/pending-orders-page.component';
 import { TesthomeComponent } from './testhome/testhome.component';
 import { AddUserComponent } from './admin-userlist/add-user/add-user.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProductsComponent } from './products/products.component';
 
 const routes: Routes = [
   {
-    path: "",
-    redirectTo: "home",
-    pathMatch: "full"
+    path: '',
+    component: DashboardComponent,
   },
+  // {
+  //   path: "",
+  //   redirectTo: "home",
+  //   pathMatch: "full"
+  // },
   {
     path: "home",
     component: TesthomeComponent
@@ -41,7 +47,16 @@ const routes: Routes = [
   {
     path: "adduser",
     component: AddUserComponent
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+  },
+  {
+    path: 'product',
+    component: ProductsComponent,
   }
+
 ];
 
 @NgModule({

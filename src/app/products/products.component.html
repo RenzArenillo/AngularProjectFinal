@@ -1,0 +1,38 @@
+<div class="min-w-[800px] bg-gray-200 h-screen py-16 flex justify-center">
+  <div class="lg:w-[80%]">
+    <div
+      class="min-h-max w-full py-4 items-center border-2 border-b-0 border-cyan-500 shadow-sm flex justify-between"
+    >
+      <span class="ml-5 text-cyan-600 uppercase">Products</span>
+
+      <div class="mx-4 space-x-2 flex">
+        <div class="mr-auto rounded-md overflow-hidden w-full flex justify-end">
+          <input
+            type="text"
+            class="px-2 py-1 rounded-l-md focus:outline-0 w-[450px]"
+            placeholder="Search product"
+          />
+          <button class="bg-cyan-500 hover:bg-cyan-600 px-2 py-1">
+            <i class="fa fa-search text-white"></i>
+          </button>
+        </div>
+
+        <button
+          class="px-2 py-1 bg-blue-600 hover:bg-blue-400 text-white rounded-md w-full"
+        >
+          <i class="fas fa-filter"></i> Filter Products
+        </button>
+
+        <button
+          class="px-2 py-1 bg-blue-600 hover:bg-blue-400 text-white rounded-md w-full"
+        >
+          <i class="fas fa-add"></i> Add Product
+        </button>
+      </div>
+    </div>
+    <app-table
+      [products]="products"
+      (emittter)="emitAction($event)"
+    ></app-table>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<table class="min-w-[500px] overflow-auto w-full border-2 border-cyan-500">
+  <thead class="bg-cyan-600">
+    <tr class="text-gray-800 grid grid-cols-5 gap-2 py-2">
+      <th class="text-white">
+        Name &nbsp;<i class="fa-solid fa-sort hover:cursor-pointer" (click)="sort('productName')"></i>
+      </th>
+      <th class="text-white">
+        Category &nbsp;<i class="fa-solid fa-sort hover:cursor-pointer" (click)="sort('productCategory')"></i>
+      </th>
+      <th class="text-white">
+        Price &nbsp;<i class="fa-solid fa-sort hover:cursor-pointer" (click)="sort('productPrice')"></i>
+      </th>
+      <th class="text-white">
+        Units Sold &nbsp;<i class="fa-solid fa-sort hover:cursor-pointer" (click)="sort('unitsSold')"></i>
+      </th>
+      <th class="text-white">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let product of products; let i = index"
+      class="grid grid-cols-5 px-2 py-1 text-center"
+      [ngClass]="i % 2 == 0 ? '' : 'bg-cyan-200'"
+    >
+      <td title="{{ product.productName }}" class="truncate">
+        {{ product.productName }}
+      </td>
+      <td>{{ product.productCategory }}</td>
+      <td>{{ product.productPrice | currency: "PHP":"symbol" }}</td>
+      <td>{{ product.unitsSold }}</td>
+      <td class="space-x-2">
+        <button
+          (click)="edit(product.productId)"
+          class="px-2 py-1 border rounded-md bg-orange-500 text-white hover:bg-orange-700 text-sm"
+        >
+          <i class="fa fa-pen-to-square"></i> Edit
+        </button>
+        <button
+          (click)="delete(product.productId)"
+          class="px-2 py-1 border rounded-md bg-red-500 text-white hover:bg-red-700 text-sm"
+        >
+          <i class="fas fa-trash"></i> Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

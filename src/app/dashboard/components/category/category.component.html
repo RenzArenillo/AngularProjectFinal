@@ -1,0 +1,10 @@
+<div class="h-24 w-full grid place-items-center" (click)="emit(category)">
+  <div class="h-20 w-20 rounded-full bg-gray-300">
+    <img src="{{category.image}}" alt="">
+  </div>
+</div>
+<div
+  class="min-h-12 w-full px-2 text-xs flex items-center justify-center text-center text-gray-700"
+>
+  {{ category.name }}
+</div>
