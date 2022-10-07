@@ -33,4 +33,9 @@ export class AdminUserlistComponent implements OnInit {
     this.router.navigate(['/adduser']);
   }
 
+
+  
+
+
+
 }
