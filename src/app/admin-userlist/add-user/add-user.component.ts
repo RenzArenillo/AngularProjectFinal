@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { User } from 'src/app/models/users';
+import { UserService } from 'src/app/user.service';
 
 @Component({
   selector: 'app-add-user',
@@ -8,9 +10,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AddUserComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute) { }
+
+
+  constructor(private route: ActivatedRoute, private userService: UserService) { }
 
   ngOnInit(): void {
   }
+
+
+
 
 }

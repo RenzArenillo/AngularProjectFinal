@@ -19,15 +19,6 @@ export class UserService {
     ))
   }
 
-  getUsersId(id?:number): Observable<User[]> {
-
-    return this.http.get<User[]>(`${environment.url}/user`).pipe<User[]>(  
-      map((data:User[]) => {
-        return data.filter(x => x.id == id)
-      }
-    ))
-  }
-
   create(user:User) {
     return this.http.post(`${environment.url}/user`, user).subscribe()
   }

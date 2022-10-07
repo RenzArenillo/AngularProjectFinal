@@ -281,10 +281,10 @@
       "interestsLists": [
         "Clothes"
       ],
-      "active": false
+      "active": true
     },
     {
-      "id": 34,
+      "id": 4,
       "userName": "liontiger",
       "userPassword": "liontiger",
       "firstName": "Don",
@@ -293,6 +293,21 @@
       "mobileNumber": 9544842885,
       "email": "liontiger@gmail.com",
       "birthdate": "1933/01/01",
+      "interestsLists": [
+        "Clothes"
+      ],
+      "active": true
+    },
+    {
+      "id": 5,
+      "userName": "liontiger2",
+      "userPassword": "liontiger2",
+      "firstName": "Dek",
+      "middleName": "Mon",
+      "lastName": "Vie",
+      "mobileNumber": 9544842885,
+      "email": "lion2tiger@gmail.com",
+      "birthdate": "1943/01/01",
       "interestsLists": [
         "Clothes"
       ],

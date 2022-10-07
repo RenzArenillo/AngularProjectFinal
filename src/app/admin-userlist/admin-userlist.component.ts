@@ -12,6 +12,9 @@ export class AdminUserlistComponent implements OnInit {
 
   public users : User[] = [];
   public selectedUser: User | undefined
+  public searchInput: string = ""
+  public statusName: string = "Deactivate"
+
 
   constructor(private userService: UserService, private router:Router) {
   }
@@ -21,7 +24,7 @@ export class AdminUserlistComponent implements OnInit {
   }
 
   deactivateUser(data: User) {
-    data.active = false
+    data.active = !data.active 
     this.userService.update(data)
   }
 
