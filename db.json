@@ -428,5 +428,68 @@
       ],
       "active": true
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "userName": "aldrin",
+      "userPassword": "123",
+      "firstName": "aldrin",
+      "middleName": "corbe",
+      "lastName": "morada",
+      "email": "aldrinmorada@email.com",
+      "mobileNumber": 123456789,
+      "birthdate": "2022-01-01",
+      "interestsLists": [
+        "any",
+        "any"
+      ]
+    },
+    {
+      "id": 2,
+      "userName": "aldrin",
+      "userPassword": "123",
+      "firstName": "aldrin",
+      "middleName": "corbe",
+      "lastName": "morada",
+      "email": "aldrinmorada@email.com",
+      "mobileNumber": 123456789,
+      "birthdate": "2022-01-01",
+      "interestsLists": [
+        "any",
+        "any"
+      ]
+    },
+    {
+      "userName": "sdafaks",
+      "email": "",
+      "mobileNumber": "",
+      "userPassword": "asfda",
+      "id": 3
+    },
+    {
+      "userName": "aldrin",
+      "email": "aaaa@aaaa.com",
+      "mobileNumber": "1113132323",
+      "userPassword": "123",
+      "confirmPassword": "123",
+      "id": 4
+    },
+    {
+      "userName": "asd",
+      "email": "a@a.com",
+      "mobileNumber": "1387183183",
+      "userPassword": "asd",
+      "confirmPassword": "asd",
+      "id": 5
+    },
+    {
+      "userName": "username",
+      "email": "user@email.com",
+      "mobileNumber": "123424234234",
+      "userPassword": "password",
+      "confirmPassword": "password",
+      "id": 6
+    }
   ]
 }

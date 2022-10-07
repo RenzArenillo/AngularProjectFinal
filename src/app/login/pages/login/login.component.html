@@ -1,0 +1,84 @@
+<html>
+<style>
+  html { 
+    background: url('https://static.vecteezy.com/system/resources/previews/001/372/960/original/abstract-flat-green-and-blue-background-free-vector.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .btn-group button {
+    background-color: #0d98ba; 
+    border: 1px solid #0d6dba;
+    border-radius: 4px; 
+    color: white; 
+    padding: 5px 12px; 
+    margin: 10px;
+    cursor: pointer; 
+    float: left; 
+    transition-duration: 0.4s;
+  } 
+  .btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }   
+  .btn-group button:not(:last-child) {
+    border-right: none; 
+  }   
+  .btn-group button:hover {
+    background-color: #0d6dba;
+  }
+  input[type=text] {
+    border: 2px solid #0d98ba;
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin: 10px;
+  }
+  input[type=password] {
+    border: 2px solid #0d98ba;
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin: 10px;
+  }
+  h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+</style>
+<div class="container">
+  <div class="flex" style="color: white">
+      <h1>&nbsp;Log In to </h1>
+      <img src="https://pngimg.com/uploads/letter_c/letter_c_PNG103.png" alt="chopee" 
+          class="h-16 w-16">
+      <h1>hopee</h1>
+  </div>
+  <br>
+  <div class="rendered-form">
+      <form [formGroup]="loginForm" (ngSubmit)="submitLogin()">
+        <div class="form-group">
+            <label for="username" class="form-username" style="color: white">&nbsp;&nbsp;Username</label><br>
+            <input formControlName="userName" type="text" placeholder="Enter your username" class="form-control" id="userName"><br>
+            <label for="password" class="form-password" style="color: white">&nbsp;&nbsp;Password</label><br>
+            <input formControlName="userPassword" type="password" placeholder="Enter your password" class="form-control" id="userPassword">
+        </div>
+        <br><span style="color: white">&nbsp;&nbsp;By logging in, you agree to our User Agreement and Privacy Policy.</span><br>
+        <div class="btn-group">
+            <button>Log In</button>
+        </div>
+      </form>
+      <div class="btn-group">
+        <button type="button" class="btn-info btn" name="reset" 
+          (click)="forgotPassword()">Forgot Password?</button>
+      </div>
+      <br><br><br><br><br>
+      <div>      
+        <p style="color: white">&nbsp;&nbsp;New to Chopee?</p>
+        <div class="btn-group">
+            <button type="button" class="btn-default btn" name="signup" 
+              (click)="signUpButton()">Sign Up</button>
+        </div>
+      </div>
+  </div> 
+</div>
+</html>

@@ -10,6 +10,10 @@ import { TesthomeComponent } from './testhome/testhome.component';
 import { AddUserComponent } from './admin-userlist/add-user/add-user.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProductsComponent } from './products/products.component';
+import { ForgetPwComponent } from './forget-pw/pages/forget-pw/forget-pw.component';
+import { ForgetRedirComponent } from './forget-pw/pages/forget-redir/forget-redir.component';
+import { LoginComponent } from './login/pages/login/login.component';
+import { SignupComponent } from './signup/pages/signup/signup.component';
 
 const routes: Routes = [
   {
@@ -56,7 +60,25 @@ const routes: Routes = [
   {
     path: 'product',
     component: ProductsComponent,
-  }
+  },
+  //Roi
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'forget-pw',
+    component: ForgetPwComponent
+  },
+  {
+    path: 'sign-up',
+    component: SignupComponent
+  },
+  {
+    path: 'forget-pw/redirect',
+    component: ForgetRedirComponent
+  },
+
 
 ];
 
