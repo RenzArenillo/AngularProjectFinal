@@ -3,10 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ForgetPwComponent } from '../forget-pw/forget-pw.component';
 
-// interface Forget{
-//   password: string
-// }
-
 @Component({
   selector: 'app-forget-redir',
   templateUrl: './forget-redir.component.html',
@@ -15,9 +11,10 @@ import { ForgetPwComponent } from '../forget-pw/forget-pw.component';
 
 export class ForgetRedirComponent implements OnInit {
 
-  uname: any;
+  // uname: any;
   nameStr? = ''
   emailStr? = ''
+  pwStr? = ''
 
   constructor(private router: Router, private http: HttpClient) { } 
 
@@ -32,13 +29,7 @@ export class ForgetRedirComponent implements OnInit {
   getPassword(){
     this.nameStr = ForgetPwComponent.uname
     this.emailStr = ForgetPwComponent.uemail
-
-    const url = 'http://localhost:3000/users?userName='+this.nameStr+'&'+this.emailStr
-    this.http.get<any>(url).subscribe(res=>{res.find((a:any)=>{
-        this.uname = a.userName
-      });
-    })
-    console.log(url)
+    this.pwStr = ForgetPwComponent.upass
   }
 
 }

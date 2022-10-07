@@ -52,6 +52,14 @@
       "userPassword": "asd",
       "confirmPassword": "asd",
       "id": 5
+    },
+    {
+      "userName": "username",
+      "email": "user@email.com",
+      "mobileNumber": "123424234234",
+      "userPassword": "password",
+      "confirmPassword": "password",
+      "id": 6
     }
   ]
 }
