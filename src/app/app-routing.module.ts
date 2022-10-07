@@ -1,7 +1,33 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ForgetPwComponent } from './forget-pw/pages/forget-pw/forget-pw.component';
+import { ForgetRedirComponent } from './forget-pw/pages/forget-redir/forget-redir.component';
+import { LoginComponent } from './login/pages/login/login.component';
+import { SignupComponent } from './signup/pages/signup/signup.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'forget-pw',
+    component: ForgetPwComponent
+  },
+  {
+    path: 'sign-up',
+    component: SignupComponent
+  },
+  {
+    path: 'forget-pw/redirect',
+    component: ForgetRedirComponent
+  },
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

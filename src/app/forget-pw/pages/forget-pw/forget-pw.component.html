@@ -1,0 +1,68 @@
+<html>
+<style>
+    html { 
+        background: url('https://static.vecteezy.com/system/resources/previews/001/372/960/original/abstract-flat-green-and-blue-background-free-vector.jpg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 200%;
+    }
+    .button {
+      background-color: #0d98ba;
+      border: 1px solid #0d6dba;
+      border-radius: 4px;
+      color: white;
+      padding: 5px 12px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+      transition-duration: 0.4s;
+    }
+    .button:hover {
+      background-color: #0d6dba;
+    }
+    input[type=text] {
+        border: 2px solid #0d98ba;
+        border-radius: 4px;
+        padding: 6px 10px;
+        margin: 10px;
+    }
+    input[type=password] {
+        border: 2px solid #0d98ba;
+        border-radius: 4px;
+        padding: 6px 10px;
+        margin: 10px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+</style>
+<div class="rendered-form">
+    <div class="flex">
+        <h1 style="color: white">&nbsp;Reset Password</h1>
+    </div>
+    <br>
+    <div class="formbuilder-text form-group field-username">
+        <form [formGroup]="forgetForm" (ngSubmit)="submitButton()">
+            <label for="username" class="formbuilder-text-label" style="color: white">&nbsp;&nbsp;Username</label><br>
+            <input formControlName="userName" type="text" placeholder="Enter your username" class="form-control" id="userName"><br>
+            <label for="email" class="formbuilder-text-label" style="color: white">&nbsp;&nbsp;Email</label><br>
+            <input formControlName="email" type="text" placeholder="Enter your email address" class="form-control" id="email"><br>
+            <label for="mobile" class="formbuilder-text-label" style="color: white">&nbsp;&nbsp;Mobile Number</label><br>
+            <input formControlName="mobileNumber" type="text" placeholder="Enter your mobile number" class="form-control" id="mobileNumber"><br>
+            <div class="button">
+                <button>Help Me Get My Password!</button>
+            </div>
+        </form>
+    </div>
+    <br>
+    <div class="button">
+        <button type="button" class="btn-default btn" name="login" id="login"
+        (click)="loginRedirect()">Log In</button>
+    </div>
+</div>
+</html>
