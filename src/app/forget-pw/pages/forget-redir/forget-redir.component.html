@@ -1,9 +1,8 @@
-<!-- <div ng-app="app" ng-controller="ctrl">
-
-</div>
-<script>
-    var a = angular.module("app", [])
-    a.controller("ctrl", function($scope){
-
-    })
-</script> -->
+<button type="submit" (click)="getPassword()">Get Password</button>
+<ul>
+    <li *ngFor="let uname of uname">
+    {{uname.name}}
+    </li>
+</ul>
+<span><a href="/login">Click here to go back to Log In</a></span>
+<p></p>

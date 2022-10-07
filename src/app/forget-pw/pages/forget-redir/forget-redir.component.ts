@@ -15,26 +15,30 @@ import { ForgetPwComponent } from '../forget-pw/forget-pw.component';
 
 export class ForgetRedirComponent implements OnInit {
 
-  constructor(private router: Router, private http: HttpClient) { }
-  // str = ''
+  uname: any;
+  nameStr? = ''
+  emailStr? = ''
 
-  // password?:Forget
-  // data?:ForgetPwComponent
+  constructor(private router: Router, private http: HttpClient) { } 
 
   ngOnInit(): void {
-    // this.str = this.data?.getName()
+
   }
 
   loginRedirect(){
     this.router.navigate(['login'])
   }
 
-  // getPassword(){
-  //   return this.http.get<any>("http://localhost:3000/users")
-  //   .subscribe(res=>{res.find((a:any)=>{
-  //       return 
-  //     });
-  //   })
-  // }
+  getPassword(){
+    this.nameStr = ForgetPwComponent.uname
+    this.emailStr = ForgetPwComponent.uemail
+
+    const url = 'http://localhost:3000/users?userName='+this.nameStr+'&'+this.emailStr
+    this.http.get<any>(url).subscribe(res=>{res.find((a:any)=>{
+        this.uname = a.userName
+      });
+    })
+    console.log(url)
+  }
 
 }

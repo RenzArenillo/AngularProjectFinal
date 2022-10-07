@@ -11,8 +11,8 @@ import { Router } from '@angular/router';
 export class ForgetPwComponent implements OnInit {
 
   forgetForm: FormGroup
-  // uname?:string
-  // uemail?:string
+  public static uname?:string
+  public static uemail?:string
   // upass?:string
 
   constructor(fb: FormBuilder, private router: Router, private http: HttpClient) { 
@@ -37,11 +37,9 @@ export class ForgetPwComponent implements OnInit {
       });
       if(user){
         alert('Account found! Redirecting...');
-        this.forgetForm.reset()
-        // this.uname = this.forgetForm.value.userName
-        // this.uemail = this.forgetForm.value.email
-        // this.upass = this.forgetForm.value.userPassword
-        this.getName(this.forgetForm.value.userName)
+        this.getName()
+        this.getEmail()
+        console.log(this.getName()+' '+this.getEmail())
         this.router.navigate(['forget-pw/redirect'])
       }else{
         alert("The data you entered is not found in our records, or you didn't fill up all the fields.")
@@ -55,14 +53,14 @@ export class ForgetPwComponent implements OnInit {
     this.router.navigate(['login'])
   }
 
-  getName(userName:string){
-    userName = this.forgetForm.value.userName
+  public getName():string{
+    ForgetPwComponent.uname = this.forgetForm.value.userName
+    return this.forgetForm.value.userName
   }
 
-  // getEmail(email:string){
-  //   email = this.forgetForm.value.email
-  // }
-
-  // get
+  public getEmail():string{
+    ForgetPwComponent.uemail = this.forgetForm.value.email
+    return this.forgetForm.value.email
+  }
 
 }
