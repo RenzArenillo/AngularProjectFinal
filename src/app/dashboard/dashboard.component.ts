@@ -11,7 +11,7 @@ import { Category } from '../assets/models/category';
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
-  userType: string = 'User'; //Change to 'Admin' to see the hidden features
+  userType: string = 'Admin';
 
   loading = true;
   showModal = false;
@@ -40,10 +40,6 @@ export class DashboardComponent implements OnInit {
     this.bestSellers = this.products
       .sort((a, b) => (a.unitsSold < b.unitsSold ? 1 : -1))
       .slice(0, 5);
-  }
-
-  toggleModal() {
-    this.showModal = !this.showModal;
   }
 
   action(event: Category) {

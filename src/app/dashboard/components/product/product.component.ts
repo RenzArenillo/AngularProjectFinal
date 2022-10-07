@@ -19,7 +19,7 @@ export class ProductComponent implements OnInit {
   }
 
   emit(product: Product){
-    this.emitter.emit({product: product});
+    this.emitter.emit(product);
   }
 
 }

@@ -13,7 +13,7 @@ export class ProductService {
   constructor(private http: HttpClient) {
 
     this.getJSON().subscribe((data) => {
-      this.products = data; // returns data
+      this.products = data;
     });
   }
 
