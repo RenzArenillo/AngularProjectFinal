@@ -14,6 +14,8 @@ import { ForgetPwComponent } from './forget-pw/pages/forget-pw/forget-pw.compone
 import { ForgetRedirComponent } from './forget-pw/pages/forget-redir/forget-redir.component';
 import { LoginComponent } from './login/pages/login/login.component';
 import { SignupComponent } from './signup/pages/signup/signup.component';
+import { CartPageComponent } from './modules/product/pages/cart-page/cart-page.component';
+import { ProductPageComponent } from './modules/product/pages/product-page/product-page.component';
 
 const routes: Routes = [
   {
@@ -78,6 +80,23 @@ const routes: Routes = [
     path: 'forget-pw/redirect',
     component: ForgetRedirComponent
   },
+  //Chin
+  // {
+  //   path: 'dashboard',
+  //   loadChildren: () => import('./modules/product/product.module').then(m => m.ProductModule)
+  // },
+  {
+    path: 'profile',
+    loadChildren: () => import('./modules/profile/profile.module').then(m => m.ProfileModule)
+  },
+  {
+    path: 'cart',
+    component: CartPageComponent
+  },
+  // {
+  //   path: 'product',
+  //   component: ProductPageComponent
+  // }
 
 
 ];

@@ -2,6 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 import { AddUserComponent } from './admin-userlist/add-user/add-user.component';
 import { AdminUserlistComponent } from './admin-userlist/admin-userlist.component';
 import { SearchPipe } from './admin-userlist/search.pipe';
@@ -23,8 +24,11 @@ import { TableComponent } from './products/components/table/table.component';
 import { ProductsComponent } from './products/products.component';
 import { FooterComponent } from './shared/footer/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { SharedModule } from './shared/shared.module';
 import { SignupModule } from './signup/signup.module';
 import { TesthomeComponent } from './testhome/testhome.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 //test
 @NgModule({
@@ -49,13 +53,19 @@ import { TesthomeComponent } from './testhome/testhome.component';
     SearchPipe,
     
   ],
-  imports: [BrowserModule, AppRoutingModule,
+  imports: [
+    BrowserModule, 
+    AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule, HttpClientModule,
+    FormsModule, 
+    HttpClientModule,
     LoginModule,
     ForgetPwModule,
-    SignupModule],
+    SignupModule,
+    SharedModule,
+    RouterModule,
+    FlexLayoutModule],
   providers: [],
   bootstrap: [AppComponent],
 })
