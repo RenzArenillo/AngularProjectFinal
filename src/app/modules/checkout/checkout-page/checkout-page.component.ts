@@ -58,7 +58,8 @@ export class CheckoutPageComponent implements OnInit {
     }
     this.orderService.create(order)
     this.listService.saveList("")
-    this.router.navigate(['/confirmed']);
+    alert("Order Confirmed!")
+    this.router.navigate(['/orders']);
 
   }
 

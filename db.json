@@ -81,35 +81,34 @@
       "unitsSold": 2
     }
   ],
-
   "categories": [
     {
-      "id" : 1,
+      "id": 1,
       "name": "Clothes",
       "image": "https://cf.shopee.ph/file/2e9bfe13ce9cecfbfad8010b843651f6_tn"
     },
     {
-      "id" : 2,
+      "id": 2,
       "name": "Bags & Accessories",
       "image": "https://cf.shopee.ph/file/55267466ff3f0445bf28c21ddafd409c_tn"
     },
     {
-      "id" : 3,
+      "id": 3,
       "name": "Shoes",
       "image": "https://cf.shopee.ph/file/b2e30c169f08d6820de5075c7827038d_tn"
     },
     {
-      "id" : 4,
+      "id": 4,
       "name": "Technology",
       "image": "https://cf.shopee.ph/file/25936be031f917470cb8c8ad9f311413_tn"
     },
     {
-      "id" : 5,
+      "id": 5,
       "name": "Appliances",
       "image": "https://cf.shopee.ph/file/d31d29d2f160baeb7592964cd9090a52_tn"
     },
     {
-      "id" : 6,
+      "id": 6,
       "name": "Sports",
       "image": "https://cf.shopee.ph/file/f12cfed5944ad868e181c6583a5a4426_tn"
     }
@@ -350,6 +349,86 @@
       "paymentMethod": "Cash",
       "orderStatus": "Pending",
       "id": "vwyvsfb"
+    },
+    {
+      "userId": "USER001",
+      "orderedItems": [
+        {
+          "productId": "1000",
+          "productName": "Item1",
+          "productQuantity": 1,
+          "productPrice": 50,
+          "productCategory": "Category1"
+        },
+        {
+          "productId": "1033",
+          "productName": "Item2",
+          "productQuantity": 2,
+          "productPrice": 200,
+          "productCategory": "Category2"
+        },
+        {
+          "productId": "1823",
+          "productName": "Item3",
+          "productQuantity": 1,
+          "productPrice": 150,
+          "productCategory": "Category2"
+        },
+        {
+          "productId": "2823",
+          "productName": "Item6",
+          "productQuantity": 4,
+          "productPrice": 20,
+          "productCategory": "Category2"
+        }
+      ],
+      "orderQuantity": 8,
+      "orderTotalPrice": 680,
+      "orderAddress": "sss",
+      "orderDate": "2022/10/08",
+      "paymentMethod": "cash",
+      "orderStatus": "Pending",
+      "id": "_UYI6_o"
+    },
+    {
+      "userId": "USER001",
+      "orderedItems": [
+        {
+          "productId": "1000",
+          "productName": "Item1",
+          "productQuantity": 1,
+          "productPrice": 50,
+          "productCategory": "Category1"
+        },
+        {
+          "productId": "1033",
+          "productName": "Item2",
+          "productQuantity": 2,
+          "productPrice": 200,
+          "productCategory": "Category2"
+        },
+        {
+          "productId": "1823",
+          "productName": "Item3",
+          "productQuantity": 1,
+          "productPrice": 150,
+          "productCategory": "Category2"
+        },
+        {
+          "productId": "2823",
+          "productName": "Item6",
+          "productQuantity": 4,
+          "productPrice": 20,
+          "productCategory": "Category2"
+        }
+      ],
+      "orderQuantity": 8,
+      "orderTotalPrice": 680,
+      "orderAddress": "sss",
+      "orderDate": "2022/10/08",
+      "paymentMethod": "cash",
+      "orderStatus": "Pending",
+      "id": "EYTOfL_"
     }
   ],
   "user": [

@@ -11,7 +11,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AdminUserlistComponent } from './modules/admin-userlist/admin-userlist.component';
 import { SearchPipe } from './modules/admin-userlist/search.pipe';
 import { AddUserComponent } from './modules/admin-userlist/add-user/add-user.component';
-import { CheckoutConfirmedComponent } from './modules/checkout/checkout-confirmed/checkout-confirmed.component';
 import { CheckoutItemsComponent } from './modules/checkout/checkout-items/checkout-items.component';
 import { CheckoutPageComponent } from './modules/checkout/checkout-page/checkout-page.component';
 import { CategoryComponent } from './modules/dashboard/components/category/category.component';
@@ -47,7 +46,6 @@ import { TesthomeComponent } from './modules/testhome/testhome.component';
     PendingOrdersPageComponent,
     PendingOrdersItemsComponent,
     TesthomeComponent,
-    CheckoutConfirmedComponent,
     AdminUserlistComponent,
     AddUserComponent,
     SearchPipe,
