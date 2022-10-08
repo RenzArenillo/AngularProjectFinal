@@ -20,13 +20,8 @@ import { ProductPageComponent } from './modules/product/pages/product-page/produ
 const routes: Routes = [
   {
     path: '',
-    component: DashboardComponent,
+    component: LoginComponent,
   },
-  // {
-  //   path: "",
-  //   redirectTo: "home",
-  //   pathMatch: "full"
-  // },
   {
     path: "home",
     component: TesthomeComponent
@@ -35,13 +30,10 @@ const routes: Routes = [
     path: "checkout",
     component: CheckoutPageComponent,
   },
-    // children: [
-      {
-        path: "confirmed",
-        component: CheckoutConfirmedComponent
-      },
-    // ]
-
+  {
+    path: "confirmed",
+    component: CheckoutConfirmedComponent
+  },
   {
     path: "orders",
     component: PendingOrdersPageComponent
@@ -97,8 +89,6 @@ const routes: Routes = [
   //   path: 'product',
   //   component: ProductPageComponent
   // }
-
-
 ];
 
 @NgModule({

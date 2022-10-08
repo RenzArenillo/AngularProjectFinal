@@ -27,8 +27,6 @@ export class ForgetPwComponent implements OnInit {
   }
 
   submitButton(){
-    // alert('Reset button works')
-    // console.log(this.forgetForm.value)
     this.http.get<any>("http://localhost:3000/users")
     .subscribe(res=>{
       const user = res.find((a:any)=>{
@@ -40,7 +38,6 @@ export class ForgetPwComponent implements OnInit {
         alert('Account found! Redirecting...');
         this.getName()
         this.getEmail()
-        console.log(this.getName()+' '+this.getEmail()+' '+this.getPassword())
         this.router.navigate(['forget-pw/redirect'])
       }else{
         alert("The data you entered is not found in our records, or you didn't fill up all the fields.")

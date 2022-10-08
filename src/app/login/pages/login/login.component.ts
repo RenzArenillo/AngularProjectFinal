@@ -23,8 +23,6 @@ export class LoginComponent implements OnInit {
   }
 
   submitLogin(){
-    // alert('Login button works')
-    // console.log(this.loginForm.value)
     this.http.get<any>("http://localhost:3000/users")
     .subscribe(res=>{
       const user = res.find((a:any)=>{
@@ -33,7 +31,7 @@ export class LoginComponent implements OnInit {
       if(user){
         alert('Login Successful');
         this.loginForm.reset()
-        // this.router.navigate(["home"])
+        this.router.navigate(["dashboard"])
       }else{
         alert("The username or password you entered is incorrect, or you didn't fill up all the fields.")
       }

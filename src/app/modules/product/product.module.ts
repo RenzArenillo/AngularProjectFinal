@@ -4,9 +4,9 @@ import { CartPageComponent } from './pages/cart-page/cart-page.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
 import { ProductRoutingModule } from './product-routing.module';
 import { ProductPageComponent } from './pages/product-page/product-page.component';
-import { ProductItemComponent } from './components/product-item/product-item.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProductItemComponent } from './components/product-item/product-item.component';
 
 
 

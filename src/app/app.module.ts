@@ -35,7 +35,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   declarations: [
     AppComponent,
     DashboardComponent,
-    HeaderComponent,
+    // HeaderComponent,
     CategoryComponent,
     ProductComponent,
     ProductsComponent,
