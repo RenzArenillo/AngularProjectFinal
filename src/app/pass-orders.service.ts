@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Product } from './models/product';
+import { ProductRenz } from './assets/models/productRenz';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PassOrdersService {
-  products: Product[] = [];
+  products: ProductRenz[] = [];
 
   constructor() { }
 

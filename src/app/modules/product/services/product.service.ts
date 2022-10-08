@@ -8,7 +8,7 @@ import { map } from 'rxjs';
 export class ProductService {
 
   constructor(private http:HttpClient) { }
-  env ="http://localhost:3000/product"
+  env ="http://localhost:3000/products"
   
   public getProducts() {
     return this.http.get(this.env).pipe(

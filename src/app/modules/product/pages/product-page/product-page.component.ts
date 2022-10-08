@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../../models/product';
+import { ProductChin } from '../../../../assets/models/productChin';
 import { CartService } from '../../services/cart.service';
 import { ProductService } from '../../services/product.service';
 
@@ -9,7 +9,7 @@ import { ProductService } from '../../services/product.service';
   styleUrls: ['./product-page.component.scss']
 })
 export class ProductPageComponent implements OnInit {
-  products: Product[] = [];
+  products: ProductChin[] = [];
   categories:string[]=[];
   constructor(
     private productService: ProductService,
