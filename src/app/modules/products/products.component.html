@@ -10,6 +10,7 @@
           <input
             type="text"
             class="px-2 py-1 rounded-l-md focus:outline-0 w-[450px]"
+            name="searchInput" [(ngModel)]="searchInput"
             placeholder="Search product"
           />
           <button class="bg-cyan-500 hover:bg-cyan-600 px-2 py-1">
@@ -17,11 +18,10 @@
           </button>
         </div>
 
-        <button
-          class="px-2 py-1 bg-blue-600 hover:bg-blue-400 text-white rounded-md w-full"
-        >
-          <i class="fas fa-filter"></i> Filter Products
-        </button>
+        <select class="px-2 py-1 bg-blue-600 text-white rounded-md w-full" [(ngModel)]="selectedCategory" (change)="valueSelected()"> 
+          <option [ngValue]="null" [disabled]="true">Filter Product</option>
+          <option *ngFor="let category of categories">{{category}}</option>
+        </select>
 
         <button
           class="px-2 py-1 bg-blue-600 hover:bg-blue-400 text-white rounded-md w-full"
@@ -31,7 +31,7 @@
       </div>
     </div>
     <app-table
-      [products]="products"
+      [products]="products" 
       (emittter)="emitAction($event)"
     ></app-table>
   </div>
