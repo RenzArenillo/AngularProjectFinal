@@ -1,6 +1,6 @@
-<div class="px-20 py-10">
+<!-- <div class="px-20 py-10">
   <div class="w-80% space-y-8">
-    <!-- Search -->
+    Search
     <div class="mr-auto rounded-md overflow-hidden w-full flex justify-end">
       <input
         type="text"
@@ -12,7 +12,7 @@
       </button>
     </div>
 
-    <!-- best sellers -->
+    best sellers
     <div *ngIf="userType == 'Admin'">
       <div
         class="h-16 bg-gray-100 flex items-center border border-b-0 border-cyan-200"
@@ -28,11 +28,12 @@
           class="bg-gray-100 w-full h-[300px] border-2 cursor-pointer hover:scale-105 duration-100"
         >
           <app-product [product]="product"></app-product>
+          <button  (click)="addToCart(product)" class="bg-orange-400 hover:bg-orange-700 px-2 rounded-md">Add to Cart</button><br>
         </div>
       </div>
     </div>
 
-    <!-- categories -->
+    categories
     <div>
       <div
         class="h-16 bg-gray-100 flex items-center border border-b-0 border-cyan-200"
@@ -55,7 +56,7 @@
       </div>
     </div>
 
-    <!-- products -->
+    products
     <div>
       <div
         class="h-16 bg-gray-100 flex items-center border border-b-0 border-cyan-200"
@@ -83,6 +84,7 @@
             [product]="product"
             (emitter)="productSelected($event)"
           ></app-product>
+          <button  (click)="addToCart(product)" class="bg-orange-400 hover:bg-orange-700 px-2 rounded-md">Add to Cart</button><br>
         </div>
       </div>
 
@@ -106,4 +108,182 @@
     (emitter)="showModal = $event"
     [product]="selectedProduct"
   ></app-product-modal>
+</div> -->
+
+<div
+  class="text-gray-600 work-sans leading-normal text-base static tracking-normal"
+>
+  <div class="carousel relative container mx-auto" style="max-width: 1600px">
+    <div class="carousel-inner relative overflow-hidden w-full">
+      <!-- Slide 1 -->
+      <input
+        class="carousel-open"
+        type="radio"
+        id="carousel-1"
+        name="carousel"
+        aria-hidden="true"
+        hidden=""
+        checked="checked"
+      />
+      <div class="carousel-item absolute opacity-0" style="height: 50vh">
+        <div
+          class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right"
+          style="
+            background-image: url('https://images.wallpaperscraft.com/image/single/living_room_comfort_furniture_pillows_70087_2560x1080.jpg');
+          "
+        >
+          <div class="container mx-auto">
+            <div
+              class="flex flex-col w-full lg:w-1/2 md:ml-20 items-center md:items-start px-6 tracking-wide"
+            >
+              <p class="text-white text-4xl my-4">Sofa and Pillow</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <label
+        for="carousel-3"
+        class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 left-0 my-auto"
+        >‹</label
+      >
+      <label
+        for="carousel-2"
+        class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 right-0 my-auto"
+        >›</label
+      >
+
+      <!-- Slide 2 -->
+      <input
+        class="carousel-open"
+        type="radio"
+        id="carousel-2"
+        name="carousel"
+        aria-hidden="true"
+        hidden=""
+      />
+      <div
+        class="carousel-item absolute opacity-0 bg-cover bg-right"
+        style="height: 50vh"
+      >
+        <div
+          class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right"
+          style="
+            background-image: url('https://www.keithmichaels.co.uk/wp-content/uploads/2020/02/Gadget-kHNxBg_38AQ-unsplash.jpg');
+          "
+        >
+          <div class="container mx-auto">
+            <div
+              class="flex flex-col w-full lg:w-1/2 md:ml-20 items-center md:items-start px-6 tracking-wide"
+            >
+              <p class="text-white text-4xl my-4 mt-9">Gadgets and more</p>
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <label
+        for="carousel-1"
+        class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 left-0 my-auto"
+        >‹</label
+      >
+      <label
+        for="carousel-3"
+        class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 right-0 my-auto"
+        >›</label
+      >
+
+      <!-- Slide 3 -->
+      <input
+        class="carousel-open"
+        type="radio"
+        id="carousel-3"
+        name="carousel"
+        aria-hidden="true"
+        hidden=""
+      />
+      <div class="carousel-item absolute opacity-0" style="height: 50vh">
+        <div
+          class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-bottom"
+          style="
+            background-image: url('https://images.wallpaperscraft.com/image/single/man_clothes_style_160239_2560x1080.jpg');
+          "
+        >
+          <div class="container mx-auto">
+            <div
+              class="flex flex-col w-full lg:w-1/2 md:ml-20 items-center md:items-start px-6 tracking-wide"
+            >
+              <p class="text-white text-4xl my-4 -mt-3">
+                Fashion
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <label
+        for="carousel-2"
+        class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 left-0 my-auto"
+        >‹</label
+      >
+      <label
+        for="carousel-1"
+        class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 right-0 my-auto"
+        >›</label
+      >
+      
+      <ol class="carousel-indicators">
+        <li class="inline-block mr-3">
+          <label
+            for="carousel-1"
+            class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900"
+            >•</label
+          >
+        </li>
+        <li class="inline-block mr-3">
+          <label
+            for="carousel-2"
+            class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900"
+            >•</label
+          >
+        </li>
+        <li class="inline-block mr-3">
+          <label
+            for="carousel-3"
+            class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900"
+            >•</label
+          >
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="bg-white py-8 relative container mx-auto">
+    <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
+      <nav id="store" class="w-full z-30 top-0 px-6 py-1">
+        <div
+          class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3"
+        >
+          <p
+            class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl"
+          >
+            Best Sellers
+      </p>
+</div>
+</nav>
+
+<!--  -->
+<div *ngIf="userType == 'Admin'">
+  <div
+    class="m-3 grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
+  >
+    <div
+      *ngFor="let product of bestSellers"
+      class="m-3 hover:grow hover:shadow-lg"
+    >
+      <app-product [product]="product"></app-product>
+      <button  (click)="addToCart(product)" class="bg-stone-400 hover:bg-stone-500 px-2 rounded-md">Add to Cart</button><br>
+    </div>
+  </div>
+</div>
+<!--  -->
+
 </div>

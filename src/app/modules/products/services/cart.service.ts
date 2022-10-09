@@ -13,14 +13,14 @@ export class CartService {
   getProducts() {
     return this.products.asObservable();
   }
-
+  
   addtoCart(product: any) {
-    this.cartList.push(product);
-    this.products.next(this.cartList);
+    this.cartList.push(product); 
+    this.products.next(this.cartList); 
     this.getTotalPrice();
   }
 
-  getTotalPrice(): number {
+  getTotalPrice(): number { 
     let totalPrice: number = 0;
     this.cartList.map((x: any) => {
       totalPrice += x.total;
@@ -38,19 +38,16 @@ export class CartService {
   }
 
   removeAllCart() {
-    this.cartList = [];
+    this.cartList = []; 
     this.products.next(this.cartList);
-  }
+  } 
 
-  public incrQty(product: any): void {
-    this.cartList.map((a: any, index: any) => {
+  public changeQty(product: any)  {
+    this.cartList.map((a: any) => {
       if (product.productId === a.productId) {
-        return {
-          ...product,
-          quantity: product.productQuantity + 1,
-        };
+        return product.length += 1
       }
-      return product;
+      return product.length -= 1
     });
   }
 }

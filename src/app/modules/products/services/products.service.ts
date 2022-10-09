@@ -5,7 +5,7 @@ import { map } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ProductService {
+export class ProductsService {
 
   constructor(private http:HttpClient) { }
   env ="http://localhost:3000/products"

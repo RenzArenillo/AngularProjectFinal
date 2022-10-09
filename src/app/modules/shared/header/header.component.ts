@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-// import { CartService } from 'src/app/modules/product/services/cart.service';
+import { CartService } from '../../products/services/cart.service';
 
+// import { CartService } from 'src/app/modules/product/services/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -9,17 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  totalItem : number = 0;
+  constructor(private cartService:CartService) {  }
 
   ngOnInit(): void {
+    this.cartService.getProducts().subscribe(res =>{
+      this.totalItem = res.length; 
+    })
   }
-
-  // totalItem : number = 0;
-  // constructor(private cartService:CartService) {  }
-
-  // ngOnInit(): void {
-  //   this.cartService.getProducts().subscribe(res =>{
-  //     this.totalItem = res.length;
-  //   })
-  // }
 }

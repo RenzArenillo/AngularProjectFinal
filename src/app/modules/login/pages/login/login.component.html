@@ -1,84 +1,39 @@
-<html>
-<style>
-  html { 
-    background: url('https://static.vecteezy.com/system/resources/previews/001/372/960/original/abstract-flat-green-and-blue-background-free-vector.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  .btn-group button {
-    background-color: #0d98ba; 
-    border: 1px solid #0d6dba;
-    border-radius: 4px; 
-    color: white; 
-    padding: 5px 12px; 
-    margin: 10px;
-    cursor: pointer; 
-    float: left; 
-    transition-duration: 0.4s;
-  } 
-  .btn-group:after {
-    content: "";
-    clear: both;
-    display: table;
-  }   
-  .btn-group button:not(:last-child) {
-    border-right: none; 
-  }   
-  .btn-group button:hover {
-    background-color: #0d6dba;
-  }
-  input[type=text] {
-    border: 2px solid #0d98ba;
-    border-radius: 4px;
-    padding: 6px 10px;
-    margin: 10px;
-  }
-  input[type=password] {
-    border: 2px solid #0d98ba;
-    border-radius: 4px;
-    padding: 6px 10px;
-    margin: 10px;
-  }
-  h1 {
-    font-size: 40px;
-    text-align: center;
-  }
-</style>
-<div class="container">
-  <div class="flex" style="color: white">
-      <h1>&nbsp;Log In to </h1>
-      <img src="https://pngimg.com/uploads/letter_c/letter_c_PNG103.png" alt="chopee" 
-          class="h-16 w-16">
-      <h1>hopee</h1>
+<div class="bg-stone-200 h-screen w-screen">
+  <div class="flex flex-col items-center flex-1 h-full justify-center px-4 sm:px-0">
+      <div class="flex rounded-lg shadow-lg w-full sm:w-3/4 lg:w-1/2 bg-white sm:mx-0" style="height: 500px">
+          <div class="flex flex-col w-full md:w-1/2 p-4">
+              <div class="flex flex-col flex-1 justify-center mb-8">
+                  <h1 class="text-4xl text-center font-thin">WELCOME</h1>
+                  <div class="w-full mt-11">
+                      <form [formGroup]="loginForm" (ngSubmit)="submitLogin()" class="form-horizontal w-3/4 mx-auto">
+                        <div class="text-xs tracking-wider font-medium">USERNAME</div>
+                          <div class="flex flex-col mt-2">
+                              <input id="username" type="text" class="placeholder:italic flex-grow h-8 px-2 border rounded border-grey-400" name="username" value="" placeholder="(juandelacruz123)">
+                          </div>
+                          
+                          <div class="flex flex-col mt-7">
+                            <div class="text-xs tracking-wider font-medium">PASSWORD</div>
+                              <input id="password" type="password" class="flex-grow h-8 px-2 rounded border border-grey-400" name="password" required placeholder="Must have atleast 6 characters">
+                          </div>
+                          <div class="flex flex-col mt-8">
+                              <button type="submit" class="bg-stone-400 hover:bg-stone-600 text-white text-sm font-semibold py-2 px-4 rounded">
+                                  Login
+                              </button>
+                          </div>
+                      </form>
+                      <div class="text-center mt-4">
+                          <a class="no-underline hover:underline text-blue-dark text-xs" (click)="forgotPassword()">
+                              Forgot Your Password?
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="text-sm font-display font-semibold text-black text-center">Don't have an account yet?
+                <a class="cursor-pointer text-red-400 hover:text-blue-700" (click)="signUpButton()">Sign Up</a>
+              </div>
+          </div>
+          <div class="hidden md:block md:w-1/2 rounded-r-lg" style="background: url('https://images.unsplash.com/photo-1513094735237-8f2714d57c13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHNob3BwaW5nfGVufDB8fDB8fA%3D%3D&w=1000&q=80'); background-size: cover; background-position: center center;"></div>
+      </div>
   </div>
-  <br>
-  <div class="rendered-form">
-      <form [formGroup]="loginForm" (ngSubmit)="submitLogin()">
-        <div class="form-group">
-            <label for="username" class="form-username" style="color: white">&nbsp;&nbsp;Username</label><br>
-            <input formControlName="userName" type="text" placeholder="Enter your username" class="form-control" id="userName"><br>
-            <label for="password" class="form-password" style="color: white">&nbsp;&nbsp;Password</label><br>
-            <input formControlName="userPassword" type="password" placeholder="Enter your password" class="form-control" id="userPassword">
-        </div>
-        <br><span style="color: white">&nbsp;&nbsp;By logging in, you agree to our User Agreement and Privacy Policy.</span><br>
-        <div class="btn-group">
-            <button>Log In</button>
-        </div>
-      </form>
-      <div class="btn-group">
-        <button type="button" class="btn-info btn" name="reset" 
-          (click)="forgotPassword()">Forgot Password?</button>
-      </div>
-      <br><br><br><br><br>
-      <div>      
-        <p style="color: white">&nbsp;&nbsp;New to Chopee?</p>
-        <div class="btn-group">
-            <button type="button" class="btn-default btn" name="signup" 
-              (click)="signUpButton()">Sign Up</button>
-        </div>
-      </div>
-  </div> 
 </div>
-</html>
+

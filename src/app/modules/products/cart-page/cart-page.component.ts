@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CartService } from '../../services/cart.service';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-cart-page',
@@ -8,6 +8,7 @@ import { CartService } from '../../services/cart.service';
 })
 export class CartPageComponent implements OnInit {
 
+  productQuantity: number = 20;
   products:any =[];
   total!:number;
   constructor(private cartService: CartService) { }
@@ -23,7 +24,10 @@ export class CartPageComponent implements OnInit {
     this.cartService.removeCartItem(prod);
   }
 
-  incrQty(prod:any) {
-    this.cartService.incrQty(prod);
+  changeQty(prod:any) {
+    this.cartService.changeQty(prod);
+    console.log("button has been biatched")
   }
+
+
 }

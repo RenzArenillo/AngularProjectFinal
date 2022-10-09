@@ -28,6 +28,9 @@ import { FooterComponent } from './modules/shared/footer/footer/footer.component
 import { SharedModule } from './modules/shared/shared.module';
 import { SignupModule } from './modules/signup/signup.module';
 import { TesthomeComponent } from './modules/testhome/testhome.component';
+import { CommonModule } from '@angular/common';
+import { CartPageComponent } from './modules/products/cart-page/cart-page.component';
+import { ProductModule } from './modules/products/products.module';
 
 
 //test
@@ -35,7 +38,7 @@ import { TesthomeComponent } from './modules/testhome/testhome.component';
   declarations: [
     AppComponent,
     DashboardComponent,
-    // HeaderComponent,
+    ProductComponent,
     CategoryComponent,
     ProductComponent,
     ProductsComponent,
@@ -55,6 +58,7 @@ import { TesthomeComponent } from './modules/testhome/testhome.component';
   ],
   imports: [
     BrowserModule, 
+    CommonModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,

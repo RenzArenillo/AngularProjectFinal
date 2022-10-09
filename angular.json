@@ -94,7 +94,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets"
-            ],
+            ], 
             "styles": [
               "src/styles.scss"
             ],
@@ -105,6 +105,6 @@
     }
   },
   "cli": {
-    "analytics": "e6f643a5-38ad-401b-b71f-682c3acec561"
+    "analytics": "0f1ea21f-7385-4e1f-97e0-5de7ecc84dcf"
   }
 }

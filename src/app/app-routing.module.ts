@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 
-import { CartPageComponent } from './modules/product/pages/cart-page/cart-page.component';
-import { ProductPageComponent } from './modules/product/pages/product-page/product-page.component';
 import { AdminUserlistComponent } from './modules/admin-userlist/admin-userlist.component';
 import { AddUserComponent } from './modules/admin-userlist/add-user/add-user.component';
 import { CheckoutConfirmedComponent } from './modules/checkout/checkout-confirmed/checkout-confirmed.component';
@@ -16,6 +13,7 @@ import { PendingOrdersPageComponent } from './modules/pending-orders/pending-ord
 import { ProductsComponent } from './modules/products/products.component';
 import { SignupComponent } from './modules/signup/pages/signup/signup.component';
 import { TesthomeComponent } from './modules/testhome/testhome.component';
+import { CartPageComponent } from './modules/products/cart-page/cart-page.component';
 
 const routes: Routes = [
   {

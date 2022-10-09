@@ -2,7 +2,10 @@ import { Component, EventEmitter, OnInit, SimpleChanges } from '@angular/core';
 import { Category } from 'src/app/assets/models/category';
 import { Product } from 'src/app/assets/models/product';
 import { CategoryService } from 'src/app/assets/services/category/category.service';
-import { ProductService } from '../product/services/product.service';
+import { ProductService } from 'src/app/assets/services/product/product.service';
+import { CartService } from '../products/services/cart.service';
+
+
 
 
 @Component({
@@ -22,10 +25,21 @@ export class DashboardComponent implements OnInit {
   selectedProduct?: Product;
   constructor(
     private productService: ProductService,
-    private categoryService: CategoryService
+    private categoryService: CategoryService,
+    private cartService: CartService
   ) {}
 
   ngOnInit(): void {
+
+    this.productService.getProducts().subscribe((res) => {
+      this.products = res;
+      this.categories = res.map( (a:any) => (a.productCategory));
+      this.categories = this.categories.filter((value,index)=>this.categories.indexOf(value)===index);
+      res.forEach((a: any) => {
+        Object.assign(a, { quantity: 1, total: Number(a.productPrice)  });
+      });
+    });
+
     this.productService.getProducts().subscribe((products) => {
       this.products = products;
       this.getBestSellers();
@@ -33,6 +47,7 @@ export class DashboardComponent implements OnInit {
 
     this.categoryService.getCategories().subscribe((categories) => {
       this.categories = categories;
+    
     });
   }
 
@@ -61,5 +76,9 @@ export class DashboardComponent implements OnInit {
   productSelected(product: Product) {
     this.selectedProduct = product;
     this.showModal = true;
+  }
+
+  addToCart(prod: any) {
+    this.cartService.addtoCart(prod);
   }
 }

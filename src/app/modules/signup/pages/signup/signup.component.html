@@ -1,75 +1,59 @@
-<html>
-<style>
-    html { 
-        background: url('https://static.vecteezy.com/system/resources/previews/001/372/960/original/abstract-flat-green-and-blue-background-free-vector.jpg') no-repeat center center fixed; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
-    .button {
-      background-color: #0d98ba;
-      border: 1px solid #0d6dba;
-      border-radius: 4px;
-      color: white;
-      padding: 5px 12px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 10px;
-      cursor: pointer;
-      transition-duration: 0.4s;
-    }
-    .button:hover {
-      background-color: #0d6dba;
-    }
-    input[type=text] {
-        border: 2px solid #0d98ba;
-        border-radius: 4px;
-        padding: 6px 10px;
-        margin: 10px;
-    }
-    input[type=password] {
-        border: 2px solid #0d98ba;
-        border-radius: 4px;
-        padding: 6px 10px;
-        margin: 10px;
-    }
-    h1 {
-        font-size: 40px;
-    }
-</style>
-<div class="rendered-form">
-    <div class="flex" style="color: white">
-        <h1>&nbsp;Sign Up</h1>
-    </div>
-    <br>
-    <form [formGroup]="signUpForm" (ngSubmit)="submitButton()">
-        <div class="form-group">
-            <label for="username" class="formbuilder-text-label" style="color: white">&nbsp;&nbsp;Username</label><br>
-            <input formControlName="userName" type="text" placeholder="Enter your username" required><br>
-            <label for="email" class="formbuilder-text-label" style="color: white">&nbsp;&nbsp;Email</label><br>
-            <input formControlName="email" type="text" placeholder="Enter your email address" class="form-control" id="email" [(ngModel)]="signUpForm.value.email"><br>
-            <label for="mobile" class="formbuilder-text-label" style="color: white">&nbsp;&nbsp;Mobile Number</label><br>
-            <input formControlName="mobileNumber" type="text" placeholder="Enter your mobile number" class="form-control" id="mobileNumber" pattern="[0-9]{2,11}" required><br>
-           
-            <div>
-            <label for="pw" class="formbuilder-text-label" style="color: white">&nbsp;&nbsp;Password</label><br>
-            <input formControlName="userPassword" type="password" placeholder="Enter your password" class="form-control" id="userPassword" required><br>
-            <span><label for="pw" class="formbuilder-text-label" style="color: white">&nbsp;&nbsp;Confirm Password</label><br>
-            <input formControlName="confirmPassword" type="password" placeholder="Confirm password" class="form-control" id="confirmPassword" required>
-            <p *ngIf="signUpForm.value.userPassword != signUpForm.value.confirmPassword" style="color: white">&nbsp;&nbsp;Passwords do not match</p></span><br>
+<section class="bg-white dark:bg-stone-200">
+    <div class="flex justify-center min-h-screen">
+        <div class="hidden bg-cover lg:block lg:w-2/5" style="background-image: url('https://www.zug-tourismus.ch/_Resources/Persistent/bce6b5dfe66e3f573f9d44fb9ef2aa28908dcbcb/shopping%20rundgang.jpg')">
+        </div>
+        <div class="flex items-center w-full max-w-3xl p-8 mx-auto lg:px-12 lg:w-3/5">
+            <div class="w-full">
+                <h1 class="text-3xl font-bold tracking-wider text-stone-700 capitalize light:text-dark">
+                    SIGN UP
+                </h1>
+
+                <p class="mt-4 text-gray-600 dark:text-gray-800">
+                    Please enter the details needed to sign up and start shopping!
+                </p>
+                <form [formGroup]="signUpForm" (ngSubmit)="submitButton()" class="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2">
+                    <div>
+                        <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-600">Username</label>
+                        <input type="text" formControlName="userName" placeholder="(juandelacruz123)" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
+                    </div>
+
+                    <div>
+                        <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-600">Email</label>
+                        <input type="text" formControlName="email" placeholder="(juandela.cruz@gmail.com)" [(ngModel)]="signUpForm.value.email" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
+                    </div>
+
+                    <div>
+                        <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-600">Mobile number</label>
+                        <input type="text" formControlName="mobileNumber" placeholder="XXX-XX-XXXX-XXX" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
+                    </div>
+
+                    <div>
+                        <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-600">Password</label>
+                        <input type="password" id="userPassword"  formControlName="userPassword" required placeholder="Enter your password" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
+                    </div>
+                    <div>
+                        <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-600">Confirm password</label>
+                        <input type="password" id="confirmPassword" formControlName="confirmPassword" required placeholder="Confirm your password" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
+                        <div *ngIf="signUpForm.value.userPassword != signUpForm.value.confirmPassword">Passwords do not match</div> 
+                    </div>
+                    
+                
+                    <button
+                        class="flex items-center justify-between w-full h-24 px-6 py-3 mt-2 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-stone-500 rounded-md hover:bg-stone-600 hover:text-orange-400 focus:outline-none focus:ring focus:ring-stone-300 focus:ring-opacity-50">
+                        <span>Sign Up</span>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 rtl:-scale-x-100" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    
+                </form>
+                <div class="text-sm text-gray-600 dark:text-gray-800 font-display font-semibold mt-4 ml-96 ">Already have an account?
+                    <a class="cursor-pointer text-orange-500 hover:text-stone-800"(click)="loginRedirect()">Login Here</a>
+                  </div>
             </div>
         </div>
-        <div class="button">
-            <button>Sign Up</button>
-        </div>
-    </form>
-    <p style="color: white">&nbsp;&nbsp;Already have an account?</p>
-    <div class="button">
-        <button type="button" class="btn-default btn" name="login" id="login"
-        (click)="loginRedirect()">Log In</button>
     </div>
-</div>
-</html>
+</section>
