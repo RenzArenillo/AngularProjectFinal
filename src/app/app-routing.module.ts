@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AdminUserlistComponent } from './modules/admin-userlist/admin-userlist.component';
 import { AddUserComponent } from './modules/admin-userlist/add-user/add-user.component';
-import { CheckoutConfirmedComponent } from './modules/checkout/checkout-confirmed/checkout-confirmed.component';
 import { CheckoutPageComponent } from './modules/checkout/checkout-page/checkout-page.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { ForgetPwComponent } from './modules/forget-pw/pages/forget-pw/forget-pw.component';
@@ -27,10 +26,6 @@ const routes: Routes = [
   {
     path: "checkout",
     component: CheckoutPageComponent,
-  },
-  {
-    path: "confirmed",
-    component: CheckoutConfirmedComponent
   },
   {
     path: "orders",
