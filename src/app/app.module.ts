@@ -32,8 +32,6 @@ import { CartPageComponent } from './modules/products/cart-page/cart-page.compon
 import { ProductModule } from './modules/products/products.module';
 import { CarouselComponent } from './modules/dashboard/components/carousel/carousel.component';
 
-
-//test
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,7 +67,8 @@ import { CarouselComponent } from './modules/dashboard/components/carousel/carou
     SignupModule,
     SharedModule,
     RouterModule,
-    FlexLayoutModule],
+    FlexLayoutModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
