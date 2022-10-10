@@ -30,6 +30,7 @@ import { TesthomeComponent } from './modules/testhome/testhome.component';
 import { CommonModule } from '@angular/common';
 import { CartPageComponent } from './modules/products/cart-page/cart-page.component';
 import { ProductModule } from './modules/products/products.module';
+import { CarouselComponent } from './modules/dashboard/components/carousel/carousel.component';
 
 
 //test
@@ -52,15 +53,16 @@ import { ProductModule } from './modules/products/products.module';
     AdminUserlistComponent,
     AddUserComponent,
     SearchPipe,
-    
+    CarouselComponent
+
   ],
   imports: [
-    BrowserModule, 
+    BrowserModule,
     CommonModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule, 
+    FormsModule,
     HttpClientModule,
     LoginModule,
     ForgetPwModule,

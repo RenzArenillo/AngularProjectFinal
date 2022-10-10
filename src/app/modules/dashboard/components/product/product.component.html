@@ -1,5 +1,5 @@
 <div
-  class="w-full h-full text-gray-800 thover:text-orange-500"
+  class="w-full h-full text-gray-800"
   title="{{ product.productName }}"
   (click)="emit(product)"
 >
@@ -11,25 +11,29 @@
     />
   </div>
   <div class="h-[37%] px-4 py-1 grid text-xs">
-    <div class="grid place-items-center truncate">
-      <span class="font-semibold text-xl">{{ product.productName }}</span>
-    </div>
-    <div class="grid grid-cols-2">
-      <div class="grid">
-        <span
-          class="hover:text-blue-500 cursor-pointer hover:underline"
-          title="{{ product.productCategory }}"
-          >{{ product.productCategory }}</span
-        >
-        <span>{{ product.productPrice | currency: "PHP":"symbol" }}</span>
-        <span
-          ><span class="font-semibold">{{ product.unitsSold }}</span
-          >&nbsp;sold</span
-        >
+    <div class="grid">
+      <div class="grid place-items-center truncate">
+        <span class="font-semibold text-xl">{{ product.productName }}</span>
       </div>
-      <div class="grid place-items-center">
-       
-      </div> 
+
+      <span
+        class="hover:text-blue-500 cursor-pointer hover:underline"
+        title="{{ product.productCategory }}"
+        >{{ product.productCategory }}</span
+      >
+      <span>{{ product.productPrice | currency: "PHP":"symbol" }}</span>
+      <span
+        ><span class="font-semibold">{{ product.unitsSold }}</span
+        >&nbsp;sold</span
+      >
+
+      <button
+        (click)="addToCart(product)"
+        *ngIf="displayType != 'BestSellers'"
+        class="bg-stone-400 hover:bg-stone-500 hover:text-white px-2 rounded-md"
+      >
+        Add to Cart
+      </button>
     </div>
   </div>
 </div>
