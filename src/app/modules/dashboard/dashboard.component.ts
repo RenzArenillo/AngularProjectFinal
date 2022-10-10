@@ -5,9 +5,6 @@ import { CategoryService } from 'src/app/assets/services/category/category.servi
 import { ProductService } from 'src/app/assets/services/product/product.service';
 import { CartService } from '../products/services/cart.service';
 
-
-
-
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -15,7 +12,8 @@ import { CartService } from '../products/services/cart.service';
 })
 export class DashboardComponent implements OnInit {
   userType: string = 'Admin';
-
+  filter: string = '';
+  dropDown: boolean = false;
   loading = true;
   showModal = false;
   bestSellers: Product[] = [];
@@ -30,13 +28,14 @@ export class DashboardComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-
     this.productService.getProducts().subscribe((res) => {
       this.products = res;
-      this.categories = res.map( (a:any) => (a.productCategory));
-      this.categories = this.categories.filter((value,index)=>this.categories.indexOf(value)===index);
+      this.categories = res.map((a: any) => a.productCategory);
+      this.categories = this.categories.filter(
+        (value, index) => this.categories.indexOf(value) === index
+      );
       res.forEach((a: any) => {
-        Object.assign(a, { quantity: 1, total: Number(a.productPrice)  });
+        Object.assign(a, { quantity: 1, total: Number(a.productPrice) });
       });
     });
 
@@ -47,7 +46,6 @@ export class DashboardComponent implements OnInit {
 
     this.categoryService.getCategories().subscribe((categories) => {
       this.categories = categories;
-    
     });
   }
 
@@ -61,17 +59,21 @@ export class DashboardComponent implements OnInit {
     this.filterBy(event.name);
   }
 
-  filterBy(by: string) {
-    this.productService.getProducts().subscribe((products: Product[]) => {
-      this.products = products.filter(
-        (product) => product.productCategory === by
-      );
+  getAll() {
+    this.productService.getProducts().subscribe((products) => {
+      this.products = products;
     });
+    this.filter = '';
   }
 
-  // ngOnChanges(changes: SimpleChanges): void {
-  //   if (this.selectedProduct) this.showModal = true;
-  // }
+  filterBy(by: string) {
+    this.filter = by;
+    this.productService.getProducts().subscribe((products: Product[]) => {
+      this.products = products
+        .filter((product) => product.productCategory === by)
+        .sort((a, b) => (a.productName < b.productName ? -1 : 1));
+    });
+  }
 
   productSelected(product: Product) {
     this.selectedProduct = product;

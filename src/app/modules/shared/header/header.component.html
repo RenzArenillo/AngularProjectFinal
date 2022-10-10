@@ -1,18 +1,19 @@
-<div
-  class="navigation-bar header bg-stone-500 flex items-center justify-between shadow-lg shadow-zinc-600 z-40 w-full fixed"
+
+<header
+  class="header sticky top-0 opacity-100 bg-stone-500 z-50 shadow-md flex items-center justify-between"
 >
   <a href="">
     <img src="../../../../assets/img/FinalLogo.png" class="logo w-48 ml-3"
   /></a>
-  <nav class="nav ml-60 uppercase tracking-widest text-base z-10 top-0 w-100">
+  <nav class="nav ml-48 uppercase tracking-widest text-base z-10 top-0 w-100">
     <ul class="flex items-center">
       <li
         routerLink="/dashboard"
-        routerLinkActive="active:"
+        routerLinkActive="active"
         ariaCurrentWhenActive="page"
         class="p-6 pr-6 border-b-2 border-orange-500 text-white border-opacity-0 hover:border-opacity-100 hover:text-orange-500 duration-200 cursor-pointer active"
       >
-        <a>Dashboard</a>
+        Dashboard
       </li>
       <li
         routerLink="/product"
@@ -20,7 +21,7 @@
         ariaCurrentWhenActive="page"
         class="p-6 pr-6 border-b-2 border-orange-500 text-white border-opacity-0 hover:border-opacity-100 hover:text-orange-500 duration-200 cursor-pointer"
       >
-        <a>Products</a>
+        Products
       </li>
       <li
         routerLink="#"
@@ -28,7 +29,7 @@
         ariaCurrentWhenActive="page"
         class="p-6 border-b-2 border-orange-500 text-white border-opacity-0 hover:border-opacity-100 hover:text-orange-500 duration-200 cursor-pointer"
       >
-        <a>Admin</a>
+        Admin
       </li>
 
       <li
@@ -37,7 +38,7 @@
         ariaCurrentWhenActive="page"
         class="p-6 pr-6 border-b-2 border-orange-500 text-white border-opacity-0 hover:border-opacity-100 hover:text-orange-500 duration-200 cursor-pointer active"
       >
-        <a>Sign Up</a>
+        SignUp
       </li>
       <li
         routerLink="/login"
@@ -45,7 +46,7 @@
         ariaCurrentWhenActive="page"
         class="p-6 pr-6 border-b-2 border-orange-500 text-white border-opacity-0 hover:border-opacity-100 hover:text-orange-500 duration-200 cursor-pointer active"
       >
-        <a>Login</a>
+        Login
       </li>
     </ul>
   </nav>
@@ -81,8 +82,10 @@
       <span
         class="absolute right-0 top-0 rounded-full bg-white w-4 h-4 top right p-0 m-0 text-black font-medium text-xs leading-tight text-center hover:bg-orange-500"
       >
+        
         {{ totalItem }}
+      
       </span>
     </button>
   </div>
-</div>
+

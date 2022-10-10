@@ -21,7 +21,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let data of users | search: searchInput;">
+                    <tr *ngFor="let data of users | searchUser: searchInput;">
                         <td>{{data.userName}}</td>
                         <td>{{data.firstName}}</td>
                         <td>{{data.middleName}}</td>

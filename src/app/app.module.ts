@@ -33,8 +33,6 @@ import { ProductModule } from './modules/products/products.module';
 import { ProfileItemComponent } from './modules/profile/components/profile-item/profile-item.component';
 import { ProfileModule } from './modules/profile/profile.module';
 
-
-//test
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +55,7 @@ import { ProfileModule } from './modules/profile/profile.module';
     
   ],
   imports: [
-    BrowserModule, 
+    BrowserModule,
     CommonModule,
     AppRoutingModule,
     HttpClientModule,
@@ -70,8 +68,9 @@ import { ProfileModule } from './modules/profile/profile.module';
     SignupModule,
     SharedModule,
     RouterModule,
-    FlexLayoutModule],
+    FlexLayoutModule
+  ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent], 
 })
 export class AppModule {}

@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { User } from 'src/app/assets/models/users';
 @Pipe({
-    name:'search'
+    name:'searchUser'
 })
 export class SearchPipe implements PipeTransform {
     transform(user: User[], searchInput: string): any[]{     
