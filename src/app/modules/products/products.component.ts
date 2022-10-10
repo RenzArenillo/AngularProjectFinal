@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Product } from 'src/app/assets/models/product';
 import { ProductsService } from './services/products.service';
 
@@ -15,7 +16,11 @@ export class ProductsComponent implements OnInit {
   sortBy:string = 'productId';
   public searchInput: string = ""
   
-  constructor(private productService: ProductsService) {}
+  constructor(private productService: ProductsService, private router: Router) {
+    this.productService.getProducts().subscribe((products) => {
+      this.products = products;
+    });
+  }
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe((products) => {
@@ -40,21 +45,27 @@ export class ProductsComponent implements OnInit {
 
   }
 
-  // this.products
-  //     .sort((a, b) => (a.unitsSold < b.unitsSold ? 1 : -1))
-
   emitAction(event: { productId: number; action: string }) {
     switch (event.action) {
       case 'edit':
-        // change later to edit function
-        alert('edit ' + event.productId);
+        this.router.navigate(['productsform', event.productId])
         break;
       case 'delete':
-        // change later to delete function
-        alert('delete ' + event.productId);
+        this.productService.delete(event.productId).subscribe((result) => {this.ngOnInit()})
         break;
       default:
         return;
     }
+  }
+
+  addProduct(){
+    this.router.navigate(['productsform'])
+  }
+
+  search(input:String) {
+    this.productService.getProducts().subscribe((products) => {
+      this.products = products.filter((x: { productName: { toLowerCase: () => String[]; }; }) => {return x.productName.toLowerCase().includes(input)});
+    });      
+    
   }
 }

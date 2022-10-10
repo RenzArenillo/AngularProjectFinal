@@ -33,6 +33,7 @@ import { ProductModule } from './modules/products/products.module';
 import { ProfileItemComponent } from './modules/profile/components/profile-item/profile-item.component';
 import { ProfileModule } from './modules/profile/profile.module';
 import { CarouselComponent } from './modules/dashboard/components/carousel/carousel.component';
+import { FormComponent } from './modules/products/components/form/form.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { CarouselComponent } from './modules/dashboard/components/carousel/carou
     AdminUserlistComponent,
     AddUserComponent,
     SearchPipe,
-    CarouselComponent
+    CarouselComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,

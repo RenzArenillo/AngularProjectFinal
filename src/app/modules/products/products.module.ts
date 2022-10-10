@@ -8,13 +8,11 @@ import { ProductRoutingModule } from './products-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
-import { SearchProductsPipe } from './search-products.pipe';
 
 
 @NgModule({
   declarations: [
     CartPageComponent,
-    SearchProductsPipe    
   ],
   imports: [
     CommonModule,
