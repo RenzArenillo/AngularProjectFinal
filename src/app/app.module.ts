@@ -32,6 +32,7 @@ import { CartPageComponent } from './modules/products/cart-page/cart-page.compon
 import { ProductModule } from './modules/products/products.module';
 import { ProfileItemComponent } from './modules/profile/components/profile-item/profile-item.component';
 import { ProfileModule } from './modules/profile/profile.module';
+import { CarouselComponent } from './modules/dashboard/components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -51,8 +52,8 @@ import { ProfileModule } from './modules/profile/profile.module';
     TesthomeComponent,
     AdminUserlistComponent,
     AddUserComponent,
-    SearchPipe
-    
+    SearchPipe,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
