@@ -1,4 +1,4 @@
-<h2 class="txt text-3xl font-semibold tracking-wider text-center mt-12">
+<h2 class="txt text-3xl font-semibold tracking-wider text-center pt-36">
   SHOPPING CART
 </h2>
 <div class="flex justify-center my-6 mt-12">
@@ -47,51 +47,67 @@
             <td class="flex justify-center md:flex mt-6">
               <div class="w-20 h-10">
                 <div class="relative flex flex-row w-full h-8 ml-2">
-                  <button (click)="changeQty(prod.quantity)" class="plus pr-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      class="w-5 h-5"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-11.25a.75.75 0 00-1.5 0v2.5h-2.5a.75.75 0 000 1.5h2.5v2.5a.75.75 0 001.5 0v-2.5h2.5a.75.75 0 000-1.5h-2.5v-2.5z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                  <small>{{ productQuantity }}</small>
-                  <button (click)="changeQty(prod.quantity)" class="minus pl-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      class="w-5 h-5"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zM6.75 9.25a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                  </button>
+                  <form (click)="decrementQty(prod)" method="POST">
+                    <button class="minus pl-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        class="w-5 h-5 fill-orange-400 hover:fill-orange-700"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zM6.75 9.25a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                  </form>
+                  <p class="text-base -mt-1">{{ prod.productQuantity }}</p>
+                  <form (click)="incrementQty(prod)" method="POST">
+                    <button class="plus pr-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        class="w-5 h-5 fill-orange-400 hover:fill-orange-700"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-11.25a.75.75 0 00-1.5 0v2.5h-2.5a.75.75 0 000 1.5h2.5v2.5a.75.75 0 001.5 0v-2.5h2.5a.75.75 0 000-1.5h-2.5v-2.5z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                  </form>
                 </div>
               </div>
             </td>
             <td class="hidden text-right md:table-cell">
-              <span class="text-sm lg:text-base font-medium">
-                {{ prod.productPrice }}
+              <span class="text-sm lg:text-base font-medium -mt-5">
+                <p class="-mt-6">{{ prod.productPrice }}</p>
               </span>
             </td>
             <td class="text-right">
               <span class="text-sm lg:text-base font-medium">
-                {{ prod.productPrice * prod.quantity }}
+                <p class="-mt-6"> {{ prod.productPrice * prod.productQuantity }}</p>
               </span>
             </td>
           </tr>
         </tbody>
       </table>
+      <div class="-ml-4 -mb-4">
+        <a href="#">
+          <form (click)="removeAllItem()" method="POST">
+            <button
+              type="submit"
+              class="hover:text-red-700 md:ml-4 text-red-400 font-semibold"
+            >
+              <small class="underline texr-base font-medium">Remove all item</small>
+            </button>
+          </form>
+        </a>
+    </div>
       <hr class="pb-6 mt-6" />
       <div class="text-center ml-96 lg:flex">
         <div class="lg:px-2 lg:w-1/2">
@@ -109,12 +125,12 @@
               <div
                 class="lg:px-4 lg:py-2 m-2 lg:text-lg font-bold text-center text-gray-900"
               >
-                ${{ total }}
+                {{ totalAmount | currency: "PHP":"symbol" }}
               </div>
             </div>
             <a href="#">
               <button
-                class="flex justify-center w-full px-10 py-3 mt-6 font-medium text-white uppercase bg-stone-600 rounded-full shadow item-center hover:bg-gray-700 focus:shadow-outline focus:outline-none"
+                class="flex justify-center w-full px-10 py-3 mt-6 font-medium text-white uppercase bg-stone-400 rounded-full shadow item-center hover:text-orange-400 hover:bg-stone-700 focus:shadow-outline focus:outline-none"
               >
                 <svg
                   aria-hidden="true"
@@ -142,15 +158,20 @@
       src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-2130356-1800917.png"
       class=""
     />
-    <div class="grid place-items-center leading-none">
+    <div class="grid place-items-center leading-none mb-12">
       <strong>Unfortunately, Your Cart is Empty.</strong>
       <br />
-      <small>Please add something in your cart.</small>
-      <a routerLink="/dashboard" routerLinkActive="active" ariaCurrentWhenActive="page">
+      <small>Please add something to your cart.</small>
+      <a
+        routerLink="/dashboard"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+      >
         <button
           type="button"
           class="text-white text-left hover:text-orange-400 font-medium text-sm uppercase tracking-wider mt-4 hover:bg-gray-700 rounded-lg pl-6 pr-10 py-2.5 dark:bg-stone-400 dark:hover:bg-stone-700"
-        >Continue Shopping
+        >
+          Continue Shopping
           <svg
             aria-hidden="true"
             class="w-5 h-5 absolute ml-40 -mt-5"

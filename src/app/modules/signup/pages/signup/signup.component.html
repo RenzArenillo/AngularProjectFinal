@@ -13,26 +13,26 @@
                 </p>
                 <form [formGroup]="signUpForm" (ngSubmit)="submitButton()" class="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2">
                     <div>
-                        <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-600">Username</label>
+                        <label class="block mb-2 text-xs font-medium uppercase ">Username</label>
                         <input type="text" formControlName="userName" placeholder="(juandelacruz123)" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
                     </div>
 
                     <div>
-                        <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-600">Email</label>
+                        <label class="block mb-2 text-xs font-medium uppercase">Email</label>
                         <input type="text" formControlName="email" placeholder="(juandela.cruz@gmail.com)" [(ngModel)]="signUpForm.value.email" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
                     </div>
 
                     <div>
-                        <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-600">Mobile number</label>
+                        <label class="block mb-2 text-xs font-medium uppercase">Mobile number</label>
                         <input type="text" formControlName="mobileNumber" placeholder="XXX-XX-XXXX-XXX" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
                     </div>
 
                     <div>
-                        <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-600">Password</label>
+                        <label class="block mb-2 text-xs font-medium uppercase">Password</label>
                         <input type="password" id="userPassword"  formControlName="userPassword" required placeholder="Enter your password" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
                     </div>
                     <div>
-                        <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-600">Confirm password</label>
+                        <label class="block mb-2 text-xs font-medium uppercase">Confirm password</label>
                         <input type="password" id="confirmPassword" formControlName="confirmPassword" required placeholder="Confirm your password" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
                         <div *ngIf="signUpForm.value.userPassword != signUpForm.value.confirmPassword">Passwords do not match</div> 
                     </div>

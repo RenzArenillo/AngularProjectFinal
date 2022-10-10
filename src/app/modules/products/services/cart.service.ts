@@ -7,24 +7,36 @@ import { BehaviorSubject } from 'rxjs';
 export class CartService {
   cartList: any = [];
   products = new BehaviorSubject<any>([]);
+  productQuantity: number = 1; 
+  
 
   constructor() {}
 
   getProducts() {
     return this.products.asObservable();
   }
-  
+
   addtoCart(product: any) {
-    this.cartList.push(product); 
-    this.products.next(this.cartList); 
-    this.getTotalPrice();
+    const cartItemsExist = this.cartList.find((x:any) => product.productId === x.productId);
+    if (this.cartList.indexOf(product) != -1) {
+      product.productQuantity++
+    } else if (cartItemsExist) {
+      this.incrementQty(product)
+    }
+    else {
+      this.cartList.push(product);
+      this.products.next(this.cartList);
+      this.getTotalPrice();
+    }
+    
   }
 
-  getTotalPrice(): number { 
+  getTotalPrice(): number {
     let totalPrice: number = 0;
     this.cartList.map((x: any) => {
-      totalPrice += x.total;
+      totalPrice += x.productPrice * x.productQuantity;
     });
+
     return totalPrice;
   }
 
@@ -38,16 +50,51 @@ export class CartService {
   }
 
   removeAllCart() {
-    this.cartList = []; 
+    this.cartList = [];
     this.products.next(this.cartList);
-  } 
+  }
 
-  public changeQty(product: any)  {
-    this.cartList.map((a: any) => {
-      if (product.productId === a.productId) {
-        return product.length += 1
+  public incrementQty(product: any): number {
+    this.cartList.map((x: any) => {
+      if (product.productId === x.productId) {
+        x.productQuantity += 1
+        this.products.next(this.cartList);
+        this.getTotalPrice();
       }
-      return product.length -= 1
+      this.products.next(this.cartList);
+      this.getTotalPrice();
     });
+    return product.productQuantity;
+  }
+
+  public decrementQty(product: any): number {
+    this.cartList.map((x: any) => {
+      if (product.productId === x.productId) {
+        if (product.productQuantity === 1){
+          this.removeCartItem(product);
+        }
+        x.productQuantity -= 1
+        this.products.next(this.cartList);
+        this.getTotalPrice();
+      }
+      this.products.next(this.cartList);
+      this.getTotalPrice();
+    });
+    return product.productQuantity;
+  }
+
+
+  getTotalQuantity(): number {
+    let totalQuantity: number = 0;
+    this.cartList.map((x: any) => {  
+
+      totalQuantity += x.productQuantity
+    });
+
+    return totalQuantity++;
+  }
+
+  incrementCart(itemCounter:number){
+    return itemCounter++
   }
 }

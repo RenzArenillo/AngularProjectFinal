@@ -13,6 +13,7 @@ import { ProductsComponent } from './modules/products/products.component';
 import { SignupComponent } from './modules/signup/pages/signup/signup.component';
 import { TesthomeComponent } from './modules/testhome/testhome.component';
 import { CartPageComponent } from './modules/products/cart-page/cart-page.component';
+import { ProfileItemComponent } from './modules/profile/components/profile-item/profile-item.component';
 
 const routes: Routes = [
   {
@@ -72,7 +73,8 @@ const routes: Routes = [
   // },
   {
     path: 'profile',
-    loadChildren: () => import('./modules/profile/profile.module').then(m => m.ProfileModule)
+    // loadChildren: () => import('./modules/profile/profile.module').then(m => m.ProfileModule)
+    component: ProfileItemComponent
   },
   {
     path: 'cart',

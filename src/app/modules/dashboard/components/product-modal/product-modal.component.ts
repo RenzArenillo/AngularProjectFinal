@@ -13,6 +13,7 @@ export class ProductModalComponent implements OnInit {
     productCategory: '',
     unitsSold: 0,
     productImage: '',
+    productQuantity: 0
   };
   @Output() emitter = new EventEmitter();
 

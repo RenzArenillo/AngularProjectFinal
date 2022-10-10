@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/assets/models/product';
+import { ProductChin } from 'src/app/assets/models/productChin';
 import { CartService } from '../services/cart.service';
 
 @Component({
@@ -8,26 +10,35 @@ import { CartService } from '../services/cart.service';
 })
 export class CartPageComponent implements OnInit {
 
-  productQuantity: number = 20;
-  products:any =[];
-  total!:number;
+  productQuantity: number = 1;
+  products:Product[] = [];
+  totalAmount!:number;
+  
   constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
-    this.cartService.getProducts().subscribe(res =>{
+      this.cartService.getProducts().subscribe(res =>{
       this.products = res;
-      this.total = this.cartService.getTotalPrice();
+      this.totalAmount = this.cartService.getTotalPrice();
     })
   }
+
+  incrementQty(prod:any) {
+    this.cartService.incrementQty(prod);
+  }
   
+  decrementQty(prod:any) {
+    this.cartService.decrementQty(prod);
+  }
+
   removeItem(prod:any){
     this.cartService.removeCartItem(prod);
   }
 
-  changeQty(prod:any) {
-    this.cartService.changeQty(prod);
-    console.log("button has been biatched")
+  removeAllItem(){
+    this.cartService.removeAllCart();
   }
 
+  
 
 }

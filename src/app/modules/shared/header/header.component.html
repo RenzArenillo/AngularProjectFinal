@@ -1,78 +1,88 @@
-<!-- <nav  class="py-1 px-2 shadow-lg flex content-center z-[50] bg-cyan-600">
-  <div>
-    <a routerLink="/dashboard" routerLinkActive="active" ariaCurrentWhenActive="page" class="flex text-lg hover:text-white duration-200">
-      <img src="https://pngimg.com/uploads/letter_c/letter_c_PNG103.png" alt="C" class="h-10 w-10">
-      hoppee
-    </a>
-  </div>
-
-  <ul class="ml-auto mr-12 flex items-center space-x-5">
-    <a routerLink="/dashboard" routerLinkActive="active" ariaCurrentWhenActive="page" class="flex text-sm text-gray-900 hover:text-white duration-200">
-      Dashboard
-    </a>
-
-    <a routerLink="/product" routerLinkActive="active" ariaCurrentWhenActive="page" class="flex text-sm text-gray-900 hover:text-white duration-200">
-     Products
-    </a>
-
-    <a routerLink="#" routerLinkActive="active" ariaCurrentWhenActive="page" class="flex text-sm text-gray-900 hover:text-white duration-200">
-      Admin
-    </a>
-
-    <a routerLink="#" routerLinkActive="active" ariaCurrentWhenActive="page" class="flex text-sm text-gray-900 hover:text-white duration-200">
-      Sign up
-    </a>
-
-    <a routerLink="#" routerLinkActive="active" ariaCurrentWhenActive="page" class="flex text-sm text-gray-900 hover:text-white duration-200">
-      Login
-    </a>
-  </ul>
-</nav> -->
-<!-- chin -->
-<header class="header sticky top-0 bg-stone-500 shadow-md flex items-center justify-between ">
-
-  <a href=""> <img src="../../../../assets/img/FinalLogo.png" class="logo w-48 ml-3" /></a>
-  <nav class="nav ml-48 uppercase tracking-widest text-base z-10 top-0 w-100">
+<div
+  class="navigation-bar header bg-stone-500 flex items-center justify-between shadow-lg shadow-zinc-600 z-40 w-full fixed"
+>
+  <a href="">
+    <img src="../../../../assets/img/FinalLogo.png" class="logo w-48 ml-3"
+  /></a>
+  <nav class="nav ml-60 uppercase tracking-widest text-base z-10 top-0 w-100">
     <ul class="flex items-center">
       <li
-      class="p-6 pr-6 border-b-2 border-orange-500 text-white border-opacity-0 hover:border-opacity-100 hover:text-orange-500 duration-200 cursor-pointer active"
-    >
-      <a routerLink="/dashboard" routerLinkActive="active" ariaCurrentWhenActive="page">Dashboard</a>
-    </li>
+        routerLink="/dashboard"
+        routerLinkActive="active:"
+        ariaCurrentWhenActive="page"
+        class="p-6 pr-6 border-b-2 border-orange-500 text-white border-opacity-0 hover:border-opacity-100 hover:text-orange-500 duration-200 cursor-pointer active"
+      >
+        <a>Dashboard</a>
+      </li>
       <li
+        routerLink="/product"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
         class="p-6 pr-6 border-b-2 border-orange-500 text-white border-opacity-0 hover:border-opacity-100 hover:text-orange-500 duration-200 cursor-pointer"
       >
-        <a routerLink="/product" routerLinkActive="active" ariaCurrentWhenActive="page">Products</a>
+        <a>Products</a>
       </li>
       <li
+        routerLink="#"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
         class="p-6 border-b-2 border-orange-500 text-white border-opacity-0 hover:border-opacity-100 hover:text-orange-500 duration-200 cursor-pointer"
       >
-        <a routerLink="#" routerLinkActive="active" ariaCurrentWhenActive="page">Admin</a>
-        <li
+        <a>Admin</a>
+      </li>
+
+      <li
+        routerLink="/sign-up"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
         class="p-6 pr-6 border-b-2 border-orange-500 text-white border-opacity-0 hover:border-opacity-100 hover:text-orange-500 duration-200 cursor-pointer active"
       >
-        <a a routerLink="/sign-up" routerLinkActive="active" ariaCurrentWhenActive="page">Sign Up</a>
+        <a>Sign Up</a>
       </li>
       <li
+        routerLink="/login"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
         class="p-6 pr-6 border-b-2 border-orange-500 text-white border-opacity-0 hover:border-opacity-100 hover:text-orange-500 duration-200 cursor-pointer active"
       >
-        <a a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">Login</a>
+        <a>Login</a>
       </li>
     </ul>
   </nav>
+
   <div class="w-3/12 flex justify-end">
-    <button class="shop mr-6" routerLink="cart">
+    <button class="profile -mr-3" routerLink="profile">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="cart drop-shadow-lg fill-white hover:fill-orange-400 w-6"
+        class="w-7 h-7 fill-white hover:fill-orange-500"
       >
         <path
-          d="M1 1.75A.75.75 0 011.75 1h1.628a1.75 1.75 0 011.734 1.51L5.18 3a65.25 65.25 0 0113.36 1.412.75.75 0 01.58.875 48.645 48.645 0 01-1.618 6.2.75.75 0 01-.712.513H6a2.503 2.503 0 00-2.292 1.5H17.25a.75.75 0 010 1.5H2.76a.75.75 0 01-.748-.807 4.002 4.002 0 012.716-3.486L3.626 2.716a.25.25 0 00-.248-.216H1.75A.75.75 0 011 1.75zM6 17.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15.5 19a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+          fill-rule="evenodd"
+          d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-5.5-2.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM10 12a5.99 5.99 0 00-4.793 2.39A6.483 6.483 0 0010 16.5a6.483 6.483 0 004.793-2.11A5.99 5.99 0 0010 12z"
+          clip-rule="evenodd"
         />
       </svg>
-      <div class="badge bg-custom text-white hover:text-orange-400 text-xs">{{ totalItem }}</div>
+    </button>
+
+    <button
+      class="shop relative flex mr-8 font-sans block mt-4 lg:inline-block lg:mt-2 lg:ml-6 align-middle text-white hover:text-orange-500"
+      routerLink="cart"
+    >
+      <svg
+        class="flex-1 w-8 h-8 fill-current hover:fill-orange-500"
+        viewbox="0 0 24 24"
+      >
+        <path
+          d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"
+        />
+      </svg>
+      <span
+        class="absolute right-0 top-0 rounded-full bg-white w-4 h-4 top right p-0 m-0 text-black font-medium text-xs leading-tight text-center hover:bg-orange-500"
+      >
+        {{ totalItem }}
+      </span>
     </button>
   </div>
-</header>
+</div>

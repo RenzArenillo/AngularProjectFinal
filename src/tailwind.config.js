@@ -1,3 +1,5 @@
+const { reduce } = require('rxjs');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -16,5 +18,7 @@ module.exports = {
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-textshadow')
+  ],
 }

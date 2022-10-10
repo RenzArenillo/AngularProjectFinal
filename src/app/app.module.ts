@@ -30,6 +30,8 @@ import { TesthomeComponent } from './modules/testhome/testhome.component';
 import { CommonModule } from '@angular/common';
 import { CartPageComponent } from './modules/products/cart-page/cart-page.component';
 import { ProductModule } from './modules/products/products.module';
+import { ProfileItemComponent } from './modules/profile/components/profile-item/profile-item.component';
+import { ProfileModule } from './modules/profile/profile.module';
 
 
 //test
@@ -51,7 +53,7 @@ import { ProductModule } from './modules/products/products.module';
     TesthomeComponent,
     AdminUserlistComponent,
     AddUserComponent,
-    SearchPipe,
+    SearchPipe
     
   ],
   imports: [
@@ -61,6 +63,7 @@ import { ProductModule } from './modules/products/products.module';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule, 
+    ProfileModule,
     HttpClientModule,
     LoginModule,
     ForgetPwModule,
