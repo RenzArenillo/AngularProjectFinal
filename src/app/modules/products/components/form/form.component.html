@@ -1,26 +1,33 @@
 <div class="min-w-[800px] bg-gray-200 h-screen py-16 flex justify-center">
 
-    <form [formGroup]="productsForm" (ngSubmit)="submit()">    
+    <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col overflow-y-scroll">
+    
+    <form [formGroup]="productsForm" (ngSubmit)="submit()">  
+        <div class="text-center font-semibold text-black">
+            <h2 *ngIf = "params">Edit Product</h2>
+            <h2 *ngIf = "!params">Add Product</h2>
+
+          </div>  
         <div class="form-group">
-            <label for="productId">ID: </label>
+            <label for="productId" class="block px-1 text-sm text-gray-600" >ID: </label>
             <input formControlName="productId" type="number" id="productId" class="form-control">   
-            <div *ngIf="(productsForm.get('productId')?.errors?.['required'] && productsForm.get('productId')?.touched)" class="bg-red-100 border border-red-400 text-red-700 px-4 py-1 rounded relative" 
+            <div *ngIf="(productsForm.get('productId')?.errors?.['required'] && productsForm.get('productId')?.touched)" class="text-red-500 text-xs italic" 
             role="alert">ID is required</div>  
         </div>
         <div class="form-group">
-            <label for="productName">Name: </label>
+            <label for="productName" class="block px-1 text-sm text-gray-600"  >Name: </label>
             <input formControlName="productName" type="text" id="productName" class="form-control"> 
-            <div *ngIf="(productsForm.get('productName')?.errors?.['required'] && productsForm.get('productName')?.touched)" class="bg-red-100 border border-red-400 text-red-700 px-4 py-1 rounded relative" 
+            <div *ngIf="(productsForm.get('productName')?.errors?.['required'] && productsForm.get('productName')?.touched)" class="text-red-500 text-xs italic"
             role="alert">Name is required</div>    
         </div>
         <div class="form-group">
-            <label for="productPrice">Price: </label>
+            <label for="productPrice" class="block px-1 text-sm text-gray-600" >Price: </label>
             <input formControlName="productPrice" type="number" id="productPrice" class="form-control">
-            <div *ngIf="(productsForm.get('productPrice')?.errors?.['required'] && productsForm.get('productPrice')?.touched)" class="bg-red-100 border border-red-400 text-red-700 px-4 py-1 rounded relative" 
+            <div *ngIf="(productsForm.get('productPrice')?.errors?.['required'] && productsForm.get('productPrice')?.touched)" class="text-red-500 text-xs italic"
             role="alert">Price is required</div>       
         </div>
         <div class="form-group">
-            <label for="productCategory">Category: </label>
+            <label for="productCategory" class="block px-1 text-sm text-gray-600"  >Category: </label>
             <select formControlName="productCategory" id="productCategory" class="form-control" > 
                 <option value = "" disabled>Select Category...</option>
                 <option *ngFor="let category of categories" >{{category}}</option>
@@ -28,20 +35,22 @@
             
         </div>
         <div class="form-group">
-            <label for="productImage">Image Url: </label>
+            <label for="productImage" class="block px-1 text-sm text-gray-600"  >Image Url: </label>
             <input formControlName="productImage" type="text" id="productImage" class="form-control">  
-            <div *ngIf="(productsForm.get('productImage')?.errors?.['required'] && productsForm.get('productImage')?.touched)" class="bg-red-100 border border-red-400 text-red-700 px-4 py-1 rounded relative" 
+            <div *ngIf="(productsForm.get('productImage')?.errors?.['required'] && productsForm.get('productImage')?.touched)" class="text-red-500 text-xs italic"
             role="alert">Image Url is required</div>     
         </div>
         <div class="form-group">
-            <label for="productQuantity">Quantity: </label>
+            <label for="productQuantity" class="block px-1 text-sm text-gray-600"  >Quantity: </label>
             <input formControlName="productQuantity" type="number" id="productQuantity" class="form-control">
-            <div *ngIf="(productsForm.get('productQuantity')?.errors?.['required'] && productsForm.get('productQuantity')?.touched)" class="bg-red-100 border border-red-400 text-red-700 px-4 py-1 rounded relative" 
+            <div *ngIf="(productsForm.get('productQuantity')?.errors?.['required'] && productsForm.get('productQuantity')?.touched)" class="text-red-500 text-xs italic"
             role="alert">Quantity is required</div>      
         </div>
+        <br/>
         <button *ngIf = "!params" type="submit" [disabled]="productsForm.invalid" class="px-2 py-1 bg-green-600 hover:bg-green-400 text-white rounded-md w-full">Submit</button>
         <button *ngIf = "params" type="submit" [disabled]="productsForm.invalid" class="px-2 py-1 bg-green-600 hover:bg-green-400 text-white rounded-md w-full">Save</button>
         <button class="px-2 py-1 bg-red-600 hover:bg-red-400 text-white rounded-md w-full" (click)="goBack()">Cancel</button>
 
     </form>
+</div>
 </div>

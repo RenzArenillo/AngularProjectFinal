@@ -62,8 +62,8 @@
     },
     {
       "productId": 7,
-      "productName": "Camera Version 2",
-      "productPrice": 12000,
+      "productName": "Camera V2",
+      "productPrice": 14660,
       "productCategory": "Technology",
       "productImage": "https://images.unsplash.com/photo-1613235577937-9ac3eed992fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2Fub24lMjBjYW1lcmF8ZW58MHx8MHx8&w=1000&q=80",
       "unitsSold": 2,
@@ -73,7 +73,7 @@
     {
       "productId": 8,
       "productName": "Shoes DE",
-      "productPrice": 3000,
+      "productPrice": 4000,
       "productCategory": "Shoes",
       "productImage": "https://media.istockphoto.com/photos/stability-and-cushion-running-shoes-new-unbranded-running-sneaker-or-picture-id1320786676?b=1&k=20&m=1320786676&s=170667a&w=0&h=qKmwIvi7qq8RBNpFzZzifpfPcZl82xlq2whbMm4W-jE=",
       "unitsSold": 2,
@@ -92,8 +92,8 @@
     },
     {
       "productId": 10,
-      "productName": "Ballsy",
-      "productPrice": 2500,
+      "productName": "Bouncy Ball",
+      "productPrice": 2800,
       "productCategory": "Sports",
       "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXKG8mKsLTQkYdsr6EFZ6h6vnU1o184ZhuFw&usqp=CAU",
       "unitsSold": 2,
@@ -169,6 +169,16 @@
       "unitsSold": 0,
       "productQuantity": 4,
       "id": 17
+    },
+    {
+      "productId": 18,
+      "productName": "Nintendo Switch",
+      "productPrice": 15249,
+      "productCategory": "Technology",
+      "productImage": "https://ph-test-11.slatic.net/p/4afc59e2550d298a4f9122f1ff361bd1.jpg",
+      "unitsSold": 0,
+      "productQuantity": 5,
+      "id": 18
     }
   ],
   "categories": [
