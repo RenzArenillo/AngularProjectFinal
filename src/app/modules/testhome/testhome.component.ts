@@ -12,25 +12,22 @@ export class TesthomeComponent implements OnInit {
 
   public products : ProductRenz[] = [
     {
-      productId: '1002',
       productName: 'Item54',
       productQuantity: 3,
       productPrice: 50,
-      productCategory: 'Category1'
+      productImage: 'https://image.shutterstock.com/image-photo/soccer-ball-on-isolated-260nw-535561051.jpg'
     }, 
     {
-      productId: '3033',
       productName: 'Item2',
       productQuantity: 2,
       productPrice: 210,
-      productCategory: 'Category2'
+      productImage: 'https://image.shutterstock.com/image-photo/laptop-screen-mockup-digital-device-600w-1891189966.jpg'
     },
     {
-      productId: '1673',
       productName: 'Item3',
       productQuantity: 1,
       productPrice: 460,
-      productCategory: 'Category2'
+      productImage: 'https://image.shutterstock.com/image-photo/blue-denim-jacket-isolated-over-260nw-310155074.jpg'
     }
   ];
   constructor(private router: Router, private passService: PassOrdersService) { }
