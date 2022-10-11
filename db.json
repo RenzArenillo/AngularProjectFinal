@@ -603,6 +603,15 @@
       "userPassword": "Gwapako07",
       "confirmPassword": "Gwapako07",
       "id": 9
+    },
+    {
+      "userName": "user342",
+      "email": "email@email.com",
+      "mobileNumber": "111111111111",
+      "userPassword": "123",
+      "confirmPassword": "123",
+      "userType": "customer",
+      "id": 10
     }
   ]
 }

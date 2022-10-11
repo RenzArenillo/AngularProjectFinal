@@ -21,11 +21,13 @@ export class SignupComponent implements OnInit {
       email: ['', [Validators.required, Validators.minLength(5)]],
       mobileNumber: ['', [Validators.required, Validators.minLength(5)]],
       userPassword: ['', [Validators.required, Validators.minLength(5)]],
-      confirmPassword: ['', [Validators.required, Validators.minLength(5)]]
+      confirmPassword: ['', [Validators.required, Validators.minLength(5)]],
+      userType: ['']
     })
   }
 
-  submitButton(){  
+  submitButton(){ 
+      this.signUpForm.value.userType = 'customer' 
       this.http.post<any>("http://localhost:3000/users",this.signUpForm.value)
       .subscribe(res=>{
           const user = this.signUpForm.pristine ||

@@ -10,4 +10,5 @@ export interface User {
   birthdate: Date;
   interestsLists: string[];
   active: boolean
+  userType: string
 }
