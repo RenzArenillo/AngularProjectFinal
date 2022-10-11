@@ -3,7 +3,7 @@
   <div class="lg:w-1/2 xl:max-w-screen-sm">
     <div class="py-12 bg-stone-200 lg:bg-white flex lg:px-12 ">
       <div class="cursor-pointer">
-        <img src="../../../../../assets/img/login.jpg" class="w-full h-5/6" />
+        <!-- <img src="../../../../../assets/img/login.jpg" class="w-full h-5/6" /> -->
       </div> 
     </div>
     <div class="px-12">
@@ -11,7 +11,8 @@
       <div class="mt-8">
           <div class="mt-10">
             <button class="bg-stone-400 w-64 ml-36 text-white p-2 w-full tracking-wide font-semibold border border-2 rounded-lg font-display focus:outline-none focus:shadow-outline hover:bg-stone-600 hover:text-orange-400"
-            type="submit" (click)="getPassword()">GET YOUR PASSWORD</button>
+            type="submit" (click)="getPassword()">GET YOUR PASSWORD</button><br>
+            <p>Password: {{pwStr}}</p><br>
           </div>
         <div class="mt-2 mb-8 -ml-3 text-sm font-display font-semibold text-black text-center">Go back to Log In?
             <a class="cursor-pointer text-red-400 hover:text-cyan-600" href="/login">Click here</a>

@@ -19,7 +19,7 @@ export class ForgetRedirComponent implements OnInit {
   constructor(private router: Router, private http: HttpClient) { } 
 
   ngOnInit(): void {
-
+    console.log(this.getPassword())
   }
 
   loginRedirect(){
