@@ -1,5 +1,5 @@
 <div class="container">
-<table class="min-w-[500px] overflow-auto w-full border-2 border-cyan-500 	" >
+<table class="min-w-[500px]  w-full border-2 border-cyan-500 	" >
   <thead class="bg-cyan-600">
     <tr class="text-gray-800 grid grid-cols-5 gap-2 py-2">
       <th class="text-white">
@@ -17,10 +17,10 @@
       <th class="text-white">Action</th>
     </tr>
   </thead>
-  <tbody class="bg-grey-light flex flex-col  justify-between overflow-y-scroll" style="height: 65vh;">
+  <tbody class="bg-grey-light flex flex-col overflow-y-auto " style="height: 65vh;">
     <tr
       *ngFor="let product of products ; let i = index "
-      class="grid grid-cols-5 px-2 py-1 text-center"
+      class="grid grid-cols-5 px-2 py-1 text-center table-fixed "
       [ngClass]="i % 2 == 0 ? '' : 'bg-cyan-200'"
     >
       <td title="{{ product.productName }}" class="truncate">

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'src/app/assets/models/product';
@@ -16,11 +16,11 @@ export class FormComponent implements OnInit {
   params:boolean = true
   unitsSold:number = 0;
   productId:string | null= "";
-  // default: string = 'Select';
 
   constructor(fb:FormBuilder, private productService: ProductsService, private router: Router, 
     private route: ActivatedRoute) {
     this.productsForm = fb.group({
+      testemail: ['', [Validators.email, Validators.required]],
       productId: ['', [Validators.required]],
       productName: ['', [Validators.required]],
       productPrice: ['', [Validators.required]],
@@ -29,7 +29,6 @@ export class FormComponent implements OnInit {
       productQuantity: ['', [Validators.required]]
 
     })
-    // this.productsForm.controls['productCategory'].setValue(this.default, {onlySelf: true});
 
    }
 

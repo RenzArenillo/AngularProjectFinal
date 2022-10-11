@@ -15,16 +15,30 @@
                     <div>
                         <label class="block mb-2 text-xs font-medium uppercase ">Username</label>
                         <input type="text" formControlName="userName" placeholder="(juandelacruz123)" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
+                        <div *ngIf="(signUpForm.get('userName')?.invalid && signUpForm.get('userName')?.touched) || signUpForm.get('userName')?.dirty">
+                            <small class="text-red-500 text-xs italic" role="alert" *ngIf="(signUpForm.get('userName')?.errors?.['required'])">Username is required</small>
+                            <small class="text-red-500 text-xs italic" role="alert" *ngIf="(signUpForm.get('userName')?.errors?.['minlength'])">Enter at least 5 characters</small>
+                        </div>
+
                     </div>
 
                     <div>
                         <label class="block mb-2 text-xs font-medium uppercase">Email</label>
                         <input type="text" formControlName="email" placeholder="(juandela.cruz@gmail.com)" [(ngModel)]="signUpForm.value.email" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
+                        <div *ngIf="(signUpForm.get('email')?.invalid && signUpForm.get('email')?.touched) || signUpForm.get('email')?.dirty">
+                            <small class="text-red-500 text-xs italic" role="alert" *ngIf="(signUpForm.get('email')?.errors?.['required'])">Email is required</small>
+                            <small class="text-red-500 text-xs italic" role="alert" *ngIf="(signUpForm.get('email')?.errors?.['email'])">Email is invalid</small>
+                        </div>
                     </div>
 
                     <div>
                         <label class="block mb-2 text-xs font-medium uppercase">Mobile number</label>
-                        <input type="text" formControlName="mobileNumber" placeholder="XXX-XX-XXXX-XXX" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
+                        <input type="text" formControlName="mobileNumber" placeholder="XXXXXXXXXX" 
+                        class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
+                        <div *ngIf="(signUpForm.get('mobileNumber')?.invalid && signUpForm.get('mobileNumber')?.touched) || signUpForm.get('mobileNumber')?.dirty">
+                            <small class="text-red-500 text-xs italic" role="alert" *ngIf="(signUpForm.get('mobileNumber')?.errors?.['required'])">Mobile number is required</small>
+                            <small class="text-red-500 text-xs italic" role="alert" *ngIf="(signUpForm.get('mobileNumber')?.errors?.['minlength'])">Mobile number should be 10 digits long</small>
+                        </div>
                     </div>
 
                     <div>
@@ -34,7 +48,8 @@
                     <div>
                         <label class="block mb-2 text-xs font-medium uppercase">Confirm password</label>
                         <input type="password" id="confirmPassword" formControlName="confirmPassword" required placeholder="Confirm your password" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
-                        <div *ngIf="signUpForm.value.userPassword != signUpForm.value.confirmPassword">Passwords do not match</div> 
+                        
+                        <div *ngIf="signUpForm.value.userPassword != signUpForm.value.confirmPassword"><small>Passwords do not match</small></div> 
                     </div>
                     
                 

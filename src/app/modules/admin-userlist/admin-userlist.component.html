@@ -38,7 +38,7 @@
           <th class="text-white">Action</th>
         </tr>
       </thead>
-      <tbody class="bg-grey-light flex flex-col  justify-between overflow-y-scroll" style="height: 60vh;">
+      <tbody class="bg-grey-light flex flex-col overflow-y-auto" style="height: 60vh;">
         <tr
           *ngFor="let data of users | searchUser: searchInput; let i = index"
           class="grid grid-cols-9 px-2 py-1 text-center"

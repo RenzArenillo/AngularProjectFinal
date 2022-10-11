@@ -8,6 +8,24 @@
             <h2 *ngIf = "!params">Add Product</h2>
 
           </div>  
+
+        <!-- <div class="form-group">
+                <label for="testemail" class="block px-1 text-sm text-gray-600" >Email: </label>
+
+                <input formControlName="testemail" [class.is-invalid]="(productsForm.get('testemail')?.invalid && 
+                    productsForm.get('testemail')?.touched)" type="email" id="testemail" class="form-control">
+
+                <div *ngIf="(productsForm.get('testemail')?.invalid && productsForm.get('testemail')?.touched) 
+                    || productsForm.get('testemail')?.dirty">
+
+                <small  class="text-red-500 text-xs italic" 
+                    role="alert" *ngIf="(productsForm.get('testemail')?.errors?.['required'])">Email address is required</small>
+
+                <small  class="text-red-500 text-xs italic" 
+                    role="alert" *ngIf="(productsForm.get('testemail')?.errors?.['email'])">Email address is invalid</small>
+            </div>
+        </div>   -->
+
         <div class="form-group">
             <label for="productId" class="block px-1 text-sm text-gray-600" >ID: </label>
             <input formControlName="productId" type="number" id="productId" class="form-control">   

@@ -17,9 +17,9 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
     this.signUpForm = this.fb.group({
-      userName: ['', [Validators.required, Validators.minLength(5)]],
-      email: ['', [Validators.required, Validators.minLength(5)]],
-      mobileNumber: ['', [Validators.required, Validators.minLength(5)]],
+      userName: ['', [Validators.required, Validators.minLength(4)]],
+      email: ['', [Validators.required, Validators.email]],
+      mobileNumber: ['', [Validators.required, Validators.minLength(10)]],
       userPassword: ['', [Validators.required, Validators.minLength(5)]],
       confirmPassword: ['', [Validators.required, Validators.minLength(5)]]
     })
@@ -29,8 +29,8 @@ export class SignupComponent implements OnInit {
       this.http.post<any>("http://localhost:3000/users",this.signUpForm.value)
       .subscribe(res=>{
           const user = this.signUpForm.pristine ||
-            (this.signUpForm.value.userName === ' ' || this.signUpForm.value.email === ' ' || 
-              this.signUpForm.value.mobileNumber === ' ' || this.signUpForm.value.userPassword === ' ' || this.signUpForm.value.confirmPassword === ' ') 
+            (this.signUpForm.value.userName.trim() === '' || this.signUpForm.value.email.trim() === '' || 
+              this.signUpForm.value.mobileNumber.trim() === '' || this.signUpForm.value.userPassword.trim() === '' || this.signUpForm.value.confirmPassword.trim === '') 
           if(!user){
             if(this.signUpForm.value.userPassword != this.signUpForm.value.confirmPassword){
               alert('Passwords do not match.')
@@ -38,9 +38,11 @@ export class SignupComponent implements OnInit {
               alert('Signup successful! Redirecting you to login.');
               this.signUpForm.reset()
               this.router.navigate(["login"])
+              console.log(this.signUpForm.value)
             }
           }else {
             alert("Please fill up all the fields.")
+            console.log(this.signUpForm.value)
           }
       },err=>{
         alert("Something went wrong.")
