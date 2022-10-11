@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   loginForm!: FormGroup
+  userStr?: any
 
   constructor(private fb: FormBuilder, private router: Router, private http: HttpClient) { 
   }
@@ -26,18 +27,6 @@ export class LoginComponent implements OnInit {
 
     this.http.get<any>("http://localhost:3000/users")
     .subscribe(res=>{
-      // const user = res.find((a:any)=>{
-      //   return a.userName === this.loginForm.value.userName && a.userPassword === this.loginForm.value.userPassword
-      // });
-      // if(user){
-      //   alert('Login Successful');
-      //   this.loginForm.reset()
-      //   this.router.navigate(["dashboard"])
-      // }else if(this.loginForm.pristine || (this.loginForm.value.userName.trim() === '' || this.loginForm.value.email.trim() === '')){
-      //   alert('Please fill up all the fields.')
-      // }else if(!user){
-      //   alert("The username or password you entered is incorrect.")
-      // }
       const user = this.loginForm.pristine ||
       (this.loginForm.value.userName?.trim() === '' || this.loginForm.value.confirmPassword?.trim === '') 
       if(!user){
@@ -48,6 +37,9 @@ export class LoginComponent implements OnInit {
           alert('Passwords do not match.')
         }else{
           alert('Login successful! Redirecting you to login.');
+          this.userStr = this.http.get<any>("http://localhost:3000/users")
+          .subscribe(a=>{a.find((b:any)=>{b.userName === this.loginForm.value.userName})})
+          console.log(this.userStr)
           this.loginForm.reset()
           // this.router.navigate(["login"])
           // console.log(this.loginForm.value)
