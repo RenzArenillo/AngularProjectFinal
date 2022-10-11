@@ -435,6 +435,21 @@
       "userPassword": "asd",
       "confirmPassword": "asd",
       "id": 5
+    },
+    {
+      "id": 6,
+      "userName": "aldrina",
+      "userPassword": "123",
+      "firstName": "aldrin",
+      "middleName": "corbe",
+      "lastName": "morada",
+      "email": "aldrinmorada@email.com",
+      "mobileNumber": 123456789,
+      "birthdate": "2022-01-01",
+      "interestsLists": [
+        "any",
+        "any"
+      ]
     }
   ]
 }
