@@ -8,12 +8,12 @@
                       <form [formGroup]="loginForm" (ngSubmit)="submitLogin()" class="form-horizontal w-3/4 mx-auto">
                         <div class="text-xs tracking-wider font-medium">USERNAME</div>
                           <div class="flex flex-col mt-2">
-                              <input id="username" type="text" class="placeholder:italic flex-grow h-8 px-2 border rounded border-grey-400" name="username" value="" placeholder="(juandelacruz123)">
+                              <input id="username" type="text" class="placeholder:italic flex-grow h-8 px-2 border rounded border-grey-400" formControlName="userName" placeholder="(juandelacruz123)">
                           </div>
                           
                           <div class="flex flex-col mt-7">
                             <div class="text-xs tracking-wider font-medium mb-2">PASSWORD</div>
-                              <input id="password" type="password" class="placeholder:italic flex-grow h-8 px-2 rounded border border-grey-400" name="password" required placeholder="Must have atleast 6 characters">
+                              <input id="password" type="password" class="placeholder:italic flex-grow h-8 px-2 rounded border border-grey-400" formControlName="userPassword" required placeholder="Must have atleast 6 characters">
                           </div>
                           <div class="flex flex-col mt-8">
                               <button type="submit" class="bg-stone-400 hover:bg-stone-600 text-white text-sm font-semibold py-2 px-4 rounded">

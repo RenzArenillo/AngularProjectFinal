@@ -23,17 +23,37 @@ export class LoginComponent implements OnInit {
   }
 
   submitLogin(){
+
     this.http.get<any>("http://localhost:3000/users")
     .subscribe(res=>{
-      const user = res.find((a:any)=>{
-        return a.userName === this.loginForm.value.userName && a.userPassword === this.loginForm.value.userPassword
-      });
-      if(user){
-        alert('Login Successful');
-        this.loginForm.reset()
-        this.router.navigate(["dashboard"])
+      // const user = res.find((a:any)=>{
+      //   return a.userName === this.loginForm.value.userName && a.userPassword === this.loginForm.value.userPassword
+      // });
+      // if(user){
+      //   alert('Login Successful');
+      //   this.loginForm.reset()
+      //   this.router.navigate(["dashboard"])
+      // }else if(this.loginForm.pristine || (this.loginForm.value.userName.trim() === '' || this.loginForm.value.email.trim() === '')){
+      //   alert('Please fill up all the fields.')
+      // }else if(!user){
+      //   alert("The username or password you entered is incorrect.")
+      // }
+      const user = this.loginForm.pristine ||
+      (this.loginForm.value.userName?.trim() === '' || this.loginForm.value.confirmPassword?.trim === '') 
+      if(!user){
+        const acc = res.find((a:any)=>{
+            return a.userName === this.loginForm.value.userName && a.userPassword === this.loginForm.value.userPassword
+          });
+        if(!acc){
+          alert('Passwords do not match.')
+        }else{
+          alert('Login successful! Redirecting you to login.');
+          this.loginForm.reset()
+          // this.router.navigate(["login"])
+          // console.log(this.loginForm.value)
+        }
       }else{
-        alert("The username or password you entered is incorrect, or you didn't fill up all the fields.")
+        alert("Please fill up all the fields.")
       }
     },err=>{
       alert("Something went wrong.")
