@@ -18,9 +18,9 @@
           </button>
         </div>
 
-        <select class="px-2 py-1 bg-blue-600 text-white rounded-md w-full" [(ngModel)]="selectedCategory" (change)="valueSelected()"> 
-          <option [ngValue]="null" [disabled]="true">Filter Product</option>
-          <option *ngFor="let category of categories">{{category}}</option>
+        <select class="px-2 py-1 hover:bg-blue-400 bg-blue-600 text-white rounded-md w-full" [(ngModel)]="selectedCategory" (change)="valueSelected()"> 
+          <option [ngValue]="null" [disabled]="true" >Filter Product</option>
+          <option *ngFor="let category of categories" class="bg-gray-500 text-white">{{category}}</option>
         </select>
 
         <button
