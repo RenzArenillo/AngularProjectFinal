@@ -14,76 +14,63 @@ import { SignupComponent } from './modules/signup/pages/signup/signup.component'
 import { TesthomeComponent } from './modules/testhome/testhome.component';
 import { CartPageComponent } from './modules/products/cart-page/cart-page.component';
 import { ProfileItemComponent } from './modules/profile/components/profile-item/profile-item.component';
+import { AdminGuard } from './assets/guards/admin.guard';
 
 const routes: Routes = [
   {
     path: '',
-    component: LoginComponent,
+    component: DashboardComponent,
   },
   {
-    path: "home",
-    component: TesthomeComponent
-  },
-  {
-    path: "checkout",
+    path: 'checkout',
     component: CheckoutPageComponent,
   },
   {
-    path: "orders",
-    component: PendingOrdersPageComponent
+    path: 'orders',
+    component: PendingOrdersPageComponent,
   },
   {
-    path: "userlist",
-    component: AdminUserlistComponent
+    path: 'userlist',
+    component: AdminUserlistComponent, // for admin
   },
-  {
-    path: "adduser",
-    component: AddUserComponent
-  },
-  //Aldrin
   {
     path: 'dashboard',
     component: DashboardComponent,
   },
   {
-    path: 'product',
+    path: 'admin',
     component: ProductsComponent,
   },
-  //Roi
+  {
+    path: 'product',
+    component: ProductsComponent,
+    //canActivate: [AdminGuard],
+  },
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
   },
   {
     path: 'forget-pw',
-    component: ForgetPwComponent
+    component: ForgetPwComponent,
   },
   {
     path: 'sign-up',
-    component: SignupComponent
+    component: SignupComponent,
   },
   {
     path: 'forget-pw/redirect',
-    component: ForgetRedirComponent
+    component: ForgetRedirComponent,
   },
-  //Chin
-  // {
-  //   path: 'dashboard',
-  //   loadChildren: () => import('./modules/product/product.module').then(m => m.ProductModule)
-  // },
   {
     path: 'profile',
+    component: ProfileItemComponent,
     // loadChildren: () => import('./modules/profile/profile.module').then(m => m.ProfileModule)
-    component: ProfileItemComponent
   },
   {
     path: 'cart',
-    component: CartPageComponent
+    component: CartPageComponent,
   },
-  // {
-  //   path: 'product',
-  //   component: ProductPageComponent
-  // }
 ];
 
 @NgModule({
@@ -91,3 +78,23 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
+
+// {
+//   path: 'userlist',
+//   component: AdminUserlistComponent, // for admin
+// },
+// {
+//   path: 'adduser',
+//   component: AddUserComponent,
+// },
+//Aldrin
+
+// {
+//   path: 'product',
+//   component: ProductPageComponent
+// }
+
+// {
+//   path: 'home',
+//   component: TesthomeComponent,
+// },

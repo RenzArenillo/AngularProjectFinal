@@ -1,8 +1,10 @@
 import { Component, EventEmitter, OnInit, SimpleChanges } from '@angular/core';
 import { Category } from 'src/app/assets/models/category';
 import { Product } from 'src/app/assets/models/product';
+import { User } from 'src/app/assets/models/users';
 import { CategoryService } from 'src/app/assets/services/category/category.service';
 import { ProductService } from 'src/app/assets/services/product/product.service';
+import { LoginService } from '../login/services/login.service';
 import { CartService } from '../products/services/cart.service';
 
 @Component({
@@ -11,6 +13,7 @@ import { CartService } from '../products/services/cart.service';
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
+  user: User | any;
   userType: string = 'Admin';
   filter: string = '';
   dropDown: boolean = false;
@@ -24,7 +27,8 @@ export class DashboardComponent implements OnInit {
   constructor(
     private productService: ProductService,
     private categoryService: CategoryService,
-    private cartService: CartService
+    private cartService: CartService,
+    private loginService: LoginService
   ) {}
 
   ngOnInit(): void {
@@ -47,6 +51,8 @@ export class DashboardComponent implements OnInit {
     this.categoryService.getCategories().subscribe((categories) => {
       this.categories = categories;
     });
+
+    this.user = this.loginService.getUser();
   }
 
   getBestSellers() {

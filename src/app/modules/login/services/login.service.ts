@@ -1,9 +1,28 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { User } from 'src/app/assets/models/users';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LoginService {
+  env = 'http://localhost:3000/user';
 
-  constructor() { }
+  user: User | any;
+  constructor(private http: HttpClient) {}
+
+  getUser(): User | any {
+    return this.user;
+  }
+
+  setUser(id: string) {
+    this.http
+      .get<User>(`${this.env}/${id}`)
+      .subscribe((user) => this.setUser2(user));
+  }
+
+  setUser2(user: User) {
+    this.user = user;
+    localStorage.setItem("user", JSON.stringify(user));
+  }
 }

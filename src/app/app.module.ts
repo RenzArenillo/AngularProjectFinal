@@ -2,7 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -32,6 +32,7 @@ import { CartPageComponent } from './modules/products/cart-page/cart-page.compon
 import { ProductModule } from './modules/products/products.module';
 import { ProfileItemComponent } from './modules/profile/components/profile-item/profile-item.component';
 import { ProfileModule } from './modules/profile/profile.module';
+import { CarouselComponent } from './modules/dashboard/components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -51,8 +52,8 @@ import { ProfileModule } from './modules/profile/profile.module';
     TesthomeComponent,
     AdminUserlistComponent,
     AddUserComponent,
-    SearchPipe
-    
+    SearchPipe,
+    CarouselComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,7 +61,7 @@ import { ProfileModule } from './modules/profile/profile.module';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule, 
+    FormsModule,
     ProfileModule,
     HttpClientModule,
     LoginModule,
@@ -68,9 +69,19 @@ import { ProfileModule } from './modules/profile/profile.module';
     SignupModule,
     SharedModule,
     RouterModule,
-    FlexLayoutModule
+    FlexLayoutModule,
   ],
   providers: [],
-  bootstrap: [AppComponent], 
+  bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+
+  currentRoute!: string;
+  constructor(){
+    console.log(window.location.pathname);
+  }
+
+  ngOnInit(): void {
+    console.log(window.location.pathname);
+  }
+}
