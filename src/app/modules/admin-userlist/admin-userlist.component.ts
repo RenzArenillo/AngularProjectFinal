@@ -25,7 +25,7 @@ export class AdminUserlistComponent implements OnInit {
   }
 
   deactivateUser(data: User) {
-    data.active = !data.active 
+    data.active = !data.active  
     this.userService.update(data)
   }
 
@@ -34,7 +34,15 @@ export class AdminUserlistComponent implements OnInit {
     this.router.navigate(['/adduser']);
   }
 
-
+  search(input:String) {
+    this.userService.getUsers().subscribe((users) => {
+      this.users = users.filter((x: { userName: { toLowerCase: () => String[]; }; firstName: { toLowerCase: () => String[]; }; lastName: { toLowerCase: () => String[]; }; }) => {return x.userName.toLowerCase().includes(input) ||
+        x.firstName.toLowerCase().includes(input) ||
+        x.lastName.toLowerCase().includes(input)});
+    });      
+    
+  }
+  
   
 
 

@@ -17,16 +17,38 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
     this.signUpForm = this.fb.group({
-      userName: ['', [Validators.required, Validators.minLength(4)]],
+      firstName: ['', [Validators.required]],
+      middleName: ['', [Validators.required]],
+      lastName: ['', [Validators.required]],
+      userName: ['', [Validators.required, Validators.minLength(5)]],
       email: ['', [Validators.required, Validators.email]],
       mobileNumber: ['', [Validators.required, Validators.minLength(10)]],
       userPassword: ['', [Validators.required, Validators.minLength(5)]],
-      confirmPassword: ['', [Validators.required, Validators.minLength(5)]]
+      confirmPassword: ['', [Validators.required, Validators.minLength(5)]],
+      birthdate: ['', [Validators.required]],
+      interestsLists: [
+        "Clothes"
+      ],
+      active: true,
+      userType: "Customer"
     })
+    this.signUpForm.get('birthdate')?.patchValue(this.formatDate(new Date()));
+
   }
 
+  private formatDate(date: string | number | Date) {
+    const d = new Date(date);
+    let month = '' + (d.getMonth() + 1);
+    let day = '' + d.getDate();
+    const year = d.getFullYear();
+    if (month.length < 2) month = '0' + month;
+    if (day.length < 2) day = '0' + day;
+    return [year, month, day].join('/');
+  }
+
+
   submitButton(){  
-      this.http.post<any>("http://localhost:3000/users",this.signUpForm.value)
+      this.http.post<any>("http://localhost:3000/user",this.signUpForm.value)
       .subscribe(res=>{
           const user = this.signUpForm.pristine ||
             (this.signUpForm.value.userName.trim() === '' || this.signUpForm.value.email.trim() === '' || 

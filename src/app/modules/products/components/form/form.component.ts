@@ -20,7 +20,6 @@ export class FormComponent implements OnInit {
   constructor(fb:FormBuilder, private productService: ProductsService, private router: Router, 
     private route: ActivatedRoute) {
     this.productsForm = fb.group({
-      testemail: ['', [Validators.email, Validators.required]],
       productId: ['', [Validators.required]],
       productName: ['', [Validators.required]],
       productPrice: ['', [Validators.required]],

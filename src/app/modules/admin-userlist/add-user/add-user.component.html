@@ -1,1 +1,60 @@
-<p>add-user works!</p>
+<div class="min-w-[800px] bg-gray-200 h-screen py-16 flex justify-center">
+
+    <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col overflow-y-scroll">
+    
+    <form [formGroup]="usersForm" (ngSubmit)="submit()">  
+        <div class="text-center font-semibold text-black">
+            <h2>Add User</h2>
+
+          </div>  
+        <div class="form-group">
+            <label for="userName" class="block px-1 text-sm text-gray-600" >User Name: </label>
+            <input formControlName="userName" type="text" id="userName" class="form-control">   
+            <div *ngIf="(usersForm.get('userName')?.errors?.['required'] && usersForm.get('userName')?.touched)" class="text-red-500 text-xs italic" 
+            role="alert">Username is required</div>  
+        </div>
+        <div class="form-group">
+            <label for="userPassword" class="block px-1 text-sm text-gray-600" >Password: </label>
+            <input formControlName="userPassword" type="text" id="userPassword" class="form-control">   
+            <div *ngIf="(usersForm.get('userPassword')?.errors?.['required'] && usersForm.get('userPassword')?.touched)" class="text-red-500 text-xs italic" 
+            role="alert">Password is required</div>  
+        </div>
+        <div class="form-group">
+            <label for="firstName" class="block px-1 text-sm text-gray-600" >First Name: </label>
+            <input formControlName="firstName" type="text" id="firstName" class="form-control">   
+            <div *ngIf="(usersForm.get('firstName')?.errors?.['required'] && usersForm.get('firstName')?.touched)" class="text-red-500 text-xs italic" 
+            role="alert">First name is required</div>  
+        </div>
+        <div class="form-group">
+            <label for="middleName" class="block px-1 text-sm text-gray-600" >Middle Name: </label>
+            <input formControlName="middleName" type="text" id="middleName" class="form-control">   
+            <div *ngIf="(usersForm.get('middleName')?.errors?.['required'] && usersForm.get('middleName')?.touched)" class="text-red-500 text-xs italic" 
+            role="alert">Middle name is required</div>  
+        </div>
+        <div class="form-group">
+            <label for="lastName" class="block px-1 text-sm text-gray-600" >Last Name: </label>
+            <input formControlName="lastName" type="text" id="lastName" class="form-control">   
+            <div *ngIf="(usersForm.get('lastName')?.errors?.['required'] && usersForm.get('lastName')?.touched)" class="text-red-500 text-xs italic" 
+            role="alert">Last name is required</div>  
+        </div>
+
+        <div class="form-group">
+            <label for="email" class="block px-1 text-sm text-gray-600" >Email: </label>
+            <input formControlName="email" type="text" id="email" class="form-control">   
+            <div *ngIf="(usersForm.get('email')?.errors?.['required'] && usersForm.get('email')?.touched)" class="text-red-500 text-xs italic" 
+            role="alert">E-mail is required</div>  
+        </div>
+        <div class="form-group">
+            <label for="mobileNumber" class="block px-1 text-sm text-gray-600" >Mobile Number: </label>
+            <input formControlName="mobileNumber" type="text" id="mobileNumber" class="form-control">   
+            <div *ngIf="(usersForm.get('mobileNumber')?.errors?.['required'] && usersForm.get('mobileNumber')?.touched)" class="text-red-500 text-xs italic" 
+            role="alert">Mobile number is required</div>  
+        </div>
+
+        <br/>
+        <button type="submit" [disabled]="usersForm.invalid" class="px-2 py-1 bg-green-600 hover:bg-green-400 text-white rounded-md w-full">Submit</button>
+        <button class="px-2 py-1 bg-red-600 hover:bg-red-400 text-white rounded-md w-full" (click)="goBack()">Cancel</button>
+
+    </form>
+</div>
+</div>

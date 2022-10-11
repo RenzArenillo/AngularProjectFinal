@@ -11,9 +11,9 @@ export class UserService {
 
   constructor(private http:HttpClient) { }
 
-  getUsers(): Observable<User[]> {
-    return this.http.get<User[]>(`${environment.url}/user`).pipe<User[]>(  
-      map((data:User[]) => {
+  getUsers() {
+    return this.http.get<User[]>(`${environment.url}/user`).pipe(  
+      map((data:any) => {
         return data
       }
     ))

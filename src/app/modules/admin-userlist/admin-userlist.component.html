@@ -13,6 +13,9 @@
             placeholder="Search..."
             size="50"
           />
+          <button class="bg-cyan-500 hover:bg-cyan-600 px-2 py-1" (click) = "search(searchInput)">
+            <i class="fa fa-search text-white" ></i>
+          </button>
         </div>
         <button
           class="px-2 py-1 bg-blue-600 hover:bg-blue-800 text-white rounded-md font-bold w-full"
@@ -40,7 +43,7 @@
       </thead>
       <tbody class="bg-grey-light flex flex-col overflow-y-auto" style="height: 60vh;">
         <tr
-          *ngFor="let data of users | searchUser: searchInput; let i = index"
+          *ngFor="let data of users; let i = index"
           class="grid grid-cols-9 px-2 py-1 text-center"
           [ngClass]="i % 2 == 0 ? '' : 'bg-cyan-200'"
         >
