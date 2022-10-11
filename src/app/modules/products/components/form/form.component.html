@@ -47,9 +47,9 @@
             role="alert">Quantity is required</div>      
         </div>
         <br/>
-        <button *ngIf = "!params" type="submit" [disabled]="productsForm.invalid" class="px-2 py-1 bg-green-600 hover:bg-green-400 text-white rounded-md w-full">Submit</button>
-        <button *ngIf = "params" type="submit" [disabled]="productsForm.invalid" class="px-2 py-1 bg-green-600 hover:bg-green-400 text-white rounded-md w-full">Save</button>
-        <button class="px-2 py-1 bg-red-600 hover:bg-red-400 text-white rounded-md w-full" (click)="goBack()">Cancel</button>
+        <button *ngIf = "!params" type="submit" [disabled]="productsForm.invalid" class="px-2 py-1 bg-green-600 hover:bg-green-400 text-white rounded-md ">Submit</button>
+        <button *ngIf = "params" type="submit" [disabled]="productsForm.invalid" class="px-2 py-1 bg-green-600 hover:bg-green-400 text-white rounded-md ">Save</button>
+        <button class="px-2 py-1 bg-red-600 hover:bg-red-400 text-white rounded-md " (click)="goBack()">Cancel</button>
 
     </form>
 </div>

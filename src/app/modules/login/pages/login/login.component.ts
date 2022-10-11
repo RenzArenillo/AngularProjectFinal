@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from 'src/app/assets/models/users';
@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   loginForm!: FormGroup
   user: string = ""
   user2?: User
+
 
   constructor(private fb: FormBuilder, private router: Router, private http: HttpClient, private loginService:LoginService) { 
   }

@@ -253,6 +253,98 @@
       "paymentMethod": "cash",
       "orderStatus": "Pending",
       "id": 1
+    },
+    {
+      "userId": "USER001",
+      "orderedItems": [
+        {
+          "productId": "1000",
+          "productName": "Item1",
+          "productQuantity": 1,
+          "productPrice": 50,
+          "productCategory": "Category1"
+        },
+        {
+          "productId": "1033",
+          "productName": "Item2",
+          "productQuantity": 2,
+          "productPrice": 200,
+          "productCategory": "Category2"
+        },
+        {
+          "productId": "1823",
+          "productName": "Item3",
+          "productQuantity": 1,
+          "productPrice": 150,
+          "productCategory": "Category2"
+        },
+        {
+          "productId": "2823",
+          "productName": "Item6",
+          "productQuantity": 4,
+          "productPrice": 20,
+          "productCategory": "Category2"
+        }
+      ],
+      "orderQuantity": 8,
+      "orderTotalPrice": 680,
+      "orderAddress": "a",
+      "orderDate": "2022/10/11",
+      "paymentMethod": "card",
+      "orderStatus": "Completed",
+      "id": 2
+    },
+    {
+      "userId": "USER001",
+      "orderedItems": [
+        {
+          "productId": "1000",
+          "productName": "Item1",
+          "productQuantity": 1,
+          "productPrice": 50,
+          "productCategory": "Category1"
+        }
+      ],
+      "orderQuantity": 1,
+      "orderTotalPrice": 50,
+      "orderAddress": "a",
+      "orderDate": "2022/09/09",
+      "paymentMethod": "cash",
+      "orderStatus": "Completed",
+      "id": 3
+    },
+    {
+      "userId": "USER001",
+      "orderedItems": [
+        {
+          "productId": "1002",
+          "productName": "Item54",
+          "productQuantity": 3,
+          "productPrice": 50,
+          "productCategory": "Category1"
+        },
+        {
+          "productId": "3033",
+          "productName": "Item2",
+          "productQuantity": 2,
+          "productPrice": 210,
+          "productCategory": "Category2"
+        },
+        {
+          "productId": "1673",
+          "productName": "Item3",
+          "productQuantity": 1,
+          "productPrice": 460,
+          "productCategory": "Category2"
+        }
+      ],
+      "orderQuantity": 6,
+      "orderTotalPrice": 1030,
+      "orderAddress": "a",
+      "orderDate": "2022/10/11",
+      "paymentMethod": "cash",
+      "orderStatus": "Pending",
+      "id": 4
     }
   ],
   "user": [
@@ -266,7 +358,7 @@
       "lastName": "Rizal",
       "mobileNumber": 9163842995,
       "email": "joserizal@gmail.com",
-      "birthdate": "1998/11/05",
+      "birthdate": "1998-11-05",
       "interestsLists": [
         "Clothes"
       ],
@@ -282,7 +374,7 @@
       "lastName": "Li",
       "mobileNumber": 9626712905,
       "email": "josiel@gmail.com",
-      "birthdate": "1993/02/25",
+      "birthdate": "1993-02-25",
       "interestsLists": [
         "Clothes"
       ],
@@ -298,7 +390,7 @@
       "lastName": "Ral",
       "mobileNumber": 9563842885,
       "email": "cowsheep@gmail.com",
-      "birthdate": "1988/06/05",
+      "birthdate": "1988-06-05",
       "interestsLists": [
         "Clothes"
       ],
@@ -314,7 +406,7 @@
       "lastName": "Ron",
       "mobileNumber": 9544842885,
       "email": "liontiger@gmail.com",
-      "birthdate": "1933/01/01",
+      "birthdate": "1933-01-01",
       "interestsLists": [
         "Clothes"
       ],
@@ -330,7 +422,7 @@
       "lastName": "Vie",
       "mobileNumber": 9544842885,
       "email": "lion2tiger@gmail.com",
-      "birthdate": "1943/01/01",
+      "birthdate": "1943-01-01",
       "interestsLists": [
         "Clothes"
       ],
@@ -344,8 +436,7 @@
       "email": "rarenillo@77global.biz",
       "mobileNumber": "09164855881",
       "userPassword": "abcde",
-      "confirmPassword": "abcde",
-      "birthdate": "1998/11/05",
+      "birthdate": "1998-11-05",
       "interestsLists": "Clothes",
       "active": true,
       "userType": "Customer",
@@ -359,8 +450,7 @@
       "email": "rarenillo@77global.biz",
       "mobileNumber": "09164855881",
       "userPassword": "s",
-      "confirmPassword": "s",
-      "birthdate": "2006/06/21",
+      "birthdate": "2006-06-21",
       "interestsLists": "Clothes",
       "active": true,
       "userType": "Customer",
@@ -374,82 +464,44 @@
       "email": "rarenillo@77global.biz",
       "mobileNumber": "09164855881",
       "userPassword": "s",
-      "confirmPassword": "s",
-      "birthdate": "2022/10/11",
+      "birthdate": "2022-10-11",
       "interestsLists": "Clothes",
       "active": true,
       "userType": "Customer",
       "id": 8
-    }
-  ],
-  "users": [
+    },
     {
-      "id": 1,
-      "userName": "aldrin",
-      "userPassword": "123",
-      "firstName": "aldrin",
-      "middleName": "corbe",
-      "lastName": "morada",
-      "email": "aldrinmorada@email.com",
-      "mobileNumber": 123456789,
-      "birthdate": "2022-01-01",
+      "userName": "Ma123",
+      "userPassword": "asdfg",
+      "firstName": "Ad",
+      "middleName": "Dada",
+      "lastName": "Aaaa",
+      "email": "ddd@d",
+      "mobileNumber": "1231293883",
+      "userType": "User",
+      "birthdate": "2001-07-27",
       "interestsLists": [
         "any",
         "any"
-      ]
+      ],
+      "active": true,
+      "id": 9
     },
     {
-      "id": 2,
-      "userName": "aldrin",
-      "userPassword": "123",
-      "firstName": "aldrin",
-      "middleName": "corbe",
-      "lastName": "morada",
-      "email": "aldrinmorada@email.com",
-      "mobileNumber": 123456789,
-      "birthdate": "2022-01-01",
+      "firstName": "TenThirty",
+      "middleName": "Ten",
+      "lastName": "Eleven",
+      "userName": "timeout",
+      "email": "abc@yahoo.com",
+      "mobileNumber": "1234567890",
+      "userPassword": "12345",
+      "birthdate": "2005-10-19",
       "interestsLists": [
-        "any",
-        "any"
-      ]
-    },
-    {
-      "userName": "sdafaks",
-      "email": "",
-      "mobileNumber": "",
-      "userPassword": "asfda",
-      "id": 3
-    },
-    {
-      "userName": "aldrin",
-      "email": "aaaa@aaaa.com",
-      "mobileNumber": "1113132323",
-      "userPassword": "123",
-      "confirmPassword": "123",
-      "id": 4
-    },
-    {
-      "userName": "asd",
-      "email": "a@a.com",
-      "mobileNumber": "1387183183",
-      "userPassword": "asd",
-      "confirmPassword": "asd",
-      "id": 5
-    },
-    {
-      "id": 6,
-      "userName": "aldrina",
-      "userPassword": "123",
-      "firstName": "aldrin",
-      "middleName": "corbe",
-      "lastName": "morada",
-      "email": "aldrinmorada@email.com",
-      "mobileNumber": 123456789,
-      "birthdate": "2022-01-01",
-      "interestsLists": [
-        "any",
-        "any"
-      ]
+        "Clothes"
+      ],
+      "active": true,
+      "userType": "Customer",
+      "id": 10
     }
   ]
 }

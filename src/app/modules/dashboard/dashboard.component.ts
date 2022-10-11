@@ -35,7 +35,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.user = this.loginService.getUser()
     // console.log(JSON.stringify(this.loginService.getUser()) + " from dashboard ts")
-    console.log(this.user?.firstName)
+    console.log(this.user)
 
     this.productService.getProducts().subscribe((res) => {
       this.products = res;

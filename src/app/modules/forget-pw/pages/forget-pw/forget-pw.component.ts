@@ -27,13 +27,14 @@ export class ForgetPwComponent implements OnInit {
   }
 
   submitButton(){
-    this.http.get<any>("http://localhost:3000/users")
+    this.http.get<any>("http://localhost:3000/user")
     .subscribe(res=>{
       const user = res.find((a:any)=>{
         ForgetPwComponent.upass = a.userPassword
         return a.userName === this.forgetForm.value.userName && a.email === this.forgetForm.value.email &&
         a.mobileNumber === this.forgetForm.value.mobileNumber
       });
+      console.log(user)
       if(user){
         alert('Account found! Redirecting...');
         this.getName()

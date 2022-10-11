@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/assets/models/users';
+import { LoginService } from '../../login/services/login.service';
 import { CartService } from '../../products/services/cart.service';
 
 // import { CartService } from 'src/app/modules/product/services/cart.service';
@@ -12,9 +14,13 @@ export class HeaderComponent implements OnInit {
   totalQuantity:number = 0;
   totalItem: number = 0;
   cartItems:number = 0;
-  constructor(private cartService:CartService) {  }
+  user?:User;
+  constructor(private cartService:CartService, private loginService: LoginService
+    ) {     this.user = this.loginService.getUser()
+    }
 
   ngOnInit(): void {
+    this.user = this.loginService.getUser()
     this.cartService.getProducts().subscribe(res =>{
       // this.totalItem = res.length; 
       this.totalItem = this.cartService.incrementCart(this.cartItems);

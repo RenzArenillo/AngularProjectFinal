@@ -22,40 +22,44 @@ export class SignupComponent implements OnInit {
       lastName: ['', [Validators.required]],
       userName: ['', [Validators.required, Validators.minLength(5)]],
       email: ['', [Validators.required, Validators.email]],
-      mobileNumber: ['', [Validators.required, Validators.minLength(10)]],
+      mobileNumber: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
       userPassword: ['', [Validators.required, Validators.minLength(5)]],
       confirmPassword: ['', [Validators.required, Validators.minLength(5)]],
       birthdate: ['', [Validators.required]],
+    })
+
+  }
+
+  submitButton(){  
+    const user = {
+      firstName: this.signUpForm.get('firstName')?.value,
+      middleName: this.signUpForm.get('middleName')?.value,
+      lastName: this.signUpForm.get('lastName')?.value,
+      userName: this.signUpForm.get('userName')?.value,
+      email: this.signUpForm.get('email')?.value,
+      mobileNumber: this.signUpForm.get('mobileNumber')?.value,
+      userPassword: this.signUpForm.get('userPassword')?.value,
+      birthdate: this.signUpForm.get('birthdate')?.value,
       interestsLists: [
         "Clothes"
       ],
       active: true,
       userType: "Customer"
-    })
-    this.signUpForm.get('birthdate')?.patchValue(this.formatDate(new Date()));
-
-  }
-
-  private formatDate(date: string | number | Date) {
-    const d = new Date(date);
-    let month = '' + (d.getMonth() + 1);
-    let day = '' + d.getDate();
-    const year = d.getFullYear();
-    if (month.length < 2) month = '0' + month;
-    if (day.length < 2) day = '0' + day;
-    return [year, month, day].join('/');
-  }
+    }
 
 
-  submitButton(){  
-      this.http.post<any>("http://localhost:3000/user",this.signUpForm.value)
+
+
+
+
+
+      this.http.post<any>("http://localhost:3000/user",user)
       .subscribe(res=>{
           const user = this.signUpForm.pristine ||
             (this.signUpForm.value.userName.trim() === '' || this.signUpForm.value.email.trim() === '' || 
               this.signUpForm.value.mobileNumber.trim() === '' || this.signUpForm.value.userPassword.trim() === '' || this.signUpForm.value.confirmPassword.trim === '') 
           if(!user){
             if(this.signUpForm.value.userPassword != this.signUpForm.value.confirmPassword){
-              alert('Passwords do not match.')
             }else{
               alert('Signup successful! Redirecting you to login.');
               this.signUpForm.reset()
@@ -63,7 +67,6 @@ export class SignupComponent implements OnInit {
               console.log(this.signUpForm.value)
             }
           }else {
-            alert("Please fill up all the fields.")
             console.log(this.signUpForm.value)
           }
       },err=>{

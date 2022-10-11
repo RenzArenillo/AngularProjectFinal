@@ -12,31 +12,24 @@ export class TesthomeComponent implements OnInit {
 
   public products : ProductRenz[] = [
     {
-      productId: '1000',
-      productName: 'Item1',
-      productQuantity: 1,
+      productId: '1002',
+      productName: 'Item54',
+      productQuantity: 3,
       productPrice: 50,
       productCategory: 'Category1'
     }, 
     {
-      productId: '1033',
+      productId: '3033',
       productName: 'Item2',
       productQuantity: 2,
-      productPrice: 200,
+      productPrice: 210,
       productCategory: 'Category2'
     },
     {
-      productId: '1823',
+      productId: '1673',
       productName: 'Item3',
       productQuantity: 1,
-      productPrice: 150,
-      productCategory: 'Category2'
-    },
-    {
-      productId: '2823',
-      productName: 'Item6',
-      productQuantity: 4,
-      productPrice: 20,
+      productPrice: 460,
       productCategory: 'Category2'
     }
   ];
