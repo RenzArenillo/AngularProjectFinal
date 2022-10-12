@@ -1,6 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule, FormGroup } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
@@ -75,13 +75,7 @@ import { CarouselComponent } from './modules/dashboard/components/carousel/carou
   bootstrap: [AppComponent],
 })
 export class AppModule {
+  constructor() {}
 
-  currentRoute!: string;
-  constructor(){
-    console.log(window.location.pathname);
-  }
-
-  ngOnInit(): void {
-    console.log(window.location.pathname);
-  }
+  ngOnInit(): void {}
 }

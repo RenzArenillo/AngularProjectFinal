@@ -1,0 +1,146 @@
+<div class="relative p-6 flex-auto">
+  <form class="space-y-3" [formGroup]="profileForm" (ngSubmit)="submit()">
+    <div class="grid grid-cols-3 gap-2">
+      <div class="form-group space-y-1">
+        <label for="firstName" class="block px-1 text-sm text-gray-600"
+          >First Name:
+        </label>
+        <input
+          formControlName="firstName"
+          type="text"
+          id="firstName"
+          class="w-full rounded-md"
+          placeholder="First Name"
+        />
+        <div
+          *ngIf="(profileForm.get('firstName')?.errors?.['required'] && profileForm.get('firstName')?.touched)"
+          class="text-red-500 text-xs italic"
+          role="alert"
+        >
+          First name is required
+        </div>
+      </div>
+
+      <div class="form-group space-y-1">
+        <label for="middleName" class="block px-1 text-sm text-gray-600"
+          >Middle Name:
+        </label>
+        <input
+          formControlName="middleName"
+          type="text"
+          id="middleName"
+          class="w-full rounded-md"
+          placeholder="Middle Name"
+        />
+        <div
+          *ngIf="(profileForm.get('middleName')?.errors?.['required'] && profileForm.get('middleName')?.touched)"
+          class="text-red-500 text-xs italic"
+          role="alert"
+        >
+          Middle name is required
+        </div>
+      </div>
+
+      <div class="form-group space-y-1">
+        <label for="lastName" class="block px-1 text-sm text-gray-600"
+          >Last Name:
+        </label>
+        <input
+          formControlName="lastName"
+          type="text"
+          id="lastName"
+          class="w-full rounded-md"
+          placeholder="Last Name"
+        />
+        <div
+          *ngIf="(profileForm.get('lastName')?.errors?.['required'] && profileForm.get('lastName')?.touched)"
+          class="text-red-500 text-xs italic"
+          role="alert"
+        >
+          Last name is required
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-3 gap-2">
+      <div class="form-group space-y-1">
+        <label for="number" class="block px-1 text-sm text-gray-600"
+          >Number:
+        </label>
+        <input
+          formControlName="number"
+          type="number"
+          id="number"
+          class="w-full rounded-md"
+          placeholder="Mobile Number"
+        />
+        <div
+          *ngIf="(profileForm.get('number')?.errors?.['required'] && profileForm.get('number')?.touched)"
+          class="text-red-500 text-xs italic"
+          role="alert"
+        >
+          Number is required
+        </div>
+      </div>
+
+      <div class="form-group space-y-1">
+        <label for="email" class="block px-1 text-sm text-gray-600"
+          >Email:
+        </label>
+        <input
+          formControlName="email"
+          type="text"
+          id="email"
+          class="w-full rounded-md"
+          placeholder="Email"
+        />
+        <div
+          *ngIf="(profileForm.get('email')?.errors?.['required'] && profileForm.get('email')?.touched)"
+          class="text-red-500 text-xs italic"
+          role="alert"
+        >
+          Email is required
+        </div>
+      </div>
+
+      <div class="form-group space-y-1">
+        <label for="birthDate" class="block px-1 text-sm text-gray-600"
+          >Birthdate:
+        </label>
+        <input
+          formControlName="birthDate"
+          type="date"
+          id="birthDate"
+          class="w-full rounded-md"
+          placeholder="Birth Date"
+        />
+        <div
+          *ngIf="(profileForm.get('birthDate')?.errors?.['required'] && profileForm.get('birthDate')?.touched)"
+          class="text-red-500 text-xs italic"
+          role="alert"
+        >
+          Birth date is required
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div
+  class="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b"
+>
+  <button
+    class="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    type="button"
+    (click)="modal(false)"
+  >
+    Close
+  </button>
+  <button
+    class="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+    type="button"
+    (click)="submit()"
+  >
+    Save Changes
+  </button>
+</div>

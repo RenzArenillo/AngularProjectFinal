@@ -1,297 +1,173 @@
-<!--
-<div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(assets/img/theme/profile-cover.jpg); background-size: cover; background-position: center top;">
-    Mask
-    <span class="mask bg-gradient-danger opacity-8"></span>
-    Header container
-    <div class="container-fluid d-flex align-items-center">
-      <div class="row">
-        <div class="col-lg-7 col-md-10">
-          <h1 class="display-2 text-white">Hello Jesse</h1>
-          <p class="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with your work and manage your projects or assigned tasks</p>
-          <a href="#!" class="btn btn-info">Edit profile</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container-fluid mt--7">
-    <div class="row">
-      <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">
-        <div class="card card-profile shadow">
-          <div class="row justify-content-center">
-            <div class="col-lg-3 order-lg-2">
-              <div class="card-profile-image">
-                <a href="javascript:void(0)">
-                  <img src="assets/img/theme/team-4-800x800.jpg" class="rounded-circle">
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
-            <div class="d-flex justify-content-between">
-              <a href="javascript:void(0)" class="btn btn-sm btn-info mr-4">Connect</a>
-              <a href="javascript:void(0)" class="btn btn-sm btn-default float-right">Message</a>
-            </div>
-          </div>
-          <div class="card-body pt-0 pt-md-4">
-            <div class="row">
-              <div class="col">
-                <div class="card-profile-stats d-flex justify-content-center mt-md-5">
-                  <div>
-                    <span class="heading">22</span>
-                    <span class="description">Friends</span>
-                  </div>
-                  <div>
-                    <span class="heading">10</span>
-                    <span class="description">Photos</span>
-                  </div>
-                  <div>
-                    <span class="heading">89</span>
-                    <span class="description">Comments</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="text-center">
-              <h3>
-                Jessica Jones<span class="font-weight-light">, 27</span>
-              </h3>
-              <div class="h5 font-weight-300">
-                <i class="ni location_pin mr-2"></i>Bucharest, Romania
-              </div>
-              <div class="h5 mt-4">
-                <i class="ni business_briefcase-24 mr-2"></i>Solution Manager - Creative Tim Officer
-              </div>
-              <div>
-                <i class="ni education_hat mr-2"></i>University of Computer Science
-              </div>
-              <hr class="my-4" />
-              <p>Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music.</p>
-              <a href="javascript:void(0)">Show more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-8 order-xl-1">
-        <div class="card bg-secondary shadow">
-          <div class="card-header bg-white border-0">
-            <div class="row align-items-center">
-              <div class="col-8">
-                <h3 class="mb-0">My account</h3>
-              </div>
-              <div class="col-4 text-right">
-                <a href="#!" class="btn btn-sm btn-primary">Settings</a>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <form>
-              <h6 class="heading-small text-muted mb-4">User information</h6>
-              <div class="pl-lg-4">
-                <div class="row">
-                  <div class="col-lg-6">
-                    <div class="form-group">
-                      <label class="form-control-label" for="input-username">Username</label>
-                      <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Username" value="lucky.jesse">
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="form-group">
-                      <label class="form-control-label" for="input-email">Email address</label>
-                      <input type="email" id="input-email" class="form-control form-control-alternative" placeholder="jesse@example.com">
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-lg-6">
-                    <div class="form-group">
-                      <label class="form-control-label" for="input-first-name">First name</label>
-                      <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="Lucky">
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="form-group">
-                      <label class="form-control-label" for="input-last-name">Last name</label>
-                      <input type="text" id="input-last-name" class="form-control form-control-alternative" placeholder="Last name" value="Jesse">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <hr class="my-4" />
-              Address
-              <h6 class="heading-small text-muted mb-4">Contact information</h6>
-              <div class="pl-lg-4">
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <label class="form-control-label" for="input-address">Address</label>
-                      <input id="input-address" class="form-control form-control-alternative" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09" type="text">
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-lg-4">
-                    <div class="form-group">
-                      <label class="form-control-label" for="input-city">City</label>
-                      <input type="text" id="input-city" class="form-control form-control-alternative" placeholder="City" value="New York">
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="form-group">
-                      <label class="form-control-label" for="input-country">Country</label>
-                      <input type="text" id="input-country" class="form-control form-control-alternative" placeholder="Country" value="United States">
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="form-group">
-                      <label class="form-control-label" for="input-country">Postal code</label>
-                      <input type="number" id="input-postal-code" class="form-control form-control-alternative" placeholder="Postal code">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <hr class="my-4" />
-              Description
-              <h6 class="heading-small text-muted mb-4">About me</h6>
-              <div class="pl-lg-4">
-                <div class="form-group">
-                  <label>About Me</label>
-                  <textarea rows="4" class="form-control form-control-alternative" placeholder="A few words about you ...">A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-<section class="relative block pt-96 h-500-px">
-  <div
-    class="absolute top-0 w-full h-full bg-center bg-cover"
-    style="background-image: url('https://wallpapercave.com/wp/wp5124755.jpg')"
-  >
-    <span
-      id="blackOverlay"
-      class="w-full h-full absolute opacity-50 bg-black"
-    ></span>
-  </div>
-</section>
-<section class="relative py-16 bg-white">
-  <div class="container mx-auto px-4">
+<div class="w-inherit h-inherit relative">
+  <section class="relative block pt-96 h-500-px">
     <div
-      class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-56"
+      class="absolute top-0 w-full h-full bg-center bg-cover"
+      style="
+        background-image: url('https://wallpapercave.com/wp/wp5124755.jpg');
+      "
     >
-      <div class="px-6">
-        <div class="flex flex-wrap justify-center">
-          <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
-            <div class="relative">
-              <img
-                src="https://media.istockphoto.com/photos/3d-render-blue-pink-neon-round-frame-circle-ring-shape-empty-space-picture-id1141495869?k=20&m=1141495869&s=612x612&w=0&h=ywX0FMtPYz9npkBKMiT42muc0mo4QmrCoboF_mBj-C4="
-                class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 -mt-12 lg:-ml-16 max-w-150-px"
-              />
-            </div>
-          </div>
-          <div
-            class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center"
-          >
-            <div class="py-6 px-3 mt-32 sm:mt-0">
-              <button
-                class="bg-stone-400 hover:bg-stone-500 hover:text-orange-400 w-44 h-12 text-base tracking-wider text-white font-bold px-4 py-2 rounded"
-                type="button"
-              >
-                Change Picture
-              </button>
-            </div>
-          </div>
-          <div class="w-full lg:w-4/12 px-4 lg:order-1">
-            <div class="flex justify-center py-4 lg:pt-4 pt-8">
-              <div class="mr-4 p-3 text-center">
-                <span
-                  class="text-xl font-bold block uppercase tracking-wide text-blueGray-600"
-                  >22</span
-                ><span class="text-sm text-blueGray-400">Reviews</span>
-              </div>
-              <div class="mr-4 p-3 text-center">
-                <span
-                  class="text-xl font-bold block uppercase tracking-wide text-blueGray-600"
-                  >10</span
-                ><span class="text-sm text-blueGray-400">Likes</span>
-              </div>
-              <div class="lg:mr-4 p-3 text-center">
-                <span
-                  class="text-xl font-bold block uppercase tracking-wide text-blueGray-600"
-                  >2</span
-                ><span class="text-sm text-blueGray-400">Dislikes</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="text-center mt-12">
-          <h3 class="text-4xl font-semibold leading-normal text-black mb-2">
-            {{
-              user.firstName + " " + user.middleName[0] + ". " + user.lastName
-            }}
-          </h3>
-          <div
-            class="text-sm leading-normal mt-0 mb-2 font-bold uppercase flex justify-center"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="w-5 h-5 mr-1"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 103 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 002.273 1.765 11.842 11.842 0 00.976.544l.062.029.018.008.006.003zM10 11.25a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z"
-                clip-rule="evenodd"
-              />
-            </svg>
-            Talisay City, Negros Occidental
-          </div>
-          <div class="mb-2 text-blueGray-600 mt-10 flex justify-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="w-5 h-5 mt-1 mr-2"
-            >
-              <path
-                d="M3 4a2 2 0 00-2 2v1.161l8.441 4.221a1.25 1.25 0 001.118 0L19 7.162V6a2 2 0 00-2-2H3z"
-              />
-              <path
-                d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z"
-              />
-            </svg>
-            {{ user.email }}
-          </div>
-          <div class="mb-2 text-blueGray-600 flex justify-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="w-5 h-5 mt-1 mr-2"
-            >
-              <path
-                d="M6.75.98l-.884.883a1.25 1.25 0 101.768 0L6.75.98zM13.25.98l-.884.883a1.25 1.25 0 101.768 0L13.25.98zM10 .98l.884.883a1.25 1.25 0 11-1.768 0L10 .98zM7.5 5.75a.75.75 0 00-1.5 0v.464c-1.179.305-2 1.39-2 2.622v.094c.1-.02.202-.038.306-.051A42.869 42.869 0 0110 8.5c1.93 0 3.83.129 5.694.379.104.013.206.03.306.051v-.094c0-1.232-.821-2.317-2-2.622V5.75a.75.75 0 00-1.5 0v.318a45.645 45.645 0 00-1.75-.062V5.75a.75.75 0 00-1.5 0v.256c-.586.01-1.17.03-1.75.062V5.75zM4.505 10.365A41.377 41.377 0 0110 10c1.863 0 3.697.124 5.495.365C16.967 10.562 18 11.838 18 13.28v.693a3.72 3.72 0 01-1.665-.393 5.222 5.222 0 00-4.67 0 3.722 3.722 0 01-3.33 0 5.222 5.222 0 00-4.67 0A3.72 3.72 0 012 13.972v-.693c0-1.441 1.033-2.716 2.505-2.914zM15.665 14.921a5.22 5.22 0 002.335.551V16.5a1.5 1.5 0 01-1.5 1.5h-13A1.5 1.5 0 012 16.5v-1.028c.8 0 1.6-.183 2.335-.551a3.722 3.722 0 013.33 0c1.47.735 3.2.735 4.67 0a3.722 3.722 0 013.33 0z"
-              />
-            </svg>
-            {{ user.birthdate | date }}
-          </div>
-        </div>
-        <div class="mt-10 py-10 border-t border-blueGray-200 text-center">
+      <span
+        id="blackOverlay"
+        class="w-full h-full absolute opacity-50 bg-black"
+      ></span>
+    </div>
+  </section>
+  <section class="relative py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div
+        class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-56"
+      >
+        <div class="px-6">
           <div class="flex flex-wrap justify-center">
-            <div class="w-full lg:w-9/12 px-4">
-              <p class="mb-4 text-lg leading-relaxed text-blueGray-700">
-                List of Interests: <br />
-                <span *ngFor="let item of user.interestsLists
-                ">{{item}} &nbsp;</span>
-              </p>
+            <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
+              <div class="relative">
+                <img
+                  src="https://media.istockphoto.com/photos/3d-render-blue-pink-neon-round-frame-circle-ring-shape-empty-space-picture-id1141495869?k=20&m=1141495869&s=612x612&w=0&h=ywX0FMtPYz9npkBKMiT42muc0mo4QmrCoboF_mBj-C4="
+                  class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 -mt-12 lg:-ml-16 max-w-150-px"
+                />
+              </div>
+            </div>
+            <div
+              class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center"
+            >
+              <div class="py-6 px-3 mt-32 sm:mt-0">
+                <button
+                  class="bg-stone-400 hover:bg-stone-500 hover:text-orange-400 w-44 h-12 text-base tracking-wider text-white font-bold px-4 py-2 rounded"
+                  (click)="toggleModal()"
+                  type="button"
+                >
+                  Edit Profile
+                </button>
+              </div>
+            </div>
+            <div class="w-full lg:w-4/12 px-4 lg:order-1">
+              <div class="flex justify-center py-4 lg:pt-4 pt-8">
+                <div class="mr-4 p-3 text-center">
+                  <span
+                    class="text-xl font-bold block uppercase tracking-wide text-blueGray-600"
+                    >22</span
+                  ><span class="text-sm text-blueGray-400">Reviews</span>
+                </div>
+                <div class="mr-4 p-3 text-center">
+                  <span
+                    class="text-xl font-bold block uppercase tracking-wide text-blueGray-600"
+                    >10</span
+                  ><span class="text-sm text-blueGray-400">Likes</span>
+                </div>
+                <div class="lg:mr-4 p-3 text-center">
+                  <span
+                    class="text-xl font-bold block uppercase tracking-wide text-blueGray-600"
+                    >2</span
+                  ><span class="text-sm text-blueGray-400">Dislikes</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-12">
+            <h3 class="text-4xl font-semibold leading-normal text-black mb-2">
+              {{
+                user.firstName + " " + user.middleName[0] + ". " + user.lastName
+              }}
+            </h3>
+            <div
+              class="text-sm leading-normal mt-0 mb-2 font-bold uppercase flex justify-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-5 h-5 mr-1"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 103 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 002.273 1.765 11.842 11.842 0 00.976.544l.062.029.018.008.006.003zM10 11.25a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              Talisay City, Negros Occidental
+            </div>
+            <div class="mb-2 text-blueGray-600 mt-10 flex justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-5 h-5 mt-1 mr-2"
+              >
+                <path
+                  d="M3 4a2 2 0 00-2 2v1.161l8.441 4.221a1.25 1.25 0 001.118 0L19 7.162V6a2 2 0 00-2-2H3z"
+                />
+                <path
+                  d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z"
+                />
+              </svg>
+              {{ user.email }}
+            </div>
+            <div class="mb-2 text-blueGray-600 flex justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-5 h-5 mt-1 mr-2"
+              >
+                <path
+                  d="M6.75.98l-.884.883a1.25 1.25 0 101.768 0L6.75.98zM13.25.98l-.884.883a1.25 1.25 0 101.768 0L13.25.98zM10 .98l.884.883a1.25 1.25 0 11-1.768 0L10 .98zM7.5 5.75a.75.75 0 00-1.5 0v.464c-1.179.305-2 1.39-2 2.622v.094c.1-.02.202-.038.306-.051A42.869 42.869 0 0110 8.5c1.93 0 3.83.129 5.694.379.104.013.206.03.306.051v-.094c0-1.232-.821-2.317-2-2.622V5.75a.75.75 0 00-1.5 0v.318a45.645 45.645 0 00-1.75-.062V5.75a.75.75 0 00-1.5 0v.256c-.586.01-1.17.03-1.75.062V5.75zM4.505 10.365A41.377 41.377 0 0110 10c1.863 0 3.697.124 5.495.365C16.967 10.562 18 11.838 18 13.28v.693a3.72 3.72 0 01-1.665-.393 5.222 5.222 0 00-4.67 0 3.722 3.722 0 01-3.33 0 5.222 5.222 0 00-4.67 0A3.72 3.72 0 012 13.972v-.693c0-1.441 1.033-2.716 2.505-2.914zM15.665 14.921a5.22 5.22 0 002.335.551V16.5a1.5 1.5 0 01-1.5 1.5h-13A1.5 1.5 0 012 16.5v-1.028c.8 0 1.6-.183 2.335-.551a3.722 3.722 0 013.33 0c1.47.735 3.2.735 4.67 0a3.722 3.722 0 013.33 0z"
+                />
+              </svg>
+              {{ user.birthdate | date }}
+            </div>
+          </div>
+          <div class="mt-10 py-10 border-t border-blueGray-200 text-center">
+            <div class="flex flex-wrap justify-center">
+              <div class="w-full lg:w-9/12 px-4">
+                <p class="mb-4 text-lg leading-relaxed text-blueGray-700">
+                  List of Interests: <br />
+                  <span *ngFor="let item of user.interestsLists"
+                    >{{ item }} &nbsp;</span
+                  >
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="m-40"></div>
+  </section>
+
+  <div
+    *ngIf="showModal"
+    class="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 bg-gray-900 bg-opacity-70 outline-none focus:outline-none justify-center items-center flex"
+  >
+    <div class="relative w-auto my-6 min-w-[500px] mx-auto max-w-6xl">
+      <!--content-->
+      <div
+        class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none"
+      >
+        <!--header-->
+        <div
+          class="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t"
+        >
+          <h5 class="text-xl text-gray-800 font-semibold uppercase">
+            {{ user.userName }}'s Profile
+          </h5>
+          <button
+            class="p-1 ml-auto bg-transparent border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+            (click)="toggleModal()"
+          >
+            <span
+              class="bg-transparent text-black h-6 w-6 text-2xl block outline-none focus:outline-none"
+            >
+              X
+            </span>
+          </button>
+        </div>
+
+        <app-profile-form
+          [user]="user"
+          (modalEmitter)="this.showModal = $event"
+          (userEmitter)="updateUser($event)"
+        ></app-profile-form>
+      </div>
+    </div>
   </div>
-  <div class="m-40"></div>
-</section>
+</div>

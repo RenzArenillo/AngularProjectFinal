@@ -441,7 +441,6 @@
       "id": "EYTOfL_"
     }
   ],
-
   "user": [
     {
       "id": 1,
@@ -549,6 +548,22 @@
         "any",
         "any"
       ]
+    },
+    {
+      "userName": "aldrin",
+      "email": "aldrin@morada.com",
+      "mobileNumber": "123456789",
+      "userPassword": "Aishiteru",
+      "confirmPassword": "Aishiteru",
+      "id": 3
+    },
+    {
+      "userName": "",
+      "email": "",
+      "mobileNumber": "1111111111111111111111111111111111111111111111111111111111111111111111",
+      "userPassword": "11111111111111111111111111111",
+      "confirmPassword": "11111111111111111111111111111",
+      "id": 4
     }
   ]
 }
