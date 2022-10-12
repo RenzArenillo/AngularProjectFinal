@@ -22,7 +22,7 @@ export class AddUserComponent implements OnInit {
       userName: ['', [Validators.required, Validators.minLength(5)]],
       userPassword: ['', [Validators.required, Validators.minLength(5)]],
       firstName: ['', [Validators.required]],
-      middleName: ['', [Validators.required]],
+      middleName: [''],
       lastName: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       mobileNumber: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
@@ -55,8 +55,7 @@ export class AddUserComponent implements OnInit {
       userType: this.usersForm.get('userType')?.value,
       birthdate: this.usersForm.get('birthdate')?.value,
       interestsLists: [
-        "any",
-        "any"
+        ""
       ] ,
       active: true,
     }

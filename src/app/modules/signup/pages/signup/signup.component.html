@@ -13,6 +13,14 @@
                 </p>
                 <form [formGroup]="signUpForm" (ngSubmit)="submitButton()" class="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2">
                     <div>
+                        <label class="block mb-2 text-xs font-medium uppercase ">Username</label>
+                        <input type="text" formControlName="userName" placeholder="(juandelacruz123)" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
+                        <div *ngIf="(signUpForm.get('userName')?.invalid && signUpForm.get('userName')?.touched) || signUpForm.get('userName')?.dirty">
+                            <small class="text-red-500 text-xs italic" role="alert" *ngIf="(signUpForm.get('userName')?.errors?.['required'])">Username is required</small>
+                            <small class="text-red-500 text-xs italic" role="alert" *ngIf="(signUpForm.get('userName')?.errors?.['minlength'])">Enter at least 5 characters</small>
+                        </div>
+                    </div>
+                    <div>
                         <label class="block mb-2 text-xs font-medium uppercase ">First Name</label>
                         <input type="text" formControlName="firstName" placeholder="(Juan)" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
                         <div *ngIf="(signUpForm.get('firstName')?.invalid && signUpForm.get('firstName')?.touched) || signUpForm.get('firstName')?.dirty">
@@ -22,9 +30,6 @@
                     <div>
                         <label class="block mb-2 text-xs font-medium uppercase ">Middle Name</label>
                         <input type="text" formControlName="middleName" placeholder="(Garcia)" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
-                        <div *ngIf="(signUpForm.get('middleName')?.invalid && signUpForm.get('middleName')?.touched) || signUpForm.get('middleName')?.dirty">
-                            <small class="text-red-500 text-xs italic" role="alert" *ngIf="(signUpForm.get('middleName')?.errors?.['required'])">Middle name is required</small>
-                        </div>
                     </div>
                     <div>
                         <label class="block mb-2 text-xs font-medium uppercase ">Last Name</label>
@@ -33,14 +38,7 @@
                             <small class="text-red-500 text-xs italic" role="alert" *ngIf="(signUpForm.get('lastName')?.errors?.['required'])">Last name is required</small>
                         </div>
                     </div>
-                    <div>
-                        <label class="block mb-2 text-xs font-medium uppercase ">Username</label>
-                        <input type="text" formControlName="userName" placeholder="(juandelacruz123)" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
-                        <div *ngIf="(signUpForm.get('userName')?.invalid && signUpForm.get('userName')?.touched) || signUpForm.get('userName')?.dirty">
-                            <small class="text-red-500 text-xs italic" role="alert" *ngIf="(signUpForm.get('userName')?.errors?.['required'])">Username is required</small>
-                            <small class="text-red-500 text-xs italic" role="alert" *ngIf="(signUpForm.get('userName')?.errors?.['minlength'])">Enter at least 5 characters</small>
-                        </div>
-                    </div>
+
                     <div>
                         <label class="block mb-2 text-xs font-medium uppercase">Email</label>
                         <input type="text" formControlName="email" placeholder="(juandela.cruz@gmail.com)" [(ngModel)]="signUpForm.value.email" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
@@ -68,6 +66,14 @@
                             <small class="text-red-500 text-xs italic" role="alert" *ngIf="(signUpForm.get('userPassword')?.errors?.['minlength'])">Password should be 5 characters long</small>
                         </div>
                     </div>
+
+                    <div>
+                        <label class="block mb-2 text-xs font-medium uppercase">Confirm password</label>
+                        <input type="password" id="confirmPassword" formControlName="confirmPassword" required placeholder="Confirm your password" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
+                        
+                        <div *ngIf="signUpForm.value.userPassword != signUpForm.value.confirmPassword">
+                        <small  class="text-red-500 text-xs italic">Passwords do not match</small></div> 
+                    </div>
                     <div>
                         <label class="block mb-2 text-xs font-medium uppercase">Birthday</label>
                         <input id="birthdate" type="date" class="form-control" formControlName="birthdate" />
@@ -76,14 +82,6 @@
                             
                         </div>
                     </div>
-                    <div>
-                        <label class="block mb-2 text-xs font-medium uppercase">Confirm password</label>
-                        <input type="password" id="confirmPassword" formControlName="confirmPassword" required placeholder="Confirm your password" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
-                        
-                        <div *ngIf="signUpForm.value.userPassword != signUpForm.value.confirmPassword">
-                        <small  class="text-red-500 text-xs italic">Passwords do not match</small></div> 
-                    </div>
-                    
                 
                     <button [disabled]="signUpForm.invalid" type="submit"
                         class="flex items-center justify-between w-full h-24 px-6 py-3 mt-2 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-stone-500 rounded-md hover:bg-stone-600 hover:text-orange-400 focus:outline-none focus:ring focus:ring-stone-300 focus:ring-opacity-50">

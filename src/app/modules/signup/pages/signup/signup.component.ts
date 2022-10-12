@@ -18,7 +18,7 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
     this.signUpForm = this.fb.group({
       firstName: ['', [Validators.required]],
-      middleName: ['', [Validators.required]],
+      middleName: [''],
       lastName: ['', [Validators.required]],
       userName: ['', [Validators.required, Validators.minLength(5)]],
       email: ['', [Validators.required, Validators.email]],
@@ -40,9 +40,7 @@ export class SignupComponent implements OnInit {
       mobileNumber: this.signUpForm.get('mobileNumber')?.value,
       userPassword: this.signUpForm.get('userPassword')?.value,
       birthdate: this.signUpForm.get('birthdate')?.value,
-      interestsLists: [
-        "Clothes"
-      ],
+      interestsLists: [""],
       active: true,
       userType: "Customer"
     }
