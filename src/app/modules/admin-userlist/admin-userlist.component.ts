@@ -4,6 +4,9 @@ import { User } from 'src/app/assets/models/users';
 import { UserService } from 'src/app/user.service';
 
 
+
+
+
 @Component({
   selector: 'app-admin-userlist',
   templateUrl: './admin-userlist.component.html',
@@ -23,6 +26,7 @@ export class AdminUserlistComponent implements OnInit {
   ngOnInit(): void {
     this.userService.getUsers().subscribe(data => {this.users = data;})
   }
+  
 
   deactivateUser(data: User) {
     data.active = !data.active  

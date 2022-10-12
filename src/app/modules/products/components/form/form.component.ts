@@ -72,6 +72,7 @@ export class FormComponent implements OnInit {
       unitsSold: this.unitsSold,
       productQuantity: this.productsForm.get('productQuantity')?.value,
     }
+    
     if (this.params) {
       this.productService.update(product, this.productId)
     } else {

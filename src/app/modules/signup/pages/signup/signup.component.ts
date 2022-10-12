@@ -1,7 +1,9 @@
+import { formatDate } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-signup',
@@ -12,10 +14,13 @@ export class SignupComponent implements OnInit {
 
   signUpForm!: FormGroup
 
-  constructor(private fb: FormBuilder, private router: Router, private http: HttpClient) { 
+  constructor(private fb: FormBuilder, private router: Router, private http: HttpClient,) { 
   }
 
+
+
   ngOnInit(): void {
+
     this.signUpForm = this.fb.group({
       firstName: ['', [Validators.required]],
       middleName: [''],
@@ -25,10 +30,12 @@ export class SignupComponent implements OnInit {
       mobileNumber: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
       userPassword: ['', [Validators.required, Validators.minLength(5)]],
       confirmPassword: ['', [Validators.required, Validators.minLength(5)]],
-      birthdate: ['', [Validators.required]],
+      birthdate: ['', [Validators.required]]
     })
 
   }
+
+  
 
   submitButton(){  
     const user = {
@@ -44,12 +51,6 @@ export class SignupComponent implements OnInit {
       active: true,
       userType: "Customer"
     }
-
-
-
-
-
-
 
       this.http.post<any>("http://localhost:3000/user",user)
       .subscribe(res=>{

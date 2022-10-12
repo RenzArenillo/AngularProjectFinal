@@ -53,7 +53,7 @@ import { FormComponent } from './modules/products/components/form/form.component
     TesthomeComponent,
     AdminUserlistComponent,
     AddUserComponent,
-    SearchPipe,
+    // SearchPipe,
     CarouselComponent,
     FormComponent
   ],

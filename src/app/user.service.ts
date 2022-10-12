@@ -19,6 +19,13 @@ export class UserService {
     ))
   }
 
+  // userNameAvailable(username: string) {
+  //      return this.http.post<any>(`${environment.url}/user`, {
+  //        username:username,
+  //      });
+  //    }
+   
+
   create(user:User) {
     return this.http.post(`${environment.url}/user`, user).subscribe()
   }

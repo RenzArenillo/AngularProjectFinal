@@ -6,7 +6,7 @@ export interface User {
   firstName: string;
   middleName: string;
   lastName: string;
-  mobileNumber: number;
+  mobileNumber: string;
   email: string;
   birthdate: Date;
   interestsLists: string[]

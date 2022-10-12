@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -17,9 +17,9 @@ export class ForgetPwComponent implements OnInit {
 
   constructor(fb: FormBuilder, private router: Router, private http: HttpClient) { 
     this.forgetForm = fb.group({
-      userName: [''],
-      email: [''],
-      mobileNumber: ['']
+      userName: ['', [Validators.required, Validators.minLength(5)]],
+      email: ['', [Validators.required, Validators.email]],
+      mobileNumber: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
     })
   }
 

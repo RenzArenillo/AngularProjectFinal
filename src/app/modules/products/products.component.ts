@@ -63,9 +63,21 @@ export class ProductsComponent implements OnInit {
   }
 
   search(input:String) {
-    this.productService.getProducts().subscribe((products) => {
-      this.products = products.filter((x: { productName: { toLowerCase: () => String[]; }; }) => {return x.productName.toLowerCase().includes(input)});
-    });      
     
+    this.search2(input)
   }
+
+  search2(input:String) {
+    
+    this.productService.getProducts().subscribe((products) => {
+      this.products = products.filter((x: { productName: { toLowerCase: () => String[]; }; }) => 
+      {return x.productName.toLowerCase().includes(input)});
+    });      
+
+  }
+
+  console() {
+    console.log(this.products)
+  }
+  
 }
