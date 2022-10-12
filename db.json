@@ -424,7 +424,7 @@
       "interestsLists": [
         "Clothes"
       ],
-      "active": false
+      "active": true
     },
     {
       "id": 2,
@@ -440,7 +440,7 @@
       "interestsLists": [
         "Clothes"
       ],
-      "active": true
+      "active": false
     },
     {
       "id": 3,
@@ -456,7 +456,7 @@
       "interestsLists": [
         "Clothes"
       ],
-      "active": true
+      "active": false
     },
     {
       "id": 4,
@@ -472,7 +472,7 @@
       "interestsLists": [
         "Clothes"
       ],
-      "active": true
+      "active": false
     },
     {
       "id": 5,

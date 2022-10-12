@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { User } from 'src/app/assets/models/users';
 import { LoginService } from '../../login/services/login.service';
 import { CartService } from '../../products/services/cart.service';
@@ -8,7 +8,7 @@ import { CartService } from '../../products/services/cart.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
   dropDown: boolean = false;
@@ -36,9 +36,4 @@ export class HeaderComponent implements OnInit {
     // this.totalQuantity = this.cartService.getTotalQuantity(); 
    
   }
-
-  // addCartItem(){o
-  //   this.cartService.incrementCart(this.cartItems);
-  // }
-
 }

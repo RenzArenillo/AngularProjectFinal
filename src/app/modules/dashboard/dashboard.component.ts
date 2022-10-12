@@ -23,6 +23,7 @@ export class DashboardComponent implements OnInit {
   userType: string = '';
   filter: string = '';
   dropDown: boolean = false;
+  user: User | any;
   loading = true;
   showModal = false;
   bestSellers: Product[] = [];
@@ -59,6 +60,8 @@ export class DashboardComponent implements OnInit {
     this.categoryService.getCategories().subscribe((categories) => {
       this.categories = categories;
     });
+
+    this.user = this.loginService.getUser();
   }
   goNext() {
     this.defaultTransform = this.defaultTransform - 398;
