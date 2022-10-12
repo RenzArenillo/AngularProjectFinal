@@ -516,6 +516,159 @@
         "Clothes"
       ],
       "active": true
+    },
+    {
+      "userName": "",
+      "email": "",
+      "mobileNumber": "",
+      "userPassword": "",
+      "confirmPassword": "",
+      "userType": "customer",
+      "id": 6
+    },
+    {
+      "firstName": "user",
+      "middleName": "user",
+      "lastName": "name",
+      "userName": "useruser",
+      "email": "user@user.com",
+      "mobileNumber": "1312131121",
+      "userPassword": "12345",
+      "birthdate": "2022-10-12",
+      "interestsLists": [
+        ""
+      ],
+      "active": true,
+      "userType": "Customer",
+      "id": 7
+    },
+    {
+      "firstName": "user",
+      "middleName": "user",
+      "lastName": "user",
+      "userName": "useruser",
+      "email": "user@user.com",
+      "mobileNumber": "1312131121",
+      "userPassword": "12345",
+      "birthdate": "2022-10-12",
+      "interestsLists": [
+        ""
+      ],
+      "active": true,
+      "userType": "Customer",
+      "id": 8
+    },
+    {
+      "firstName": "user",
+      "middleName": "user",
+      "lastName": "user",
+      "userName": "useruser1",
+      "email": "user@user.com",
+      "mobileNumber": "1312131121",
+      "userPassword": "12345",
+      "birthdate": "2022-10-12",
+      "interestsLists": [
+        ""
+      ],
+      "active": true,
+      "userType": "Customer",
+      "id": 9
+    },
+    {
+      "firstName": "user",
+      "middleName": "user",
+      "lastName": "user",
+      "userName": "useruser123",
+      "email": "user@user.com",
+      "mobileNumber": "1312131121",
+      "userPassword": "12345",
+      "birthdate": "2022-10-12",
+      "interestsLists": [
+        ""
+      ],
+      "active": true,
+      "userType": "Customer",
+      "id": 10
+    },
+    {
+      "firstName": "user",
+      "middleName": "user",
+      "lastName": "usre",
+      "userName": "useruser",
+      "email": "user@user.com",
+      "mobileNumber": "1312131121",
+      "userPassword": "12345",
+      "birthdate": "2022-10-12",
+      "interestsLists": [
+        ""
+      ],
+      "active": true,
+      "userType": "Customer",
+      "id": 11
+    },
+    {
+      "firstName": "user",
+      "middleName": "user",
+      "lastName": "usre",
+      "userName": "useruser111",
+      "email": "user@user.com",
+      "mobileNumber": "1312131121",
+      "userPassword": "12345",
+      "birthdate": "2022-10-12",
+      "interestsLists": [
+        ""
+      ],
+      "active": true,
+      "userType": "Customer",
+      "id": 12
+    },
+    {
+      "firstName": "user",
+      "middleName": "user",
+      "lastName": "usre",
+      "userName": "useruser224",
+      "email": "user@user.com",
+      "mobileNumber": "1312131121",
+      "userPassword": "12345",
+      "birthdate": "2022-10-21",
+      "interestsLists": [
+        ""
+      ],
+      "active": true,
+      "userType": "Customer",
+      "id": 13
+    },
+    {
+      "firstName": "user",
+      "middleName": "user",
+      "lastName": "usre",
+      "userName": "uwwer",
+      "email": "user@user.com",
+      "mobileNumber": "1312131121",
+      "userPassword": "12345",
+      "birthdate": "2022-10-21",
+      "interestsLists": [
+        ""
+      ],
+      "active": true,
+      "userType": "Customer",
+      "id": 14
+    },
+    {
+      "firstName": "user",
+      "middleName": "user",
+      "lastName": "usre",
+      "userName": "uwwer",
+      "email": "user@user.com",
+      "mobileNumber": "1312131121",
+      "userPassword": "12345",
+      "birthdate": "2022-10-21",
+      "interestsLists": [
+        ""
+      ],
+      "active": true,
+      "userType": "Customer",
+      "id": 15
     }
   ],
   "users": [
@@ -596,6 +749,69 @@
       "confirmPassword": "123",
       "userType": "customer",
       "id": 10
+    },
+    {
+      "userName": "",
+      "email": "",
+      "mobileNumber": "",
+      "userPassword": "",
+      "confirmPassword": "",
+      "userType": "customer",
+      "id": 11
+    },
+    {
+      "userName": "",
+      "email": "",
+      "mobileNumber": "",
+      "userPassword": "",
+      "confirmPassword": "",
+      "userType": "customer",
+      "id": 12
+    },
+    {
+      "userName": "",
+      "email": "",
+      "mobileNumber": "",
+      "userPassword": "",
+      "confirmPassword": "",
+      "userType": "customer",
+      "id": 13
+    },
+    {
+      "userName": "",
+      "email": " ",
+      "mobileNumber": " ",
+      "userPassword": " ",
+      "confirmPassword": " ",
+      "userType": "customer",
+      "id": 14
+    },
+    {
+      "userName": " ",
+      "email": " ",
+      "mobileNumber": " ",
+      "userPassword": " ",
+      "confirmPassword": " ",
+      "userType": "customer",
+      "id": 15
+    },
+    {
+      "userName": "",
+      "email": " ",
+      "mobileNumber": " ",
+      "userPassword": " ",
+      "confirmPassword": " ",
+      "userType": "customer",
+      "id": 16
+    },
+    {
+      "userName": "",
+      "email": "",
+      "mobileNumber": "",
+      "userPassword": "",
+      "confirmPassword": "",
+      "userType": "customer",
+      "id": 17
     }
   ]
 }

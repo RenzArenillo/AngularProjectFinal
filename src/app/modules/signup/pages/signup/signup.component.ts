@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CustomValidatorService } from '../../services/custom-validator.service';
 
 @Component({
   selector: 'app-signup',
@@ -12,23 +13,44 @@ export class SignupComponent implements OnInit {
 
   signUpForm!: FormGroup
 
-  constructor(private fb: FormBuilder, private router: Router, private http: HttpClient) { 
+  constructor(private fb: FormBuilder, private router: Router, private http: HttpClient, private customValidator: CustomValidatorService) { 
   }
 
+  //from txt
   ngOnInit(): void {
     this.signUpForm = this.fb.group({
-      userName: ['', [Validators.required, Validators.minLength(5)]],
-      email: ['', [Validators.required, Validators.minLength(5)]],
-      mobileNumber: ['', [Validators.required, Validators.minLength(5)]],
+      firstName: ['', [Validators.required]],
+      middleName: [''],
+      lastName: ['', [Validators.required]],
+      userName: ['', [Validators.required, Validators.minLength(5)], this.customValidator.validateUsernameNotTaken.bind(this.customValidator)],
+      email: ['', [Validators.required, Validators.email]],
+      mobileNumber: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
       userPassword: ['', [Validators.required, Validators.minLength(5)]],
       confirmPassword: ['', [Validators.required, Validators.minLength(5)]],
-      userType: ['']
+      birthdate: ['', [Validators.required]],
     })
   }
+  //
 
   submitButton(){ 
-      this.signUpForm.value.userType = 'customer' 
-      this.http.post<any>("http://localhost:3000/users",this.signUpForm.value)
+    //added from txt
+    const user = {
+      firstName: this.signUpForm.get('firstName')?.value,
+      middleName: this.signUpForm.get('middleName')?.value,
+      lastName: this.signUpForm.get('lastName')?.value,
+      userName: this.signUpForm.get('userName')?.value,
+      email: this.signUpForm.get('email')?.value,
+      mobileNumber: this.signUpForm.get('mobileNumber')?.value,
+      userPassword: this.signUpForm.get('userPassword')?.value,
+      birthdate: this.signUpForm.get('birthdate')?.value,
+      interestsLists: [""],
+      active: true,
+      userType: "Customer"
+    }
+    //
+
+      // this.signUpForm.value.userType = 'customer' 
+      this.http.post<any>("http://localhost:3000/user",user)
       .subscribe(res=>{
           const user = this.signUpForm.pristine ||
             (this.signUpForm.value.userName.trim() === '' || this.signUpForm.value.email.trim() === '' || 
