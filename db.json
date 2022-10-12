@@ -2,10 +2,10 @@
   "products": [
     {
       "productId": 1,
-      "productName": "Laptop",
+      "productName": "Acer Laptop",
       "productPrice": 20000,
       "productCategory": "Technology",
-      "productImage": "data:'image'/jpeg;base64,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",
+      "productImage": "https://i.pinimg.com/originals/0b/5f/c8/0b5fc864c174f4bea7e93892e5eeb00a.jpg",
       "unitsSold": 4321,
       "productQuantity":1 
     },
@@ -14,16 +14,16 @@
       "productName": "Camera",
       "productPrice": 12000,
       "productCategory": "Technology",
-      "productImage": "https://images.unsplash.com/photo-1613235577937-9ac3eed992fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2Fub24lMjBjYW1lcmF8ZW58MHx8MHx8&w=1000&q=80",
+      "productImage": "https://images4.alphacoders.com/255/255596.jpg",
       "unitsSold": 23,
       "productQuantity":1 
     },
     {
       "productId": 3,
-      "productName": "Shoes",
+      "productName": "Nike",
       "productPrice": 3000,
       "productCategory": "Shoes",
-      "productImage": "https://media.istockphoto.com/photos/stability-and-cushion-running-shoes-new-unbranded-running-sneaker-or-picture-id1320786676?b=1&k=20&m=1320786676&s=170667a&w=0&h=qKmwIvi7qq8RBNpFzZzifpfPcZl82xlq2whbMm4W-jE=",
+      "productImage": "https://wallpapercave.com/wp/wp2896922.jpg",
       "unitsSold": 2642,
       "productQuantity":1 
     },
@@ -32,22 +32,22 @@
       "productName": "Washing Machine",
       "productPrice": 9000,
       "productCategory": "Appliances",
-      "productImage": "https://ph.sharp/sites/default/files/uploads/2021-05/washing%20machine%20design-%20SHARP.png",
+      "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz-_MyC4COUtiXlRq2Pi-URxkDYW5PmR3BRJ5Q_YhHxaA_jkzKLQr8e4Ayz-MFsKsbMdY&usqp=CAU",
       "unitsSold": 200,
       "productQuantity":1 
     },
     {
       "productId": 5,
-      "productName": "Balls",
+      "productName": "Basketball",
       "productPrice": 2500,
       "productCategory": "Sports",
-      "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXKG8mKsLTQkYdsr6EFZ6h6vnU1o184ZhuFw&usqp=CAU",
+      "productImage": "https://i.pinimg.com/736x/07/2a/7e/072a7ef3c39deccee1f51e90706fc024.jpg",
       "unitsSold": 5,
       "productQuantity":1 
     },
     {
       "productId": 6,
-      "productName": "Laptop 2",
+      "productName": "Macbook Pro",
       "productPrice": 20000,
       "productCategory": "Technology",
       "productImage": "data:'image'/jpeg;base64,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",
@@ -56,7 +56,7 @@
     },
     {
       "productId": 7,
-      "productName": "Camera 2",
+      "productName": "Canon",
       "productPrice": 12000,
       "productCategory": "Technology",
       "productImage": "https://images.unsplash.com/photo-1613235577937-9ac3eed992fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2Fub24lMjBjYW1lcmF8ZW58MHx8MHx8&w=1000&q=80",
@@ -65,28 +65,55 @@
     },
     {
       "productId": 8,
-      "productName": "Shoes 2",
+      "productName": "Sketchers",
       "productPrice": 3000,
       "productCategory": "Shoes",
-      "productImage": "https://media.istockphoto.com/photos/stability-and-cushion-running-shoes-new-unbranded-running-sneaker-or-picture-id1320786676?b=1&k=20&m=1320786676&s=170667a&w=0&h=qKmwIvi7qq8RBNpFzZzifpfPcZl82xlq2whbMm4W-jE=",
+      "productImage": "https://c1.wallpaperflare.com/preview/935/753/110/sneaker-skecher-running-shoe-shoe.jpg",
       "unitsSold": 2,
       "productQuantity":1 
     },
     {
       "productId": 9,
-      "productName": "Washing Machine 2 Washing Machine 2 Washing Machine 2 Washing Machine 2",
+      "productName": "Refrigerator",
       "productPrice": 9000,
       "productCategory": "Appliances",
-      "productImage": "https://ph.sharp/sites/default/files/uploads/2021-05/washing%20machine%20design-%20SHARP.png",
+      "productImage": "https://media.istockphoto.com/photos/refrigerator-with-fruits-and-vegetables-picture-id842160124?k=20&m=842160124&s=612x612&w=0&h=GrjPQBB3DRGLEtm1Oa0gcTpMOhdOpXGgECnLB8qVnJg=",
       "unitsSold": 2,
       "productQuantity":1 
     },
     {
       "productId": 10,
-      "productName": "Balls 2",
+      "productName": "Pool Ball",
       "productPrice": 2500,
       "productCategory": "Sports",
-      "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXKG8mKsLTQkYdsr6EFZ6h6vnU1o184ZhuFw&usqp=CAU",
+      "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvK9--f6FF7IFhD7Z8jhpRBpPCaq_EUT7icA&usqp=CAU",
+      "unitsSold": 2,
+      "productQuantity":1 
+    },
+    {
+      "productId": 11,
+      "productName": "Guess",
+      "productPrice": 2500,
+      "productCategory": "Clothes",
+      "productImage": "https://images.unsplash.com/photo-1580694915740-33306cfdfd88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Z3Vlc3N8ZW58MHx8MHx8&w=1000&q=80",
+      "unitsSold": 2,
+      "productQuantity":1 
+    },
+    {
+      "productId": 12,
+      "productName": "Vinta",
+      "productPrice": 2500,
+      "productCategory": "Bags",
+      "productImage": "https://images.unsplash.com/photo-1547949003-9792a18a2601?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YmFnc3xlbnwwfHwwfHw%3D&w=1000&q=80",
+      "unitsSold": 2,
+      "productQuantity":1 
+    },
+    {
+      "productId": 13,
+      "productName": "Dog Leash",
+      "productPrice": 2500,
+      "productCategory": "Pets",
+      "productImage": "https://fur-babies.pet/wp-content/uploads/2018/09/Double-Braided-Paracord-Dog-Lead.jpg",
       "unitsSold": 2,
       "productQuantity":1 
     }
@@ -94,33 +121,58 @@
   "categories": [
     {
       "id": 1,
-      "name": "Clothes",
-      "image": "https://cf.shopee.ph/file/2e9bfe13ce9cecfbfad8010b843651f6_tn"
+      "name": "Shoes",
+      "image": "https://wallpapercave.com/wp/wp3668500.jpg"
     },
     {
       "id": 2,
-      "name": "Bags & Accessories",
-      "image": "https://cf.shopee.ph/file/55267466ff3f0445bf28c21ddafd409c_tn"
+      "name": "Bags",
+      "image": "https://images.unsplash.com/photo-1591561954557-26941169b49e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGhhbmRiYWd8ZW58MHx8MHx8&w=1000&q=80"
     },
     {
       "id": 3,
-      "name": "Shoes",
-      "image": "https://cf.shopee.ph/file/b2e30c169f08d6820de5075c7827038d_tn"
+      "name": "Accessories",
+      "image": "https://burst.shopifycdn.com/photos/sunglasses-making-a-splash.jpg?width=1200&format=pjpg&exif=1&iptc=1"
     },
     {
       "id": 4,
-      "name": "Technology",
-      "image": "https://cf.shopee.ph/file/25936be031f917470cb8c8ad9f311413_tn"
+      "name": "Clothes",
+      "image": "https://images.unsplash.com/photo-1495121605193-b116b5b9c5fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fGZhc2hpb258ZW58MHx8MHx8&w=1000&q=80"
     },
     {
       "id": 5,
-      "name": "Appliances",
-      "image": "https://cf.shopee.ph/file/d31d29d2f160baeb7592964cd9090a52_tn"
+      "name": "Technology",
+      "image": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bGFwdG9wJTIwY29tcHV0ZXJ8ZW58MHx8MHx8&w=1000&q=80"
     },
     {
       "id": 6,
+      "name": "Appliances",
+      "image": "https://cdn.decorpad.com/photos/2021/08/02/small-kitchen-appliances-cabinet-with-sliding-shelves.jpeg"
+    },
+    {
+      "id": 7,
       "name": "Sports",
-      "image": "https://cf.shopee.ph/file/f12cfed5944ad868e181c6583a5a4426_tn"
+      "image": "https://images.unsplash.com/photo-1628779238951-be2c9f2a59f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8OHx8fGVufDB8fHx8&w=1000&q=80"
+    },
+    {
+      "id": 8,
+      "name": "Furnitures",
+      "image": "https://stylenations.com/blog/wp-content/uploads/2021/04/38a6241c1f3b68de3c5d645359eef6a1.jpeg"
+    },
+    {
+      "id": 9,
+      "name": "Pets",
+      "image": "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fwp-content%2Fblogs.dir%2F6%2Ffiles%2F2022%2F05%2Fceline-maison-new-saddlery-and-dog-accessories-elvis-lookbook-3.jpg?q=75&w=800&cbr=1&fit=max"
+    },
+    {
+      "id": 10,
+      "name": "Beauty",
+      "image": "https://freedesignfile.com/upload/2016/12/Fashion-beauty-makeup-HD-picture-04.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Home Decors",
+      "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bathroom-decor-rug-1548371038.jpg" 
     }
   ],
   "order": [
@@ -611,8 +663,6 @@
       "userPassword": "",
       "confirmPassword": "",
       "id": 10
-<<<<<<< HEAD
-=======
     },
     {
       "userName": "",
@@ -645,7 +695,6 @@
       "userPassword": "",
       "confirmPassword": "",
       "id": 14
->>>>>>> ec9486276459d86123bb3fb2bf79715b2e742768
     }
   ]
 }

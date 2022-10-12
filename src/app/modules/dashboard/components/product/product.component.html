@@ -1,39 +1,44 @@
 <div
-  class="w-full h-full text-gray-800"
+  class="wrapper text-gray-900 m-3"
   title="{{ product.productName }}"
   (click)="emit(product)"
 >
-  <div class="grid place-items-center h-[63%] overflow-hidden">
+  <div>
     <img
-      class="h-full w-full"
       src="{{ product.productImage }}"
       alt="{{ product.productName }}"
+      class="w-full object-cover object-center rounded-lg shadow-md"
     />
-  </div>
-  <div class="h-[37%] px-4 py-1 grid text-xs">
-    <div class="grid">
-      <div class="grid place-items-center truncate">
-        <span class="font-semibold text-xl">{{ product.productName }}</span>
+
+    <div class="relative px-4 -mt-10">
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h4 class="mt-1 text-xl font-semibold uppercase leading-tight truncate">
+          {{ product.productName }}
+        </h4>
+
+        <div class="mt-1" title="{{ product.productCategory }}">
+          {{ product.productPrice | currency: "PHP":"symbol" }}
+        </div>
+        <div class="mt-4">
+          <span
+            class="text-teal-600 text-md font-semibold"
+            title="{{ product.productCategory }}"
+            >{{ product.productCategory }} </span
+          ><br />
+          <span
+            class="text-sm text-gray-600"
+            title="{{ product.productCategory }}"
+            >{{ product.unitsSold }} sold
+          </span>
+        </div>
+        <button
+          (click)="addToCart(product)"
+          *ngIf="displayType != 'BestSellers'"
+          class="bg-stone-500 text-xs text-white hover:bg-stone-500 hover:text-orange-400 px-3 py-2 mt-2 rounded-md uppercase"
+        >
+          Add to Cart
+        </button>
       </div>
-
-      <span
-        class="hover:text-blue-500 cursor-pointer hover:underline"
-        title="{{ product.productCategory }}"
-        >{{ product.productCategory }}</span
-      >
-      <span>{{ product.productPrice | currency: "PHP":"symbol" }}</span>
-      <span
-        ><span class="font-semibold">{{ product.unitsSold }}</span
-        >&nbsp;sold</span
-      >
-
-      <button
-        (click)="addToCart(product)"
-        *ngIf="displayType != 'BestSellers'"
-        class="bg-stone-400 hover:bg-stone-500 hover:text-white px-2 rounded-md"
-      >
-        Add to Cart
-      </button>
     </div>
   </div>
 </div>

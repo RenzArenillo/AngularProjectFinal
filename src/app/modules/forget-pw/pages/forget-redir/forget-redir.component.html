@@ -1,24 +1,48 @@
 
-<div class="lg:flex justify-evenly static py-2"> 
-  <div class="lg:w-1/2 xl:max-w-screen-sm">
-    <div class="py-12 bg-stone-200 lg:bg-white flex lg:px-12 ">
-      <div class="cursor-pointer">
-        <img src="../../../../../assets/img/login.jpg" class="w-full h-5/6" />
-      </div> 
-    </div>
-    <div class="px-12">
-      <h2 class="-mt-24 text-4xl text-center text-black font-display font-medium ">RESET PASSWORD</h2>
-      <div class="mt-8">
-          <div class="mt-10">
-            <button class="bg-stone-400 w-64 ml-36 text-white p-2 w-full tracking-wide font-semibold border border-2 rounded-lg font-display focus:outline-none focus:shadow-outline hover:bg-stone-600 hover:text-orange-400"
-            type="submit" (click)="getPassword()">GET YOUR PASSWORD</button>
+<div class="bg-stone-200 h-screen">
+  <div
+    class="flex flex-col items-center flex-1 h-full justify-center px-4 sm:px-0"
+  >
+    <div
+      class="flex rounded-lg shadow-lg w-full sm:w-3/4 lg:w-1/2 bg-stone-500 sm:mx-0"
+      style="height: 500px"
+    >
+      <div class="flex flex-col w-full md:w-1/2 p-4">
+        <div class="flex flex-col flex-1 justify-center mb-8">
+          <h1 class="drop-shadow-lg shadow-black text-4xl text-center text-white font-medium">RESET PASSWORD</h1>
+          <div class="w-full mt-11">
+            <div class="form-horizontal w-3/4 mx-auto">
+              <div class="flex flex-col mt-8">
+                <button
+                  type="submit"
+                  (click)="getPassword()"
+                  class="bg-stone-300 hover:bg-stone-600 text-stone-700 hover:text-orange-400 text-sm font-semibold py-2 px-4 rounded"
+                >
+                  GET PASSWORD
+                </button>
+              </div>
+            </div>
+            <div
+              class="mt-2 mb-8 text-sm font-display font-semibold text-white text-center"
+            >
+              Go back to Log In?
+              <a
+                class="cursor-pointer text-orange-500 hover:text-cyan-600"
+                href="/login"
+                >Click here</a
+              >
+            </div>
           </div>
-        <div class="mt-2 mb-8 -ml-3 text-sm font-display font-semibold text-black text-center">Go back to Log In?
-            <a class="cursor-pointer text-red-400 hover:text-cyan-600" href="/login">Click here</a>
-          </div>
+        </div>
       </div>
-      
+      <div
+        class="hidden md:block md:w-1/2 rounded-r-lg"
+        style="
+          background: url('https://img.freepik.com/free-vector/forgot-password-concept-illustration_114360-1123.jpg?w=2000');
+          background-size: cover;
+          background-position: center center;
+        "
+      ></div>
     </div>
   </div>
-  
-</div>  
+</div>

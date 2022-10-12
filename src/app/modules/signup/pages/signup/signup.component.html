@@ -1,10 +1,10 @@
-<section class="bg-white dark:bg-stone-200">
+<section class="bg">
     <div class="flex justify-center min-h-screen">
-        <div class="hidden bg-cover lg:block lg:w-2/5" style="background-image: url('https://www.zug-tourismus.ch/_Resources/Persistent/bce6b5dfe66e3f573f9d44fb9ef2aa28908dcbcb/shopping%20rundgang.jpg')">
+        <div class="hidden bg-cover lg:block lg:w-2/5" style="background-image: url('https://i.pinimg.com/736x/64/7c/ef/647cefcc2f1f2809ecb697370fb20d7a.jpg')">
         </div>
         <div class="flex items-center w-full max-w-3xl p-8 mx-auto lg:px-12 lg:w-3/5">
             <div class="w-full">
-                <h1 class="text-3xl font-bold tracking-wider text-stone-700 capitalize light:text-dark">
+                <h1 class="text-3xl font-bold tracking-wider text-black capitalize light:text-dark">
                     SIGN UP
                 </h1>
 
@@ -13,13 +13,28 @@
                 </p>
                 <form [formGroup]="signUpForm" (ngSubmit)="submitButton()" class="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2">
                     <div>
-                        <label class="block mb-2 text-xs font-medium uppercase ">Username</label>
-                        <input type="text" formControlName="userName" placeholder="(juandelacruz123)" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
+                        <label class="block mb-2 text-xs font-medium uppercase ">First Name</label>
+                        <input type="text" formControlName="userName" placeholder="(Juan)" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder:text-sm hahaplaceholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
+                    </div>
+
+                    <div>
+                        <label class="block mb-2 text-xs font-medium uppercase ">Middle Name</label>
+                        <input type="text" formControlName="userName" placeholder="(Anino)" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
+                    </div>
+
+                    <div>
+                        <label class="block mb-2 text-xs font-medium uppercase ">Last Name</label>
+                        <input type="text" formControlName="userName" placeholder="(Dela Cruz)" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
                     </div>
 
                     <div>
                         <label class="block mb-2 text-xs font-medium uppercase">Email</label>
-                        <input type="text" formControlName="email" placeholder="(juandela.cruz@gmail.com)" [(ngModel)]="signUpForm.value.email" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
+                        <input type="text" formControlName="email" placeholder="(name@example.com)" [(ngModel)]="signUpForm.value.email" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
+                    </div>
+
+                    <div>
+                        <label class="block mb-2 text-xs font-medium uppercase ">Date of Birth</label>
+                        <input type="text" formControlName="userName" placeholder="07/21/1998" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
                     </div>
 
                     <div>
@@ -36,11 +51,10 @@
                         <input type="password" id="confirmPassword" formControlName="confirmPassword" required placeholder="Confirm your password" class="block w-full px-5 py-3 mt-2 text-gray-700 border-none placeholder:italic placeholder-gray-400 bg-white rounded-md dark:placeholder-gray-600 dark:text-gray-700  focus:border-stone-500 dark:focus:border-stone-500 focus:ring-stone-500 focus:outline-none focus:ring focus:ring-opacity-40" />
                         <div *ngIf="signUpForm.value.userPassword != signUpForm.value.confirmPassword">Passwords do not match</div> 
                     </div>
-                    
-                
+                    <div></div>
                     <button
-                        class="flex items-center justify-between w-full h-24 px-6 py-3 mt-2 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-stone-500 rounded-md hover:bg-stone-600 hover:text-orange-400 focus:outline-none focus:ring focus:ring-stone-300 focus:ring-opacity-50">
-                        <span>Sign Up</span>
+                        class="flex items-center font-bold justify-between w-full h-24 px-6 py-3 mt-2 text-sm tracking-wide text-neutral-50 capitalize transition-colors duration-300 transform bg-stone-500 rounded-md hover:bg-stone-600 hover:text-orange-400 focus:outline-none focus:ring focus:ring-stone-300 focus:ring-opacity-50">
+                        <span>SIGN UP</span>
 
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 rtl:-scale-x-100" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd"
@@ -48,11 +62,15 @@
                                 clip-rule="evenodd" />
                         </svg>
                     </button>
-                    
+                <!-- class="items-center text-sm text-gray-600 dark:text-gray-800 font-display font-semibold mt-4 ml-96 " -->
+                <div></div>
+                    <div class="flex justify-center space-x-1 -mt-4 text-sm font-medium">
+                       <p>Already have an account?</p>  
+                        <a class="cursor-pointer text-orange-500 hover:text-stone-800"(click)="loginRedirect()">Login Here</a>
+                      </div>
                 </form>
-                <div class="text-sm text-gray-600 dark:text-gray-800 font-display font-semibold mt-4 ml-96 ">Already have an account?
-                    <a class="cursor-pointer text-orange-500 hover:text-stone-800"(click)="loginRedirect()">Login Here</a>
-                  </div>
+                
+                
             </div>
         </div>
     </div>

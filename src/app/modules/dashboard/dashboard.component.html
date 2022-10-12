@@ -121,18 +121,18 @@
   <div class="bg-white py-8 relative container mx-auto">
     <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
       <nav id="store" class="w-full z-30 top-0 px-6 py-1">
-        <div
-          class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3"
-        >
-          <p
-            class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl"
-          >
-            Best Sellers
-          </p>
-        </div>
-
         <!-- BestSellers -->
+
         <div *ngIf="userType == 'Admin'">
+          <div
+            class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3"
+          >
+            <p
+              class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl"
+            >
+              Best Sellers
+            </p>
+          </div>
           <div
             class="grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 border-spacing-0"
           >
@@ -150,47 +150,90 @@
       </nav>
 
       <!-- Categories -->
-      <nav id="store" class="w-full z-30 top-0 px-6 py-1">
-        <div
-          class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3"
-        >
-          <p
-            class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl"
+      <p
+        class="uppercase tracking-wider mt-24 ml-7 font-medium text-gray-800 text-2xl"
+      >
+        Featured Products 
+      </p>
+      <div class="flex items-center justify-center w-full h-full py-24 sm:py-8 ">
+        <div class="w-full relative flex items-center justify-center">
+          <button
+            aria-label="slide backward"
+            class="absolute z-30 left-0 ml-8 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 cursor-pointer"
+            (click)="goPrev()"
           >
-            Categories
-          </p>
-        </div>
-        <div class="m-3 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+            <svg
+              width="8"
+              height="14"
+              viewBox="0 0 8 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 1L1 7L7 13"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
           <div
-            *ngFor="let category of categories"
-            class="cursor-pointer py-2 h-36 border hover:shadow-md hover:border-cyan-700 duration-200"
+            class="w-full h-full mx-auto overflow-x-hidden overflow-y-hidden"
           >
-            <app-category
-              [category]="category"
-              (emittter)="action($event)"
-            ></app-category>
+            <div
+              id="slider"
+              class="h-full flex lg:gap-8 md:gap-4 gap-12 items-center justify-start transition ease-out duration-700 -space-x-2"
+            >
+              <div
+                class="flex flex-shrink-0 relative w-full sm:w-auto hover:grow hover:shadow-lg"
+                *ngFor="let category of categories"
+              >
+                <app-category
+                  [category]="category"
+                  (emittter)="action($event)"
+                ></app-category>
+              </div>
+            </div>
           </div>
+          <button
+            aria-label="slide forward"
+            class="absolute z-30 right-0 mr-8 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
+            (click)="goNext()"
+          >
+            <svg
+              width="8"
+              height="14"
+              viewBox="0 0 8 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 1L7 7L1 13"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
         </div>
-      </nav>
+      </div>
 
       <!-- Products -->
       <nav id="store" class="w-full z-30 top-0 px-6 py-1">
         <div
-          class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3"
+          class="w-full container mx-auto flex flex-wrap items-center justify-between mt-12 px-2 py-3"
         >
           <p
-            class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl"
+            class="uppercase tracking-wide no-underline font-medium text-gray-800 text-2xl"
           >
-            <span (click)="getAll()" class="hover:text-blue-500 cursor-pointer">
-              Products</span
-            >
+            <span (click)="getAll()" class="cursor-pointer"> Products</span>
 
             <span *ngIf="filter !== ''">
               &nbsp; > &nbsp;
-              <span
-                (click)="filterBy(filter)"
-                class="hover:text-blue-500 cursor-pointer"
-              >
+              <span (click)="filterBy(filter)" class="cursor-pointer">
                 {{ filter }}</span
               ></span
             >
@@ -231,28 +274,14 @@
                   <div
                     class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-stone-600 dark:hover:text-white cursor-pointer"
                   >
-                    Filter
+                    Cheapest
                   </div>
                 </li>
                 <li>
                   <div
                     class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-stone-600 dark:hover:text-white cursor-pointer"
                   >
-                    Filter
-                  </div>
-                </li>
-                <li>
-                  <div
-                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-stone-600 dark:hover:text-white cursor-pointer"
-                  >
-                    Filter
-                  </div>
-                </li>
-                <li>
-                  <div
-                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-stone-600 dark:hover:text-white cursor-pointer"
-                  >
-                    Filter
+                    Most Expensive
                   </div>
                 </li>
               </ul>

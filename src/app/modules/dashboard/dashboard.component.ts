@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
 import { Category } from 'src/app/assets/models/category';
 import { Product } from 'src/app/assets/models/product';
 import { CategoryService } from 'src/app/assets/services/category/category.service';
@@ -11,7 +11,13 @@ import { CartService } from '../products/services/cart.service';
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
-  userType: string = 'Admin';
+  slider: any;
+  defaultTransform: any;
+  @Input()
+  category!: Category;
+
+  @Output() emittter = new EventEmitter();
+  userType: string = '';
   filter: string = '';
   dropDown: boolean = false;
   loading = true;
@@ -21,6 +27,7 @@ export class DashboardComponent implements OnInit {
   filteredProducts: Product[] = [];
   categories: Category[] = [];
   selectedProduct?: Product;
+
   constructor(
     private productService: ProductService,
     private categoryService: CategoryService,
@@ -28,7 +35,9 @@ export class DashboardComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.productService.getProducts().subscribe((res) => {
+    this.slider = document.getElementById("slider");
+    this.defaultTransform=0
+      this.productService.getProducts().subscribe((res) => {
       this.products = res;
       this.categories = res.map((a: any) => a.productCategory);
       this.categories = this.categories.filter(
@@ -47,6 +56,22 @@ export class DashboardComponent implements OnInit {
     this.categoryService.getCategories().subscribe((categories) => {
       this.categories = categories;
     });
+  }
+  goNext() {
+    this.defaultTransform = this.defaultTransform - 398;
+    if (Math.abs(this.defaultTransform) >= this.slider.scrollWidth / 1.7)
+      this.defaultTransform = 0;
+    this.slider.style.transform = 'translateX(' + this.defaultTransform + 'px)';
+  }
+
+  goPrev() {
+    if (Math.abs(this.defaultTransform) <= 0) this.defaultTransform = this.defaultTransform;
+    else this.defaultTransform = this.defaultTransform + 398;
+    this.slider.style.transform = 'translateX(' + this.defaultTransform + 'px)';
+  }
+  
+  emit(category: Category){
+    this.emittter.emit(category);
   }
 
   getBestSellers() {
@@ -83,4 +108,6 @@ export class DashboardComponent implements OnInit {
   addToCart(prod: any) {
     this.cartService.addtoCart(prod);
   }
+
+  
 }

@@ -1,9 +1,10 @@
-<h2 class="txt text-3xl font-semibold tracking-wider text-center pt-36">
+<h2 class="txt text-3xl font-semibold tracking-wider text-center pt-12">
   SHOPPING CART
 </h2>
-<div class="flex justify-center my-6 mt-12">
+<div class="flex justify-center mt-12 mb-48">
+ 
   <div
-    *ngIf="products.length > 0"
+  *ngIf="products.length > 0"
     class="flex flex-col w-full p-8 text-gray-800 bg-white shadow-lg pin-r pin-y md:w-4/5 lg:w-4/5"
   >
     <div class="flex-1">
@@ -48,7 +49,7 @@
               <div class="w-20 h-10">
                 <div class="relative flex flex-row w-full h-8 ml-2">
                   <form (click)="decrementQty(prod)" method="POST">
-                    <button class="minus pl-2">
+                    <button class="minus pr-2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
@@ -63,9 +64,9 @@
                       </svg>
                     </button>
                   </form>
-                  <p class="text-base -mt-1">{{ prod.productQuantity }}</p>
+                  <p class="text-base ">{{ prod.productQuantity }}</p>
                   <form (click)="incrementQty(prod)" method="POST">
-                    <button class="plus pr-2">
+                    <button class="plus pl-2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
@@ -125,11 +126,10 @@
               <div
                 class="lg:px-4 lg:py-2 m-2 lg:text-lg font-bold text-center text-gray-900"
               >
-                {{ totalAmount | currency: "PHP":"symbol" }}
+                {{ totalAmount }}
               </div>
             </div>
-            <a href="#">
-              <button
+              <button routerLink="/checkout"
                 class="flex justify-center w-full px-10 py-3 mt-6 font-medium text-white uppercase bg-stone-400 rounded-full shadow item-center hover:text-orange-400 hover:bg-stone-700 focus:shadow-outline focus:outline-none"
               >
                 <svg
@@ -147,18 +147,18 @@
                 </svg>
                 <span class="ml-2 mt-5px">Proceed to checkout!</span>
               </button>
-            </a>
           </div>
         </div>
       </div>
     </div>
   </div>
+  
   <div *ngIf="products.length === 0">
     <img
       src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-2130356-1800917.png"
       class=""
     />
-    <div class="grid place-items-center leading-none mb-12">
+    <div class="grid place-items-center leading-none mb-6">
       <strong>Unfortunately, Your Cart is Empty.</strong>
       <br />
       <small>Please add something to your cart.</small>

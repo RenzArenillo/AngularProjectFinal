@@ -28,11 +28,10 @@ import { SharedModule } from './modules/shared/shared.module';
 import { SignupModule } from './modules/signup/signup.module';
 import { TesthomeComponent } from './modules/testhome/testhome.component';
 import { CommonModule } from '@angular/common';
-import { CartPageComponent } from './modules/products/cart-page/cart-page.component';
-import { ProductModule } from './modules/products/products.module';
-import { ProfileItemComponent } from './modules/profile/components/profile-item/profile-item.component';
 import { ProfileModule } from './modules/profile/profile.module';
 import { CarouselComponent } from './modules/dashboard/components/carousel/carousel.component';
+import { CartPageComponent } from './modules/products/cart-page/cart-page.component';
+
 
 @NgModule({
   declarations: [
@@ -53,7 +52,8 @@ import { CarouselComponent } from './modules/dashboard/components/carousel/carou
     AdminUserlistComponent,
     AddUserComponent,
     SearchPipe,
-    CarouselComponent
+    CarouselComponent,
+    CartPageComponent
   ],
   imports: [
     BrowserModule,

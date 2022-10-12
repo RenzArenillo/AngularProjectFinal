@@ -8,14 +8,18 @@ import { Category } from 'src/app/assets/models/category';
   styleUrls: ['./category.component.scss']
 })
 export class CategoryComponent implements OnInit {
-
+  slider: any;
+  defaultTransform: any;
   @Input()
   category!: Category;
 
   @Output() emittter = new EventEmitter();
+  categories: Category[] = [];
   constructor() { }
 
   ngOnInit(): void {
+    this.slider = document.getElementById("slider");
+    this.defaultTransform=0
   }
 
   emit(category: Category){

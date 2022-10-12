@@ -14,7 +14,7 @@ import { SearchProductsPipe } from './search-products.pipe';
 @NgModule({
   declarations: [
     CartPageComponent,
-    SearchProductsPipe    
+    SearchProductsPipe 
   ],
   imports: [
     CommonModule,
