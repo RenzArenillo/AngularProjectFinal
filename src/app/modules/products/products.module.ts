@@ -12,7 +12,7 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
-    CartPageComponent 
+    CartPageComponent,
   ],
   imports: [
     CommonModule,

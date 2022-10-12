@@ -1,6 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
@@ -54,15 +54,16 @@ import { SignupModule } from './modules/signup/signup.module';
     AddUserComponent,
     SearchPipe,
     CarouselComponent,
-    CartPageComponent
+    CartPageComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule,
     FormsModule, 
+    ReactiveFormsModule,
     ProfileModule,
     HttpClientModule,
     LoginModule,

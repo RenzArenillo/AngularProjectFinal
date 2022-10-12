@@ -97,7 +97,7 @@
       "productCategory": "Sports",
       "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvK9--f6FF7IFhD7Z8jhpRBpPCaq_EUT7icA&usqp=CAU",
       "unitsSold": 2,
-      "productQuantity":1 
+      "productQuantity": 1
     },
     {
       "productId": 11,
@@ -106,7 +106,7 @@
       "productCategory": "Clothes",
       "productImage": "https://images.unsplash.com/photo-1580694915740-33306cfdfd88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Z3Vlc3N8ZW58MHx8MHx8&w=1000&q=80",
       "unitsSold": 2,
-      "productQuantity":1 
+      "productQuantity": 1
     },
     {
       "productId": 12,
@@ -115,7 +115,7 @@
       "productCategory": "Bags",
       "productImage": "https://images.unsplash.com/photo-1547949003-9792a18a2601?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YmFnc3xlbnwwfHwwfHw%3D&w=1000&q=80",
       "unitsSold": 2,
-      "productQuantity":1 
+      "productQuantity": 1
     },
     {
       "productId": 13,
@@ -272,7 +272,7 @@
     {
       "id": 11,
       "name": "Home Decors",
-      "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bathroom-decor-rug-1548371038.jpg" 
+      "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bathroom-decor-rug-1548371038.jpg"
     }
   ],
   "order": [
@@ -580,6 +580,22 @@
       "active": true,
       "userType": "Customer",
       "id": 11
+    },
+    {
+      "firstName": "aaaa",
+      "middleName": "",
+      "lastName": "aaaa",
+      "userName": "seses",
+      "email": "rarenillo@77global.biz",
+      "mobileNumber": "9164855881",
+      "userPassword": "aaaaa",
+      "birthdate": "2022-10-18",
+      "interestsLists": [
+        ""
+      ],
+      "active": true,
+      "userType": "Customer",
+      "id": 12
     }
   ]
 }
