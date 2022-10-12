@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   loginForm!: FormGroup
   user: string = ""
   user2?: User
+  userStr?: any
 
 
   constructor(private fb: FormBuilder, private router: Router, private http: HttpClient, private loginService:LoginService) { 
@@ -31,18 +32,6 @@ export class LoginComponent implements OnInit {
 
     this.http.get<any>("http://localhost:3000/user")
     .subscribe(res=>{
-      // const user = res.find((a:any)=>{
-      //   return a.userName === this.loginForm.value.userName && a.userPassword === this.loginForm.value.userPassword
-      // });
-      // if(user){
-      //   alert('Login Successful');
-      //   this.loginForm.reset()
-      //   this.router.navigate(["dashboard"])
-      // }else if(this.loginForm.pristine || (this.loginForm.value.userName.trim() === '' || this.loginForm.value.email.trim() === '')){
-      //   alert('Please fill up all the fields.')
-      // }else if(!user){
-      //   alert("The username or password you entered is incorrect.")
-      // }
       const user = this.loginForm.pristine ||
       (this.loginForm.value.userName?.trim() === '' || this.loginForm.value.confirmPassword?.trim === '') 
       if(!user){
@@ -57,8 +46,9 @@ export class LoginComponent implements OnInit {
           alert('Passwords do not match.')
         }else{
           alert('Login successful! Redirecting you to login.');
-
-          console.log(JSON.stringify(this.loginService.getUser()) + " from login ts")
+          this.userStr = this.http.get<any>("http://localhost:3000/user")
+          .subscribe(a=>{a.find((b:any)=>{b.userName === this.loginForm.value.userName})})
+          console.log(this.userStr)
           this.loginForm.reset()
           // this.router.navigate(["login"])
           // console.log(this.loginForm.value)

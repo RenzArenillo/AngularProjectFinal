@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CustomValidatorService } from '../../services/custom-validator.service';
 
 
 @Component({
@@ -14,18 +15,17 @@ export class SignupComponent implements OnInit {
 
   signUpForm!: FormGroup
 
-  constructor(private fb: FormBuilder, private router: Router, private http: HttpClient,) { 
+  constructor(private fb: FormBuilder, private router: Router, private http: HttpClient, private customValidator: CustomValidatorService) { 
   }
 
-
-
+  //from txt
   ngOnInit(): void {
 
     this.signUpForm = this.fb.group({
       firstName: ['', [Validators.required]],
       middleName: [''],
       lastName: ['', [Validators.required]],
-      userName: ['', [Validators.required, Validators.minLength(5)]],
+      userName: ['', [Validators.required, Validators.minLength(5)], this.customValidator.validateUsernameNotTaken.bind(this.customValidator)],
       email: ['', [Validators.required, Validators.email]],
       mobileNumber: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
       userPassword: ['', [Validators.required, Validators.minLength(5)]],
@@ -34,10 +34,10 @@ export class SignupComponent implements OnInit {
     })
 
   }
+  //
 
-  
-
-  submitButton(){  
+  submitButton(){ 
+    //added from txt
     const user = {
       firstName: this.signUpForm.get('firstName')?.value,
       middleName: this.signUpForm.get('middleName')?.value,
@@ -51,7 +51,6 @@ export class SignupComponent implements OnInit {
       active: true,
       userType: "Customer"
     }
-
       this.http.post<any>("http://localhost:3000/user",user)
       .subscribe(res=>{
           const user = this.signUpForm.pristine ||
@@ -66,6 +65,7 @@ export class SignupComponent implements OnInit {
               console.log(this.signUpForm.value)
             }
           }else {
+            alert("Please fill up all the fields.")
             console.log(this.signUpForm.value)
           }
       },err=>{

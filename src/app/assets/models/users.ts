@@ -19,4 +19,5 @@ export interface User {
   //   sports: boolean
   // };
   active: boolean
+  userType: string
 }
