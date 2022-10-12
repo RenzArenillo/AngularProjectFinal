@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -17,9 +17,9 @@ export class ForgetPwComponent implements OnInit {
 
   constructor(fb: FormBuilder, private router: Router, private http: HttpClient) { 
     this.forgetForm = fb.group({
-      userName: [''],
-      email: [''],
-      mobileNumber: ['']
+      userName: ['', [Validators.required, Validators.minLength(5)]],
+      email: ['', [Validators.required, Validators.email]],
+      mobileNumber: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
     })
   }
 
@@ -27,13 +27,14 @@ export class ForgetPwComponent implements OnInit {
   }
 
   submitButton(){
-    this.http.get<any>("http://localhost:3000/users")
+    this.http.get<any>("http://localhost:3000/user")
     .subscribe(res=>{
       const user = res.find((a:any)=>{
         ForgetPwComponent.upass = a.userPassword
         return a.userName === this.forgetForm.value.userName && a.email === this.forgetForm.value.email &&
         a.mobileNumber === this.forgetForm.value.mobileNumber
       });
+      console.log(user)
       if(user){
         alert('Account found! Redirecting...');
         this.getName()

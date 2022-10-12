@@ -11,13 +11,20 @@ export class UserService {
 
   constructor(private http:HttpClient) { }
 
-  getUsers(): Observable<User[]> {
-    return this.http.get<User[]>(`${environment.url}/user`).pipe<User[]>(  
-      map((data:User[]) => {
+  getUsers() {
+    return this.http.get<User[]>(`${environment.url}/user`).pipe(  
+      map((data:any) => {
         return data
       }
     ))
   }
+
+  // userNameAvailable(username: string) {
+  //      return this.http.post<any>(`${environment.url}/user`, {
+  //        username:username,
+  //      });
+  //    }
+   
 
   create(user:User) {
     return this.http.post(`${environment.url}/user`, user).subscribe()

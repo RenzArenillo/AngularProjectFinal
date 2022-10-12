@@ -25,13 +25,14 @@ import { TableComponent } from './modules/products/components/table/table.compon
 import { ProductsComponent } from './modules/products/products.component';
 import { FooterComponent } from './modules/shared/footer/footer/footer.component';
 import { SharedModule } from './modules/shared/shared.module';
-import { SignupModule } from './modules/signup/signup.module';
 import { TesthomeComponent } from './modules/testhome/testhome.component';
 import { CommonModule } from '@angular/common';
 import { ProfileModule } from './modules/profile/profile.module';
 import { CarouselComponent } from './modules/dashboard/components/carousel/carousel.component';
 import { CartPageComponent } from './modules/products/cart-page/cart-page.component';
 
+import { FormComponent } from './modules/products/components/form/form.component';
+import { SignupModule } from './modules/signup/signup.module';
 
 @NgModule({
   declarations: [

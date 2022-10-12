@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { Product } from 'src/app/assets/models/product';
+import { ProductsService } from '../../services/products.service';
 
 
 @Component({
@@ -20,12 +21,11 @@ export class TableComponent implements OnInit {
 
 
   sortBy: string = 'productId';
-  constructor() {}
+  constructor(private productService: ProductsService) {}
 
   ngOnInit(): void {}
 
   sort(sortBy: string){
-    alert("sorted by "+ sortBy);
     if (sortBy == "productName") {
       if (this.ascName == true) {
         this.products = this.products.sort((a, b) => (a.productName < b.productName ? -1 : 1))
@@ -64,5 +64,6 @@ export class TableComponent implements OnInit {
 
   edit(id:any){
     this.emittter.emit({productId : id, action:"edit"});
+
   }
 }

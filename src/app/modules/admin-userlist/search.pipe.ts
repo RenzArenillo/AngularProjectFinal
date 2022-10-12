@@ -8,11 +8,16 @@ export class SearchPipe implements PipeTransform {
         if(!searchInput) {
             return user;
         }
-       searchInput = searchInput.toLowerCase();
+    //    searchInput = searchInput.toLowerCase();
+    //    return user.filter(
+    //        x => {return x.userName.toLowerCase().includes(searchInput) ||
+    //          x.firstName.toLowerCase().includes(searchInput) ||
+    //          x.lastName.toLowerCase().includes(searchInput)
+    //     }
+    //    )
+    //    searchInput = searchInput.toLowerCase();
        return user.filter(
-           x => {return x.userName.toLowerCase().includes(searchInput) ||
-             x.firstName.toLowerCase().includes(searchInput) ||
-             x.lastName.toLowerCase().includes(searchInput)
+           x => {return x.userName.includes(searchInput) 
         }
        )
      }

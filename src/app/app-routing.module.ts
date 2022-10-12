@@ -14,6 +14,7 @@ import { SignupComponent } from './modules/signup/pages/signup/signup.component'
 import { TesthomeComponent } from './modules/testhome/testhome.component';
 import { CartPageComponent } from './modules/products/cart-page/cart-page.component';
 import { ProfileItemComponent } from './modules/profile/components/profile-item/profile-item.component';
+import { FormComponent } from './modules/products/components/form/form.component';
 
 const routes: Routes = [
   {
@@ -80,10 +81,19 @@ const routes: Routes = [
     path: 'cart',
     component: CartPageComponent
   },
+
   // {
   //   path: 'product',
   //   component: ProductPageComponent
   // }
+  {
+    path: 'productsform',
+    component: FormComponent
+  },
+  {
+    path: 'productsform/:id',
+    component: FormComponent
+  },
 ];
 
 @NgModule({

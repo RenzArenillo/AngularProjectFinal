@@ -1,25 +1,37 @@
- <div class="bg-stone-200 h-screen w-screen">
+<div class="bg-stone-200 h-screen w-screen">
     <div class="flex flex-col items-center flex-1 h-full justify-center px-4 sm:px-0">
         <div class="flex rounded-lg shadow-lg w-full sm:w-3/4 lg:w-1/2 bg-white sm:mx-0" style="height: 500px">
             <div class="flex flex-col w-full md:w-1/2 p-4">
-                <div class="flex flex-col flex-1 justify-center mb-8">
+                <div class="flex flex-col flex-1 justify-center mb-8 overflow-y-scroll">
                     <h1 class="text-3xl text-center font-thin">RESET PASSWORD</h1>
-                    <div class="w-full mt-11">
+                    <div class="w-full mt-11" >
                         <form [formGroup]="forgetForm" (ngSubmit)="submitButton()" class="form-horizontal w-3/4 mx-auto">
                           <div class="text-xs tracking-wider font-medium">USERNAME</div>
                             <div class="flex flex-col mt-2">
-                                <input id="username" type="text" class="placeholder:italic flex-grow h-8 px-2 border rounded border-grey-400" name="username" value="" placeholder="(juandelacruz123)">
+                                <input id="userName" type="text" class="placeholder:italic flex-grow h-8 px-2 border rounded border-grey-400" formControlName="userName" placeholder="(juandelacruz123)">
+                                <div *ngIf="(forgetForm.get('userName')?.invalid && forgetForm.get('userName')?.touched) || forgetForm.get('userName')?.dirty">
+                                    <small class="text-red-500 text-xs italic" role="alert" *ngIf="(forgetForm.get('userName')?.errors?.['required'] )">Username is required</small>
+                                    <small class="text-red-500 text-xs italic" role="alert" *ngIf="(forgetForm.get('userName')?.errors?.['minlength'] && forgetForm.get('userName')?.touched)">Enter at least 5 characters</small>
+                                </div>
                             </div>
                             <div class="flex flex-col mt-7">
                               <div class="text-xs tracking-wider font-medium mb-2">EMAIL</div>
-                                <input id="email" type="text" class="placeholder:italic flex-grow h-8 px-2 rounded border border-grey-400" name="email" placeholder="(name@example.com)">
+                                <input id="email" type="text" class="placeholder:italic flex-grow h-8 px-2 rounded border border-grey-400" formControlName="email" placeholder="(juandela.cruz@gmail.com)">
+                                <div *ngIf="(forgetForm.get('email')?.invalid && forgetForm.get('email')?.touched) || forgetForm.get('email')?.dirty">
+                                    <small class="text-red-500 text-xs italic" role="alert" *ngIf="(forgetForm.get('email')?.errors?.['required'])">Email is required</small>
+                                    <small class="text-red-500 text-xs italic" role="alert" *ngIf="(forgetForm.get('email')?.errors?.['email'] && forgetForm.get('email')?.touched) ">Email is invalid</small>
+                                </div>
                             </div>
                             <div class="flex flex-col mt-7">
                                 <div class="text-xs tracking-wider font-medium mb-2">MOBILE NUMBER</div>
-                                  <input id="number" type="text" class="placeholder:italic flex-grow h-8 px-2 rounded border border-grey-400" name="number" placeholder="XXX-XX-XXXX-XXX">
-                              </div>
+                                  <input id="mobileNumber" type="text" class="placeholder:italic flex-grow h-8 px-2 rounded border border-grey-400" formControlName="mobileNumber" placeholder="XXXXXXXXXXX">
+                                  <div *ngIf="(forgetForm.get('mobileNumber')?.invalid && forgetForm.get('mobileNumber')?.touched) || forgetForm.get('mobileNumber')?.dirty">
+                                    <small class="text-red-500 text-xs italic" role="alert" *ngIf="(forgetForm.get('mobileNumber')?.errors?.['required'])">Mobile number is required</small>
+                                    <small class="text-red-500 text-xs italic" role="alert" *ngIf="(forgetForm.get('mobileNumber')?.errors?.['pattern'] && forgetForm.get('mobileNumber')?.touched)">Mobile number should be 10 digits long</small>
+                                </div>
+                                </div>
                             <div class="flex flex-col mt-8">
-                                <button type="submit" class="bg-stone-500 hover:bg-stone-600 text-white text-sm font-semibold py-2 px-4 rounded">
+                                <button type="submit" [disabled]="forgetForm.invalid" class="bg-stone-400 hover:bg-stone-600 text-white text-sm font-semibold py-2 px-4 rounded">
                                     RESET MY PASSWORD
                                 </button>
                             </div>

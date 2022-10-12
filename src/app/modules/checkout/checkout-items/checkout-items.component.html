@@ -1,3 +1,10 @@
+
+<td class="hidden pb-4 md:table-cell" style="width: 10%;">
+    <img
+    src="{{ product.productImage }}"
+    class="w-32 rounded"
+    alt="Thumbnail"
+    /></td>
 <td style="width: 30%;">{{ product.productName }}</td>
 <td style="width: 30%;">{{ product.productQuantity }}</td>
 <td style="width: 30%;"> {{ product.productPrice * product.productQuantity | currency:"PHP":"symbol"}}</td>
