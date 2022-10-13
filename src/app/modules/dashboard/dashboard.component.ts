@@ -27,6 +27,8 @@ export class DashboardComponent implements OnInit {
   loading = true;
   showModal = false;
   bestSellers: Product[] = [];
+  mostExpensive: Product[] = [];
+  cheapest: Product[] = [];
   products: Product[] = [];
   filteredProducts: Product[] = [];
   categories: Category[] = [];
@@ -80,6 +82,19 @@ export class DashboardComponent implements OnInit {
     this.emittter.emit(category);
   }
 
+  getMostExpensive(){
+    this.mostExpensive = this.products
+      .sort((a, b) => (a.productPrice < b.productPrice ? 1 : -1))
+      .slice(0, 5);
+  }
+
+  getCheapest(){
+    this.cheapest = this.products
+      .sort((a, b) => (a.productPrice < b.productPrice ? -1 : 1))
+      .slice(0, 5);
+  }
+
+  
   getBestSellers() {
     this.bestSellers = this.products
       .sort((a, b) => (a.unitsSold < b.unitsSold ? 1 : -1))

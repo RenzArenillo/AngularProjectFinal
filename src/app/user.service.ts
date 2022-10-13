@@ -34,6 +34,11 @@ export class UserService {
     return this.http.patch(`${environment.url}/user/${user.id}`, user).subscribe()
   }
 
+  update2(user:User, id?:any) {
+    id = user.id;
+    return this.http.patch(`${environment.url}/user/${id}`, user).subscribe()
+  }
+
   updateStatus(user:User): Observable<any> {
     
     return this.http.patch(`${environment.url}/user/${user.id}`, user)

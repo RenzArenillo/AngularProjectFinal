@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 import { User } from 'src/app/assets/models/users';
+import { UserService } from 'src/app/user.service';
 
 @Component({
   selector: 'app-profile-item',
@@ -23,7 +25,7 @@ export class ProfileItemComponent implements OnInit {
     userPassword: ''
   };
   showModal = false;
-  constructor() {}
+  constructor( public userService: UserService, private router: Router) {}
 
   ngOnInit(): void {
     this.user = localStorage.getItem('user');
@@ -60,10 +62,14 @@ export class ProfileItemComponent implements OnInit {
     this.userUpdate.birthdate = user.birthDate;
 
     console.log(this.userUpdate);
-    // chin pakigawan ng service to
-    // this.userService.update(this.userUpdate, user.id)
-    // after sa service,uncomment ung codes below this
-    // localStorage.clear();
-    // localStorage.setItem('user', this.userUpdate);
+    
+    this.userService.update2(this.userUpdate, user.id)
+
+    localStorage.clear();
+    localStorage.setItem('user', JSON.stringify(this.userUpdate));
+ 
+    window.location.reload();
   }
+
+  
 }

@@ -1,6 +1,8 @@
+import {COMMA, ENTER} from '@angular/cdk/keycodes';
+import {MatChipInputEvent} from '@angular/material/chips';
 import { formatDate } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
 import { User } from 'src/app/assets/models/users';
 
 @Component({
@@ -16,6 +18,7 @@ export class ProfileFormComponent implements OnInit {
   profileForm: FormGroup;
   myDate: any;
   userBirthdate = '';
+  listOfInterests: FormArray
   constructor(formBuilder: FormBuilder) {
     this.profileForm = formBuilder.group({
       firstName: ['', [Validators.required]],
@@ -25,6 +28,7 @@ export class ProfileFormComponent implements OnInit {
       email: ['', [Validators.required]],
       birthDate: ['', [Validators.required]],
     });
+    this.listOfInterests = this.profileForm.get('listOfInterest') as FormArray;
   }
 
   ngOnInit(): void {
@@ -41,6 +45,7 @@ export class ProfileFormComponent implements OnInit {
       number: '0' + user.mobileNumber,
       email: user.email,
       birthDate: formatDate(new Date(), this.userBirthdate, 'en'),
+      listOfInterests: user.interestsLists
     });
   }
 
@@ -54,6 +59,7 @@ export class ProfileFormComponent implements OnInit {
       mobileNumber: this.profileForm.get('number')?.value,
       email: this.profileForm.get('email')?.value,
       birthDate: this.profileForm.get('birthDate')?.value,
+      listOfInterests: this.profileForm.get('listOfInterest')?.value
     };
 
     this.userEmitter.emit(editedUser);
@@ -62,4 +68,28 @@ export class ProfileFormComponent implements OnInit {
   modal(val: boolean) {
     this.modalEmitter.emit(val);
   }
+
+
+  addOnBlur = true;
+  readonly separatorKeysCodes = [ENTER, COMMA] as const;
+
+  // add(event: MatChipInputEvent): void {
+  //   const value = (event.value || '').trim();
+
+  //   // Add our fruit
+  //   if (value) {
+  //     this.listOfInterests.push({name: value});
+  //   }
+
+  //   // Clear the input value
+  //   event.chipInput!.clear();
+  // }
+
+  // remove(item: number): void {
+  //   const index = this.listOfInterests
+
+  //   if (index >= 0) {
+  //     this.fruits.splice(index, 1);
+  //   }
+  // }
 }
