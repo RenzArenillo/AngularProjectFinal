@@ -2,19 +2,21 @@
   class="header sticky top-0 opacity-100 bg-stone-500 z-50 shadow-md flex items-center justify-between"
 >
   <a href="">
-    <img src="../../../../assets/img/FinalLogo.png" class="logo w-48 ml-3"
+    <img src="../../../../assets/img/FinalLogo.png" class="logo w-48 mx-2"
   /></a>
-  <nav class="nav ml-48 uppercase tracking-widest text-base z-10 top-0 w-100">
+  <nav class="nav uppercase tracking-widest text-base z-10 top-0 w-100">
     <ul class="flex items-center">
       <li
+        *ngIf="loggedIn"
         routerLink="/dashboard"
         routerLinkActive="active"
         ariaCurrentWhenActive="page"
         class="p-6 pr-6 border-b-2 border-orange-500 text-white border-opacity-0 hover:border-opacity-100 hover:text-orange-400 duration-200 cursor-pointer active"
       >
-        Dashboard
+        {{ userType === "admin" ? "Dashboard" : "Our products" }}
       </li>
       <li
+        *ngIf="loggedIn && userType === 'admin'"
         routerLink="/admin"
         routerLinkActive="active"
         ariaCurrentWhenActive="page"
@@ -24,6 +26,7 @@
       </li>
 
       <li
+        *ngIf="!loggedIn"
         routerLink="/sign-up"
         routerLinkActive="active"
         ariaCurrentWhenActive="page"
@@ -32,6 +35,7 @@
         SignUp
       </li>
       <li
+        *ngIf="!loggedIn"
         routerLink="/login"
         routerLinkActive="active"
         ariaCurrentWhenActive="page"
@@ -39,11 +43,11 @@
       >
         Login
       </li>
-      
     </ul>
   </nav>
 
-  <div class="w-3/12 flex justify-end">
+  <!-- profile section -->
+  <div class="flex justify-end" *ngIf="loggedIn">
     <div>
       <div class="relative"></div>
       <button
@@ -81,11 +85,11 @@
             </div>
           </li>
           <li>
-            <div 
-              routerLink="adduser"
+            <div
+              routerLink="orders"
               class="block py-2 px-4 text-black hover:bg-stone-100 dark:hover:bg-stone-400 dark:hover:text-orange-600 cursor-pointer"
             >
-              Edit Profile
+              My orders
             </div>
           </li>
           <hr class="pb-2 mt-2" />

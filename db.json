@@ -1012,6 +1012,22 @@
       "active": true,
       "userType": "Customer",
       "id": 12
+    },
+    {
+      "firstName": "aldrin",
+      "middleName": "corbe",
+      "lastName": "morada",
+      "userName": "aldrin",
+      "email": "aldrin@email.com",
+      "mobileNumber": "1234567899",
+      "userPassword": "12345",
+      "birthdate": "2022-10-01",
+      "interestsLists": [
+        ""
+      ],
+      "active": true,
+      "userType": "Customer",
+      "id": 13
     }
   ]
 }
