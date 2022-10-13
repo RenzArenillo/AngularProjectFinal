@@ -1,6 +1,8 @@
 
 <br/>
-<h2 align="center" class="text-amber-600"><b>CHECKOUT SUMMARY</b></h2>
+<h2 align="center" class="text-amber-600" *ngIf = "!params"><b>CHECKOUT SUMMARY</b></h2>
+<h2 align="center" class="text-amber-600" *ngIf = "params"><b>ORDER SUMMARY</b></h2>
+
 <br/>
 <table align="center" class="border-double border-2 border-indigo-600">
   <thead>
@@ -21,7 +23,7 @@
 </table>
 <br/>
 
-<h2 align="center" class="text-amber-600"><b>ORDER DETAILS</b></h2>
+<h2 align="center" class="text-amber-600"><b>DELIVERY DETAILS</b></h2>
 <br/>
 <form [formGroup]="checkoutForm" (ngSubmit)="createOrder()">    
   <div class="form-group" align="center" >
@@ -56,8 +58,8 @@
 
 
 <div align="center">
-  <button [disabled]="!products.length || checkoutForm.invalid" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded" >Submit</button>
-  <button [disabled]="!products.length" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-1 rounded" (click)="cancelOrder()">Cancel</button>
+  <button *ngIf = "!params" [disabled]="!products.length || checkoutForm.invalid" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded" >Submit</button>
+  <button *ngIf = "!params" [disabled]="!products.length" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-1 rounded" (click)="cancelOrder()">Cancel</button>
 </div>
 </form>
 

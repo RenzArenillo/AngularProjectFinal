@@ -6,19 +6,19 @@
       "productPrice": 25000,
       "productCategory": "Technology",
       "productImage": "https://i.pinimg.com/originals/0b/5f/c8/0b5fc864c174f4bea7e93892e5eeb00a.jpg",
-      "unitsSold": 4321,
+      "unitsSold": 4324,
       "productQuantity": 1,
       "id": "1"
     },
     {
-      "id": "2",
       "productId": 2,
       "productName": "Camera",
       "productPrice": 12000,
       "productCategory": "Technology",
       "productImage": "https://images4.alphacoders.com/255/255596.jpg",
-      "unitsSold": 23,
-      "productQuantity": 1
+      "unitsSold": 26,
+      "productQuantity": 1,
+      "id": "2"
     },
     {
       "id": "3",
@@ -132,11 +132,11 @@
     },
     {
       "productId": 14,
-      "productName": "Hermes",
-      "productPrice": 100000,
+      "productName": "Fake Hermes",
+      "productPrice": 2000,
       "productCategory": "Bags & Accessories",
       "productImage": "https://cf.shopee.ph/file/0519c2a14b1a9a44add9ed49c1257ab8",
-      "unitsSold": 0,
+      "unitsSold": 10,
       "productQuantity": 2,
       "id": "14"
     },
@@ -166,7 +166,7 @@
       "productPrice": "12499",
       "productCategory": "Clothes",
       "productImage": "https://cdn.shopify.com/s/files/1/0017/2100/8243/products/QX-1_FRONT_BrightRed_400x.jpg?v=1610646148",
-      "unitsSold": 0,
+      "unitsSold": 9,
       "productQuantity": "1",
       "id": "17"
     },
@@ -196,7 +196,7 @@
       "productPrice": 32999,
       "productCategory": "Technology",
       "productImage": "https://cdn.vox-cdn.com/thumbor/avQXnY3_y3EE2SbGO_UwMnpZJyM=/0x0:2400x1566/1200x800/filters:focal(1008x591:1392x975)/cdn.vox-cdn.com/uploads/chorus_image/image/67708941/ps5_hardware_render.0.jpg",
-      "unitsSold": 0,
+      "unitsSold": 4,
       "productQuantity": "5",
       "id": "20"
     },
@@ -206,7 +206,7 @@
       "productPrice": 9500,
       "productCategory": "Appliances",
       "productImage": "https://www.lg.com/ph/images/refrigerators/md07518449/gallery/medium11.jpg",
-      "unitsSold": 0,
+      "unitsSold": 1,
       "productQuantity": 4,
       "id": "21"
     },
@@ -683,6 +683,110 @@
       "paymentMethod": "cash",
       "orderStatus": "Pending",
       "id": 14
+    },
+    {
+      "orderedItems": [
+        {
+          "productId": 20,
+          "productName": "PS5",
+          "productPrice": 32999,
+          "productImage": "https://cdn.vox-cdn.com/thumbor/avQXnY3_y3EE2SbGO_UwMnpZJyM=/0x0:2400x1566/1200x800/filters:focal(1008x591:1392x975)/cdn.vox-cdn.com/uploads/chorus_image/image/67708941/ps5_hardware_render.0.jpg",
+          "productQuantity": 3
+        },
+        {
+          "productId": 21,
+          "productName": "Refrigirator",
+          "productPrice": 9500,
+          "productImage": "https://www.lg.com/ph/images/refrigerators/md07518449/gallery/medium11.jpg",
+          "productQuantity": 1
+        }
+      ],
+      "orderQuantity": 4,
+      "orderTotalPrice": 108497,
+      "orderAddress": "a",
+      "orderDate": "2022/10/13",
+      "paymentMethod": "cash",
+      "orderStatus": "Pending",
+      "id": 15
+    },
+    {
+      "orderedItems": [
+        {
+          "productId": 20,
+          "productName": "PS5",
+          "productPrice": 32999,
+          "productImage": "https://cdn.vox-cdn.com/thumbor/avQXnY3_y3EE2SbGO_UwMnpZJyM=/0x0:2400x1566/1200x800/filters:focal(1008x591:1392x975)/cdn.vox-cdn.com/uploads/chorus_image/image/67708941/ps5_hardware_render.0.jpg",
+          "productQuantity": 3
+        }
+      ],
+      "orderQuantity": 3,
+      "orderTotalPrice": 98997,
+      "orderAddress": "aaaa",
+      "orderDate": "2022/10/13",
+      "paymentMethod": "cash",
+      "orderStatus": "Pending",
+      "id": 16
+    },
+    {
+      "orderedItems": [
+        {
+          "productId": 14,
+          "productName": "Fake Hermes",
+          "productPrice": 2000,
+          "productImage": "https://cf.shopee.ph/file/0519c2a14b1a9a44add9ed49c1257ab8",
+          "productQuantity": 10
+        }
+      ],
+      "orderQuantity": 10,
+      "orderTotalPrice": 20000,
+      "orderAddress": "sss",
+      "orderDate": "2022/10/13",
+      "paymentMethod": "cash",
+      "orderStatus": "Pending",
+      "id": 17
+    },
+    {
+      "orderedItems": [
+        {
+          "productId": 1,
+          "productName": "Acer Laptop",
+          "productPrice": 25000,
+          "productImage": "https://i.pinimg.com/originals/0b/5f/c8/0b5fc864c174f4bea7e93892e5eeb00a.jpg",
+          "productQuantity": 3
+        },
+        {
+          "productId": 2,
+          "productName": "Camera",
+          "productPrice": 12000,
+          "productImage": "https://images4.alphacoders.com/255/255596.jpg",
+          "productQuantity": 3
+        }
+      ],
+      "orderQuantity": 6,
+      "orderTotalPrice": 111000,
+      "orderAddress": "a",
+      "orderDate": "2022/10/13",
+      "paymentMethod": "cash",
+      "orderStatus": "Pending",
+      "id": 18
+    },
+    {
+      "orderedItems": [
+        {
+          "productId": 17,
+          "productName": "Red Jacket",
+          "productPrice": "12499",
+          "productImage": "https://cdn.shopify.com/s/files/1/0017/2100/8243/products/QX-1_FRONT_BrightRed_400x.jpg?v=1610646148",
+          "productQuantity": 9
+        }
+      ],
+      "orderQuantity": 9,
+      "orderTotalPrice": 112491,
+      "orderAddress": "Quezon City",
+      "orderDate": "2022/10/13",
+      "paymentMethod": "cash",
+      "orderStatus": "Pending",
+      "id": 19
     }
   ],
   "user": [

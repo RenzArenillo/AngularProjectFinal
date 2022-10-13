@@ -31,4 +31,8 @@ export class OrdersService {
   create(order:Order) {
     return this.http.post(`${environment.url}/order`, order).subscribe()
   }
+
+  getOrder(id:number): Observable<Order> {
+    return this.http.get<Order>(`${environment.url}/order/${id}`)
+  }
 }

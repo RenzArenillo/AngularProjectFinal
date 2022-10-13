@@ -83,7 +83,11 @@ const routes: Routes = [
   {
     path: 'productsform/:id',
     component: FormComponent
-  }
+  },
+  {
+    path: 'checkout/:id',
+    component: CheckoutPageComponent,
+  },
 ];
 
 @NgModule({

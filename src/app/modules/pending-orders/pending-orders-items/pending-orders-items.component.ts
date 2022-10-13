@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Order } from 'src/app/assets/models/order';
 
 @Component({
@@ -10,9 +11,13 @@ export class PendingOrdersItemsComponent implements OnInit {
 
   @Input() order!:Order 
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  view(id:string) {
+    this.router.navigate(['checkout', id])
+
+  }
 }

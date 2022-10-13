@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { Cart } from 'src/app/assets/models/cart';
+import { Order } from 'src/app/assets/models/order';
 import { OrdersService } from 'src/app/orders.service';
-import { PassOrdersService } from 'src/app/pass-orders.service';
 import { CartService } from '../../products/services/cart.service';
 import { ProductsService } from '../../products/services/products.service';
 
@@ -22,14 +22,16 @@ export class CheckoutPageComponent implements OnInit {
   unitsSold = 0
   prevSold = 0
   user!: any
-
+  orderId:string | null= "";
+  params:boolean = true
 
   public products : Cart[] = [];
 
   constructor(private orderService: OrdersService, private route:ActivatedRoute, 
     private listService:CartService, private router:Router, fb:FormBuilder,
     private productsService: ProductsService) { 
-    this.products = this.listService.retrieveList()
+      this.products = this.listService.retrieveList()
+
     this.checkoutForm = fb.group({
       address: [{value: '', disabled: !this.products.length}, Validators.required],
       paymentMethod: [{value: '', disabled: !this.products.length}, Validators.required]
@@ -38,6 +40,15 @@ export class CheckoutPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.user = localStorage.getItem('user');
+    this.route.paramMap.subscribe(params => {
+      this.orderId = params.get('id');
+      if (this.orderId) {
+        this.getProduct(parseInt(this.orderId))
+      } else {
+        this.params = false
+
+      }
+    })
     console.log(this.user)
     if (this.products.length > 0 ) {
       const { Quantity, Price } = this.products.reduce((acc, item) => {
@@ -53,6 +64,18 @@ export class CheckoutPageComponent implements OnInit {
     } 
   }
   
+  getProduct(id: number) {
+    this.orderService.getOrder(id).subscribe(order => this.showOrder(order))
+  }
+
+  showOrder(order:Order) {
+    this.products = order.orderedItems
+    this.total = order.orderTotalPrice
+    this.checkoutForm.patchValue({
+      address: order.orderAddress,
+      paymentMethod: order.paymentMethod
+    })
+  }
   createOrder() {
     const order = {
       userId: this.user.id,
@@ -69,18 +92,33 @@ export class CheckoutPageComponent implements OnInit {
 
     for (var data of this.products) {
       
-      // console.log("First: " + data.productQuantity)
+
       this.productsService.getProduct(data.productId).subscribe(product => {
-        product.unitsSold = 4
-        this.productsService.updateSold(product)
+        const productUpdate = {
+          productId: product.productId,
+          productName: product.productName,
+          productPrice: product.productPrice,
+          productCategory: product.productCategory,
+          productImage: product.productImage,
+          unitsSold: product.unitsSold + data.productQuantity,
+          productQuantity: product.productQuantity,
+        }
+        this.productsService.update(productUpdate, product.id!.toString())
+
       })
-      console.log("Prev: " + this.prevSold + " Quantity: " + data.productQuantity)
     }
     
     alert("Order Confirmed!")
     this.router.navigate(['/orders']);
 
   }
+
+  // getProduct(id: number) {
+  //   this.productsService.getProduct(id).subscribe(product => this.editProduct(product))
+  // }
+
+
+
 
 
   cancelOrder() {
