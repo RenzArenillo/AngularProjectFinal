@@ -6,5 +6,5 @@ export interface Product {
   productCategory: string,
   productImage: string,
   unitsSold: number,
-  // productQuantity: number
+  productQuantity: number
 }
