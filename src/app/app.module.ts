@@ -32,6 +32,7 @@ import { CartPageComponent } from './modules/products/cart-page/cart-page.compon
 
 import { FormComponent } from './modules/products/components/form/form.component';
 import { SignupModule } from './modules/signup/signup.module';
+import { AdminComponent } from './modules/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { SignupModule } from './modules/signup/signup.module';
     SearchPipe,
     CarouselComponent,
     CartPageComponent,
-    FormComponent
+    FormComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
