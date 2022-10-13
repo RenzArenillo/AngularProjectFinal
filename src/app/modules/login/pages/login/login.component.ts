@@ -64,7 +64,7 @@ export class LoginComponent implements OnInit {
             });
           console.log(this.userStr);
           this.loginForm.reset();
-          // this.router.navigate(["login"])
+          this.router.navigate(["dashboard"])
           // console.log(this.loginForm.value)
         }
       } else {
