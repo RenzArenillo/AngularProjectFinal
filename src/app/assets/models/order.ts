@@ -1,10 +1,10 @@
-import { ProductRenz } from "./productRenz"
+import { Cart } from "./cart"
 
 export interface Order {
     id?: string
     userId: string,
     orderQuantity: number,
-    orderedItems: ProductRenz[],
+    orderedItems: Cart[],
     orderTotalPrice: number,
     orderAddress: string,
     orderDate: string,

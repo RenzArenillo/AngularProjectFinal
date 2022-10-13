@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ProductRenz } from 'src/app/assets/models/productRenz';
+import { Cart } from 'src/app/assets/models/cart';
 
 
 @Component({
@@ -10,7 +10,7 @@ selector: '[app-checkout-items]',
 export class CheckoutItemsComponent implements OnInit {
 
 
-  @Input() product!:ProductRenz 
+  @Input() product!:Cart 
 
   constructor() { }
 

@@ -12,23 +12,27 @@ export class PendingOrdersPageComponent implements OnInit {
   public orders: Order[] = []
 
   //input ito from somewhere
-  public userId: string = "USER001"
+  user!: any
+
 
 
   constructor(private orderService: OrdersService) {
   }
 
   ngOnInit(): void {
-    this.orderService.getOrders(this.userId).subscribe(data => {this.orders = data;})
+    this.user = localStorage.getItem('user');
+
+    this.orderService.getOrders(this.user.id).subscribe(data => {this.orders = data;})
   }
 
   allOrders() {
-    this.orderService.getOrders(this.userId).subscribe(data => {this.orders = data;})
+    this.orderService.getOrders(this.user.id).subscribe(data => {this.orders = data;})
   }
 
   filteredOrders(filter:string) {
-    this.orderService.getFilteredOrders(this.userId, filter).subscribe(data => {this.orders = data;})
+    this.orderService.getFilteredOrders(this.user.id, filter).subscribe(data => {this.orders = data;})
   }
+  //
 
 
 }

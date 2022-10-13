@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Route, Router } from '@angular/router';
-import { Product } from 'src/app/assets/models/product';
-import { ProductRenz } from 'src/app/assets/models/productRenz';
+import { Cart } from 'src/app/assets/models/cart';
 import { OrdersService } from 'src/app/orders.service';
 import { PassOrdersService } from 'src/app/pass-orders.service';
+import { CartService } from '../../products/services/cart.service';
 import { ProductsService } from '../../products/services/products.service';
 
 @Component({
@@ -20,14 +20,14 @@ export class CheckoutPageComponent implements OnInit {
   quantity = 0
   dateToday = new Date().toJSON().slice(0,10).replace(/-/g,'/');
   unitsSold = 0
-  holder = 0
+  prevSold = 0
+  user!: any
 
 
-
-  public products : ProductRenz[] = [];
+  public products : Cart[] = [];
 
   constructor(private orderService: OrdersService, private route:ActivatedRoute, 
-    private listService:PassOrdersService, private router:Router, fb:FormBuilder,
+    private listService:CartService, private router:Router, fb:FormBuilder,
     private productsService: ProductsService) { 
     this.products = this.listService.retrieveList()
     this.checkoutForm = fb.group({
@@ -37,6 +37,8 @@ export class CheckoutPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.user = localStorage.getItem('user');
+    console.log(this.user)
     if (this.products.length > 0 ) {
       const { Quantity, Price } = this.products.reduce((acc, item) => {
         acc.Quantity += item.productQuantity;
@@ -53,7 +55,7 @@ export class CheckoutPageComponent implements OnInit {
   
   createOrder() {
     const order = {
-      userId: "USER001",
+      userId: this.user.id,
       orderedItems: this.products,
       orderQuantity: this.quantity,
       orderTotalPrice: this.total,
@@ -63,20 +65,18 @@ export class CheckoutPageComponent implements OnInit {
       orderStatus: "Pending"
     }
     this.orderService.create(order)
-    this.listService.saveList("")
+    this.listService.removeAllCart()
 
     for (var data of this.products) {
-      console.log("First: " + data.productQuantity)
-      this.holder = data.productQuantity
+      
+      // console.log("First: " + data.productQuantity)
       this.productsService.getProduct(data.productId).subscribe(product => {
-        product.unitsSold = product.unitsSold + this.holder
-        console.log("Second: " + this.holder)
-
-
+        product.unitsSold = 4
         this.productsService.updateSold(product)
       })
+      console.log("Prev: " + this.prevSold + " Quantity: " + data.productQuantity)
     }
-
+    
     alert("Order Confirmed!")
     this.router.navigate(['/orders']);
 
@@ -84,8 +84,8 @@ export class CheckoutPageComponent implements OnInit {
 
 
   cancelOrder() {
-    this.listService.saveList("")
-    this.router.navigate(['/home']);
+    // this.listService.saveList("")
+    this.router.navigate(['/dashboard']);
   }
 
 }

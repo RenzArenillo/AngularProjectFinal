@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { Cart } from 'src/app/assets/models/cart';
+import { Product } from 'src/app/assets/models/product';
 
 @Injectable({
   providedIn: 'root',
@@ -10,13 +12,15 @@ export class CartService {
   productQuantity: number = 1;
     //need ID user => localstorage user service
 
-  constructor() {}
+  constructor() {
+
+  }
 
   getProducts() {
     return this.products.asObservable();
   }
 
-  addtoCart(product: any) {
+  addtoCart(product: Product) {
     // const cartItemsExist = this.cartList.find((x:any) => product.productId === x.productId);
     // if (this.cartList.indexOf(product) != -1) {
     //   product.productQuantity++
@@ -32,14 +36,23 @@ export class CartService {
       (item: any) => item.productName === product.productName
     );
     
+    
+
+
     if (index > -1) {
       this.cartList[index].productQuantity =
         this.cartList[index].productQuantity + 1;
     } else {
-      this.cartList.push(product);
-    }
-    console.log(this.cartList)
+      const cart = {
+        productId: product.productId!,
+        productName: product.productName,
+        productPrice: product.productPrice,
+        productImage: product.productImage,
+        productQuantity: 1
+      }
 
+      this.cartList.push(cart)
+    }    
     this.products.next(this.cartList);
     this.getTotalPrice();
   }
@@ -112,4 +125,10 @@ export class CartService {
     });
     return totalQuantity;
   }
+
+  retrieveList(){
+    return this.cartList;
+  }
+
+
 }

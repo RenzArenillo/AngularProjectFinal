@@ -37,7 +37,7 @@ update(product:Product, id:string| null) {
 }
 
 updateSold(product:Product): Observable<any> {
-  console.log(product.id + " " + product.productName + " " + product.unitsSold)
+  console.log("Service: " + product.id + " " + product.productName + " " + product.unitsSold)
 
   return this.http.patch(`${this.env}/${product.id}`, product)
 
