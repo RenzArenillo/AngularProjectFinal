@@ -65,7 +65,6 @@ export class LoginComponent implements OnInit {
           console.log(this.userStr);
           this.loginForm.reset();
           this.router.navigate(["dashboard"])
-          // console.log(this.loginForm.value)
         }
       } else {
         alert('Please fill up all the fields.');
