@@ -3,6 +3,7 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { Cart } from 'src/app/assets/models/cart';
 import { Order } from 'src/app/assets/models/order';
+import { User } from 'src/app/assets/models/users';
 import { OrdersService } from 'src/app/orders.service';
 import { CartService } from '../../products/services/cart.service';
 import { ProductsService } from '../../products/services/products.service';
@@ -21,7 +22,7 @@ export class CheckoutPageComponent implements OnInit {
   dateToday = new Date().toJSON().slice(0,10).replace(/-/g,'/');
   unitsSold = 0
   prevSold = 0
-  user!: any
+  user!: User
   orderId:string | null= "";
   params:boolean = true
 
@@ -39,7 +40,10 @@ export class CheckoutPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.user = localStorage.getItem('user');
+    this.user = JSON.parse(localStorage.getItem('user')|| '{}');
+    
+    console.log("Hello " + this.user.id)
+
     this.route.paramMap.subscribe(params => {
       this.orderId = params.get('id');
       if (this.orderId) {
@@ -78,7 +82,7 @@ export class CheckoutPageComponent implements OnInit {
   }
   createOrder() {
     const order = {
-      userId: this.user.id,
+      userId: (this.user.id!).toString(),
       orderedItems: this.products,
       orderQuantity: this.quantity,
       orderTotalPrice: this.total,

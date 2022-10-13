@@ -12,7 +12,8 @@ import { ProductsService } from '../../services/products.service';
 export class FormComponent implements OnInit {
 
   productsForm: FormGroup
-  categories: String[] = ["Clothes", "Bags & Accessories", "Shoes", "Technology", "Appliances", "Sports"]
+  categories: String[] = ["All", "Clothes", "Bags", "Accessories", "Shoes", "Technology", "Appliances", "Sports",
+    "Furniture", "Pets", "Beauty", "Home Decors"]  
   params:boolean = true
   unitsSold:number = 0;
   productId:string | null= "";
@@ -25,7 +26,7 @@ export class FormComponent implements OnInit {
       productPrice: ['', [Validators.required]],
       productCategory: ['', [Validators.required]],
       productImage: ['', [Validators.required]],
-      productQuantity: ['', [Validators.required]]
+      // productQuantity: ['', [Validators.required]]
 
     })
 
@@ -57,7 +58,7 @@ export class FormComponent implements OnInit {
       productPrice: product.productPrice,
       productCategory: product.productCategory,
       productImage: product.productImage,
-      productQuantity: product.productQuantity
+      // productQuantity: product.productQuantity
     })
     this.unitsSold = product.unitsSold
   }
@@ -70,7 +71,7 @@ export class FormComponent implements OnInit {
       productCategory: this.productsForm.get('productCategory')?.value,
       productImage: this.productsForm.get('productImage')?.value,
       unitsSold: this.unitsSold,
-      productQuantity: this.productsForm.get('productQuantity')?.value,
+      // productQuantity: this.productsForm.get('productQuantity')?.value,
     }
     
     if (this.params) {

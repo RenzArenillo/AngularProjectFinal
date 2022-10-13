@@ -11,7 +11,8 @@ import { ProductsService } from './services/products.service';
 })
 export class ProductsComponent implements OnInit {
   products: Product[] = [];
-  categories: String[] = ["All", "Clothes", "Bags & Accessories", "Shoes", "Technology", "Appliances", "Sports"]
+  categories: String[] = ["All", "Clothes", "Bags", "Accessories", "Shoes", "Technology", "Appliances", "Sports",
+    "Furniture", "Pets", "Beauty", "Home Decors"]
   selectedCategory = null
   sortBy:string = 'productId';
   public searchInput: string = ""

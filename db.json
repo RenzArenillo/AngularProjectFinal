@@ -21,24 +21,24 @@
       "id": "2"
     },
     {
-      "id": "3",
       "productId": 3,
       "productName": "Nike",
       "productPrice": 3000,
       "productCategory": "Shoes",
       "productImage": "https://wallpapercave.com/wp/wp2896922.jpg",
-      "unitsSold": 2642,
-      "productQuantity": 1
+      "unitsSold": 2648,
+      "productQuantity": 1,
+      "id": "3"
     },
     {
-      "id": "4",
       "productId": 4,
       "productName": "Washing Machine",
       "productPrice": 9000,
       "productCategory": "Appliances",
       "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz-_MyC4COUtiXlRq2Pi-URxkDYW5PmR3BRJ5Q_YhHxaA_jkzKLQr8e4Ayz-MFsKsbMdY&usqp=CAU",
-      "unitsSold": 200,
-      "productQuantity": 1
+      "unitsSold": 201,
+      "productQuantity": 1,
+      "id": "4"
     },
     {
       "id": "5",
@@ -66,7 +66,7 @@
       "productPrice": 12000,
       "productCategory": "Technology",
       "productImage": "https://images.unsplash.com/photo-1613235577937-9ac3eed992fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2Fub24lMjBjYW1lcmF8ZW58MHx8MHx8&w=1000&q=80",
-      "unitsSold": 2,
+      "unitsSold": 6,
       "productQuantity": 1,
       "id": "7"
     },
@@ -106,7 +106,7 @@
       "productPrice": 2500,
       "productCategory": "Clothes",
       "productImage": "https://images.unsplash.com/photo-1580694915740-33306cfdfd88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Z3Vlc3N8ZW58MHx8MHx8&w=1000&q=80",
-      "unitsSold": 2,
+      "unitsSold": 4,
       "productQuantity": 1,
       "id": "11"
     },
@@ -134,7 +134,7 @@
       "productId": 14,
       "productName": "Fake Hermes",
       "productPrice": 2000,
-      "productCategory": "Bags & Accessories",
+      "productCategory": "Bags",
       "productImage": "https://cf.shopee.ph/file/0519c2a14b1a9a44add9ed49c1257ab8",
       "unitsSold": 10,
       "productQuantity": 2,
@@ -224,7 +224,7 @@
       "productId": 23,
       "productName": "Backpack",
       "productPrice": 5500,
-      "productCategory": "Bags & Accessories",
+      "productCategory": "Bags",
       "productImage": "https://www.helikon-tex.com/media/catalog/product/cache/4/image/500x/17f82f742ffe127f42dca9de82fb58b1/p/l/pl-dtn-nl-1919.jpg",
       "unitsSold": 0,
       "productQuantity": 2,
@@ -234,7 +234,7 @@
       "productId": 24,
       "productName": "Hermes",
       "productPrice": 100000,
-      "productCategory": "Bags & Accessories",
+      "productCategory": "Bags",
       "productImage": "https://cf.shopee.ph/file/0519c2a14b1a9a44add9ed49c1257ab8",
       "unitsSold": 0,
       "productQuantity": 2,
@@ -533,296 +533,84 @@
     {
       "orderedItems": [
         {
-          "productId": 1,
-          "productName": "Acer Laptop",
-          "productPrice": 25000,
-          "productImage": "https://i.pinimg.com/originals/0b/5f/c8/0b5fc864c174f4bea7e93892e5eeb00a.jpg",
-          "productQuantity": 2
-        },
-        {
-          "productId": 3,
-          "productName": "Nike",
-          "productPrice": 3000,
-          "productImage": "https://wallpapercave.com/wp/wp2896922.jpg",
-          "productQuantity": 3
+          "productId": 4,
+          "productName": "Washing Machine",
+          "productPrice": 9000,
+          "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz-_MyC4COUtiXlRq2Pi-URxkDYW5PmR3BRJ5Q_YhHxaA_jkzKLQr8e4Ayz-MFsKsbMdY&usqp=CAU",
+          "productQuantity": 1
         }
       ],
-      "orderQuantity": 5,
-      "orderTotalPrice": 59000,
-      "orderAddress": "1",
+      "orderQuantity": 1,
+      "orderTotalPrice": 9000,
+      "orderAddress": "Dalandan St., Manila ",
       "orderDate": "2022/10/13",
       "paymentMethod": "cash",
       "orderStatus": "Pending",
       "id": 8
     },
     {
-      "orderedItems": [
-        {
-          "productId": 1,
-          "productName": "Acer Laptop",
-          "productPrice": 25000,
-          "productImage": "https://i.pinimg.com/originals/0b/5f/c8/0b5fc864c174f4bea7e93892e5eeb00a.jpg",
-          "productQuantity": 2
-        },
-        {
-          "productId": 4,
-          "productName": "Washing Machine",
-          "productPrice": 9000,
-          "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz-_MyC4COUtiXlRq2Pi-URxkDYW5PmR3BRJ5Q_YhHxaA_jkzKLQr8e4Ayz-MFsKsbMdY&usqp=CAU",
-          "productQuantity": 2
-        }
-      ],
-      "orderQuantity": 4,
-      "orderTotalPrice": 68000,
-      "orderAddress": "sss",
-      "orderDate": "2022/10/13",
-      "paymentMethod": "cash",
-      "orderStatus": "Pending",
-      "id": 9
-    },
-    {
+      "userId": "1",
       "orderedItems": [
         {
           "productId": 3,
           "productName": "Nike",
           "productPrice": 3000,
           "productImage": "https://wallpapercave.com/wp/wp2896922.jpg",
-          "productQuantity": 2
+          "productQuantity": 4
         },
         {
-          "productId": 5,
-          "productName": "Basketball",
+          "productId": 11,
+          "productName": "Guess",
           "productPrice": 2500,
-          "productImage": "https://i.pinimg.com/736x/07/2a/7e/072a7ef3c39deccee1f51e90706fc024.jpg",
-          "productQuantity": 8
+          "productImage": "https://images.unsplash.com/photo-1580694915740-33306cfdfd88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Z3Vlc3N8ZW58MHx8MHx8&w=1000&q=80",
+          "productQuantity": 2
         }
       ],
-      "orderQuantity": 10,
-      "orderTotalPrice": 26000,
-      "orderAddress": "aaaa",
+      "orderQuantity": 6,
+      "orderTotalPrice": 17000,
+      "orderAddress": "Manila",
+      "orderDate": "2022/10/13",
+      "paymentMethod": "cash",
+      "orderStatus": "Pending",
+      "id": 9
+    },
+    {
+      "userId": "1",
+      "orderedItems": [
+        {
+          "productId": 7,
+          "productName": "Canon",
+          "productPrice": 12000,
+          "productImage": "https://images.unsplash.com/photo-1613235577937-9ac3eed992fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2Fub24lMjBjYW1lcmF8ZW58MHx8MHx8&w=1000&q=80",
+          "productQuantity": 4
+        }
+      ],
+      "orderQuantity": 4,
+      "orderTotalPrice": 48000,
+      "orderAddress": "a",
       "orderDate": "2022/10/13",
       "paymentMethod": "cash",
       "orderStatus": "Pending",
       "id": 10
     },
     {
+      "userId": "2",
       "orderedItems": [
         {
-          "productId": 4,
-          "productName": "Washing Machine",
-          "productPrice": 9000,
-          "productImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz-_MyC4COUtiXlRq2Pi-URxkDYW5PmR3BRJ5Q_YhHxaA_jkzKLQr8e4Ayz-MFsKsbMdY&usqp=CAU",
-          "productQuantity": 2
-        },
-        {
-          "productId": 5,
-          "productName": "Basketball",
-          "productPrice": 2500,
-          "productImage": "https://i.pinimg.com/736x/07/2a/7e/072a7ef3c39deccee1f51e90706fc024.jpg",
-          "productQuantity": 1
-        }
-      ],
-      "orderQuantity": 3,
-      "orderTotalPrice": 20500,
-      "orderAddress": "sss",
-      "orderDate": "2022/10/13",
-      "paymentMethod": "cash",
-      "orderStatus": "Pending",
-      "id": 11
-    },
-    {
-      "orderedItems": [
-        {
-          "productId": 1,
-          "productName": "Acer Laptop",
-          "productPrice": 25000,
-          "productImage": "https://i.pinimg.com/originals/0b/5f/c8/0b5fc864c174f4bea7e93892e5eeb00a.jpg",
-          "productQuantity": 3
-        }
-      ],
-      "orderQuantity": 3,
-      "orderTotalPrice": 75000,
-      "orderAddress": "1",
-      "orderDate": "2022/10/13",
-      "paymentMethod": "cash",
-      "orderStatus": "Pending",
-      "id": 12
-    },
-    {
-      "orderedItems": [
-        {
-          "productId": 1,
-          "productName": "Acer Laptop",
-          "productPrice": 25000,
-          "productImage": "https://i.pinimg.com/originals/0b/5f/c8/0b5fc864c174f4bea7e93892e5eeb00a.jpg",
+          "productId": 3,
+          "productName": "Nike",
+          "productPrice": 3000,
+          "productImage": "https://wallpapercave.com/wp/wp2896922.jpg",
           "productQuantity": 4
         }
       ],
       "orderQuantity": 4,
-      "orderTotalPrice": 100000,
-      "orderAddress": "1",
+      "orderTotalPrice": 12000,
+      "orderAddress": "dad",
       "orderDate": "2022/10/13",
-      "paymentMethod": "cash",
+      "paymentMethod": "card",
       "orderStatus": "Pending",
-      "id": 13
-    },
-    {
-      "orderedItems": [
-        {
-          "productId": 20,
-          "productName": "PS5",
-          "productPrice": 32999,
-          "productImage": "https://cdn.vox-cdn.com/thumbor/avQXnY3_y3EE2SbGO_UwMnpZJyM=/0x0:2400x1566/1200x800/filters:focal(1008x591:1392x975)/cdn.vox-cdn.com/uploads/chorus_image/image/67708941/ps5_hardware_render.0.jpg",
-          "productQuantity": 1
-        }
-      ],
-      "orderQuantity": 1,
-      "orderTotalPrice": 32999,
-      "orderAddress": "sss",
-      "orderDate": "2022/10/13",
-      "paymentMethod": "cash",
-      "orderStatus": "Pending",
-      "id": 14
-    },
-    {
-      "orderedItems": [
-        {
-          "productId": 20,
-          "productName": "PS5",
-          "productPrice": 32999,
-          "productImage": "https://cdn.vox-cdn.com/thumbor/avQXnY3_y3EE2SbGO_UwMnpZJyM=/0x0:2400x1566/1200x800/filters:focal(1008x591:1392x975)/cdn.vox-cdn.com/uploads/chorus_image/image/67708941/ps5_hardware_render.0.jpg",
-          "productQuantity": 3
-        },
-        {
-          "productId": 21,
-          "productName": "Refrigirator",
-          "productPrice": 9500,
-          "productImage": "https://www.lg.com/ph/images/refrigerators/md07518449/gallery/medium11.jpg",
-          "productQuantity": 1
-        }
-      ],
-      "orderQuantity": 4,
-      "orderTotalPrice": 108497,
-      "orderAddress": "a",
-      "orderDate": "2022/10/13",
-      "paymentMethod": "cash",
-      "orderStatus": "Pending",
-      "id": 15
-    },
-    {
-      "orderedItems": [
-        {
-          "productId": 20,
-          "productName": "PS5",
-          "productPrice": 32999,
-          "productImage": "https://cdn.vox-cdn.com/thumbor/avQXnY3_y3EE2SbGO_UwMnpZJyM=/0x0:2400x1566/1200x800/filters:focal(1008x591:1392x975)/cdn.vox-cdn.com/uploads/chorus_image/image/67708941/ps5_hardware_render.0.jpg",
-          "productQuantity": 3
-        }
-      ],
-      "orderQuantity": 3,
-      "orderTotalPrice": 98997,
-      "orderAddress": "aaaa",
-      "orderDate": "2022/10/13",
-      "paymentMethod": "cash",
-      "orderStatus": "Pending",
-      "id": 16
-    },
-    {
-      "orderedItems": [
-        {
-          "productId": 14,
-          "productName": "Fake Hermes",
-          "productPrice": 2000,
-          "productImage": "https://cf.shopee.ph/file/0519c2a14b1a9a44add9ed49c1257ab8",
-          "productQuantity": 10
-        }
-      ],
-      "orderQuantity": 10,
-      "orderTotalPrice": 20000,
-      "orderAddress": "sss",
-      "orderDate": "2022/10/13",
-      "paymentMethod": "cash",
-      "orderStatus": "Pending",
-      "id": 17
-    },
-    {
-      "orderedItems": [
-        {
-          "productId": 1,
-          "productName": "Acer Laptop",
-          "productPrice": 25000,
-          "productImage": "https://i.pinimg.com/originals/0b/5f/c8/0b5fc864c174f4bea7e93892e5eeb00a.jpg",
-          "productQuantity": 3
-        },
-        {
-          "productId": 2,
-          "productName": "Camera",
-          "productPrice": 12000,
-          "productImage": "https://images4.alphacoders.com/255/255596.jpg",
-          "productQuantity": 3
-        }
-      ],
-      "orderQuantity": 6,
-      "orderTotalPrice": 111000,
-      "orderAddress": "a",
-      "orderDate": "2022/10/13",
-      "paymentMethod": "cash",
-      "orderStatus": "Pending",
-      "id": 18
-    },
-    {
-      "orderedItems": [
-        {
-          "productId": 17,
-          "productName": "Red Jacket",
-          "productPrice": "12499",
-          "productImage": "https://cdn.shopify.com/s/files/1/0017/2100/8243/products/QX-1_FRONT_BrightRed_400x.jpg?v=1610646148",
-          "productQuantity": 9
-        }
-      ],
-      "orderQuantity": 9,
-      "orderTotalPrice": 112491,
-      "orderAddress": "Quezon City",
-      "orderDate": "2022/10/13",
-      "paymentMethod": "cash",
-      "orderStatus": "Pending",
-      "id": 19
-    },
-    {
-      "orderedItems": [
-        {
-          "productId": 1,
-          "productName": "Acer Laptop",
-          "productPrice": 25000,
-          "productImage": "https://i.pinimg.com/originals/0b/5f/c8/0b5fc864c174f4bea7e93892e5eeb00a.jpg",
-          "productQuantity": 3
-        }
-      ],
-      "orderQuantity": 3,
-      "orderTotalPrice": 75000,
-      "orderAddress": "Manila",
-      "orderDate": "2022/10/13",
-      "paymentMethod": "cash",
-      "orderStatus": "Pending",
-      "id": 20
-    },
-    {
-      "orderedItems": [
-        {
-          "productId": 1,
-          "productName": "Acer Laptop",
-          "productPrice": 25000,
-          "productImage": "https://i.pinimg.com/originals/0b/5f/c8/0b5fc864c174f4bea7e93892e5eeb00a.jpg",
-          "productQuantity": 3
-        }
-      ],
-      "orderQuantity": 3,
-      "orderTotalPrice": 75000,
-      "orderAddress": "Manila",
-      "orderDate": "2022/10/13",
-      "paymentMethod": "cash",
-      "orderStatus": "Pending",
-      "id": 21
+      "id": 11
     }
   ],
   "user": [
