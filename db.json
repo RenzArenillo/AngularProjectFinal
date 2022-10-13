@@ -6,7 +6,7 @@
       "productPrice": 25000,
       "productCategory": "Technology",
       "productImage": "https://i.pinimg.com/originals/0b/5f/c8/0b5fc864c174f4bea7e93892e5eeb00a.jpg",
-      "unitsSold": 4324,
+      "unitsSold": 4327,
       "productQuantity": 1,
       "id": "1"
     },
@@ -787,6 +787,24 @@
       "paymentMethod": "cash",
       "orderStatus": "Pending",
       "id": 19
+    },
+    {
+      "orderedItems": [
+        {
+          "productId": 1,
+          "productName": "Acer Laptop",
+          "productPrice": 25000,
+          "productImage": "https://i.pinimg.com/originals/0b/5f/c8/0b5fc864c174f4bea7e93892e5eeb00a.jpg",
+          "productQuantity": 3
+        }
+      ],
+      "orderQuantity": 3,
+      "orderTotalPrice": 75000,
+      "orderAddress": "Manila",
+      "orderDate": "2022/10/13",
+      "paymentMethod": "cash",
+      "orderStatus": "Pending",
+      "id": 20
     }
   ],
   "user": [
