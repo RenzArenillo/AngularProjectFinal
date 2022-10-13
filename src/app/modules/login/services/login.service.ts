@@ -7,6 +7,7 @@ import { User } from 'src/app/assets/models/users';
   providedIn: 'root',
 })
 export class LoginService {
+  
   env = 'http://localhost:3000/user';
 
   user: User | any;

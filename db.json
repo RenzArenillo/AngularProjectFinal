@@ -25,8 +25,7 @@
       "productPrice": 3000,
       "productCategory": "Shoes",
       "productImage": "https://wallpapercave.com/wp/wp2896922.jpg",
-      "unitsSold": 2648,
-      "productQuantity": 1,
+      "unitsSold": 2651,
       "id": "3"
     },
     {
@@ -64,8 +63,7 @@
       "productPrice": 12000,
       "productCategory": "Technology",
       "productImage": "https://images.unsplash.com/photo-1613235577937-9ac3eed992fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2Fub24lMjBjYW1lcmF8ZW58MHx8MHx8&w=1000&q=80",
-      "unitsSold": 6,
-      "productQuantity": 1,
+      "unitsSold": 9,
       "id": "7"
     },
     {
@@ -143,8 +141,7 @@
       "productPrice": "500",
       "productCategory": "Sports",
       "productImage": "https://sportsmatik.com/uploads/matik-sports-corner/equipage/volleyball-ball_1605077648.jpg",
-      "unitsSold": 0,
-      "productQuantity": "10",
+      "unitsSold": 3,
       "id": "15"
     },
     {
@@ -646,6 +643,39 @@
       "paymentMethod": "cash",
       "orderStatus": "Pending",
       "id": 13
+    },
+    {
+      "userId": "15",
+      "orderedItems": [
+        {
+          "productId": 3,
+          "productName": "Nike",
+          "productPrice": 3000,
+          "productImage": "https://wallpapercave.com/wp/wp2896922.jpg",
+          "productQuantity": 1
+        },
+        {
+          "productId": 7,
+          "productName": "Canon",
+          "productPrice": 12000,
+          "productImage": "https://images.unsplash.com/photo-1613235577937-9ac3eed992fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2Fub24lMjBjYW1lcmF8ZW58MHx8MHx8&w=1000&q=80",
+          "productQuantity": 2
+        },
+        {
+          "productId": 15,
+          "productName": "Volleyball",
+          "productPrice": "500",
+          "productImage": "https://sportsmatik.com/uploads/matik-sports-corner/equipage/volleyball-ball_1605077648.jpg",
+          "productQuantity": 3
+        }
+      ],
+      "orderQuantity": 6,
+      "orderTotalPrice": 28500,
+      "orderAddress": "Manila",
+      "orderDate": "2022/10/13",
+      "paymentMethod": "cash",
+      "orderStatus": "Pending",
+      "id": 14
     }
   ],
   "user": [
