@@ -19,6 +19,7 @@ export class CartPageComponent implements OnInit {
   ngOnInit(): void {
       this.cartService.getProducts().subscribe(res =>{
       this.products = res;
+      console.log(this.products)
       this.totalAmount = this.cartService.getTotalPrice();
     })
   }
@@ -39,6 +40,9 @@ export class CartPageComponent implements OnInit {
     this.cartService.removeAllCart();
   }
 
+  passMethod() {
+
+  }
   
 
 }

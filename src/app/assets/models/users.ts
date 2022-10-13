@@ -18,5 +18,10 @@ export interface User {
   //   appliances: boolean,
   //   sports: boolean
   // };
+  // cart: [{
+  //   productId: number,
+  //   quantity: 
+  // }
+  // ]
   active: boolean
 }

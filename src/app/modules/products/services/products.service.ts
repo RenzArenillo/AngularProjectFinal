@@ -35,4 +35,11 @@ create(product:Product) {
 update(product:Product, id:string| null) {
   return this.http.put(`${this.env}/${id}`, product).subscribe()
 }
+
+updateSold(product:Product): Observable<any> {
+  console.log(product.id + " " + product.productName + " " + product.unitsSold)
+
+  return this.http.patch(`${this.env}/${product.id}`, product)
+
+}
 }

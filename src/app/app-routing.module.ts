@@ -14,6 +14,7 @@ import { FormComponent } from './modules/products/components/form/form.component
 import { ProductsComponent } from './modules/products/products.component';
 import { ProfileItemComponent } from './modules/profile/components/profile-item/profile-item.component';
 import { SignupComponent } from './modules/signup/pages/signup/signup.component';
+import { TesthomeComponent } from './modules/testhome/testhome.component';
 
 const routes: Routes = [
   {
@@ -82,6 +83,10 @@ const routes: Routes = [
   {
     path: 'productsform/:id',
     component: FormComponent
+  },
+  {
+    path: "home",
+    component: TesthomeComponent
   },
 ];
 

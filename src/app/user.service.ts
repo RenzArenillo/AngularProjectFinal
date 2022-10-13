@@ -35,6 +35,7 @@ export class UserService {
   }
 
   updateStatus(user:User): Observable<any> {
+    
     return this.http.patch(`${environment.url}/user/${user.id}`, user)
   }
 }

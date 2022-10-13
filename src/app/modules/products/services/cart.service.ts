@@ -8,6 +8,7 @@ export class CartService {
   cartList: any = [];
   products = new BehaviorSubject<any>([]);
   productQuantity: number = 1;
+    //need ID user => localstorage user service
 
   constructor() {}
 
@@ -30,13 +31,15 @@ export class CartService {
     var index = this.cartList.findIndex(
       (item: any) => item.productName === product.productName
     );
-
+    
     if (index > -1) {
       this.cartList[index].productQuantity =
         this.cartList[index].productQuantity + 1;
     } else {
       this.cartList.push(product);
     }
+    console.log(this.cartList)
+
     this.products.next(this.cartList);
     this.getTotalPrice();
   }
