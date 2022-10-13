@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
-import { User } from 'src/app/assets/models/users';
-import { UserService } from 'src/app/user.service';
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/core/services/user/user.service';
+import { User } from 'src/app/models/users';
 
 @Component({
   selector: 'app-profile-item',

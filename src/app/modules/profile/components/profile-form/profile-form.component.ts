@@ -3,7 +3,7 @@ import {MatChipInputEvent} from '@angular/material/chips';
 import { formatDate } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
-import { User } from 'src/app/assets/models/users';
+import { User } from 'src/app/models/users';
 
 @Component({
   selector: 'app-profile-form',
@@ -73,23 +73,5 @@ export class ProfileFormComponent implements OnInit {
   addOnBlur = true;
   readonly separatorKeysCodes = [ENTER, COMMA] as const;
 
-  // add(event: MatChipInputEvent): void {
-  //   const value = (event.value || '').trim();
 
-  //   // Add our fruit
-  //   if (value) {
-  //     this.listOfInterests.push({name: value});
-  //   }
-
-  //   // Clear the input value
-  //   event.chipInput!.clear();
-  // }
-
-  // remove(item: number): void {
-  //   const index = this.listOfInterests
-
-  //   if (index >= 0) {
-  //     this.fruits.splice(index, 1);
-  //   }
-  // }
 }

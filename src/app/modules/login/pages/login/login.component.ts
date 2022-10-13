@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { User } from 'src/app/assets/models/users';
+import { User } from 'src/app/models/users';
 import { LoginService } from '../../services/login.service';
 
 @Component({
@@ -77,7 +77,6 @@ export class LoginComponent implements OnInit {
   }
 
   forgotPassword() {
-    // alert('Forgot password button works')
     this.router.navigate(['forget-pw']);
   }
 }

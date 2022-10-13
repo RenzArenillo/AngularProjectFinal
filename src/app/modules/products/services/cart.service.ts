@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Cart } from 'src/app/assets/models/cart';
-import { Product } from 'src/app/assets/models/product';
+import { Cart } from 'src/app/models/cart';
+import { Product } from 'src/app/models/product';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +10,6 @@ export class CartService {
   cartList: any = [];
   products = new BehaviorSubject<any>([]);
   productQuantity: number = 1;
-    //need ID user => localstorage user service
 
   constructor() {
 
@@ -21,17 +20,7 @@ export class CartService {
   }
 
   addtoCart(product: Product) {
-    // const cartItemsExist = this.cartList.find((x:any) => product.productId === x.productId);
-    // if (this.cartList.indexOf(product) != -1) {
-    //   product.productQuantity++
-    // } else if (cartItemsExist) {
-    //   this.incrementQty(product)
-    // }
-    // else {
-    //   this.cartList.push(product);
-    //   this.products.next(this.cartList);
-    //   this.getTotalPrice();
-    // }
+
     var index = this.cartList.findIndex(
       (item: any) => item.productName === product.productName
     );

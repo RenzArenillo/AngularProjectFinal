@@ -25,7 +25,6 @@ import { TableComponent } from './modules/products/components/table/table.compon
 import { ProductsComponent } from './modules/products/products.component';
 import { FooterComponent } from './modules/shared/footer/footer/footer.component';
 import { SharedModule } from './modules/shared/shared.module';
-import { TesthomeComponent } from './modules/testhome/testhome.component';
 import { CommonModule } from '@angular/common';
 import { ProfileModule } from './modules/profile/profile.module';
 import { CarouselComponent } from './modules/dashboard/components/carousel/carousel.component';
@@ -49,7 +48,6 @@ import { SignupModule } from './modules/signup/signup.module';
     CheckoutItemsComponent,
     PendingOrdersPageComponent,
     PendingOrdersItemsComponent,
-    TesthomeComponent,
     AdminUserlistComponent,
     AddUserComponent,
     SearchPipe,

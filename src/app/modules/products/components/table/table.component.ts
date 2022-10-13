@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
-import { Product } from 'src/app/assets/models/product';
+import { Product } from 'src/app/models/product';
 import { ProductsService } from '../../services/products.service';
 
 

@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
+import { Order } from 'src/app/models/order';
 import { environment } from 'src/environments/environment';
-import { Order } from './assets/models/order';
 
 @Injectable({
   providedIn: 'root'

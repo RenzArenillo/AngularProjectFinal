@@ -18,7 +18,6 @@ export class SignupComponent implements OnInit {
   constructor(private fb: FormBuilder, private router: Router, private http: HttpClient, private customValidator: CustomValidatorService) { 
   }
 
-  //from txt
   ngOnInit(): void {
 
     this.signUpForm = this.fb.group({
@@ -34,10 +33,8 @@ export class SignupComponent implements OnInit {
     })
 
   }
-  //
 
   submitButton(){ 
-    //added from txt
     const user = {
       firstName: this.signUpForm.get('firstName')?.value,
       middleName: this.signUpForm.get('middleName')?.value,

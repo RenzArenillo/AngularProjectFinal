@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User } from './assets/models/users';
 import { map, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { User } from 'src/app/models/users';
 
 @Injectable({
   providedIn: 'root'
@@ -19,11 +19,7 @@ export class UserService {
     ))
   }
 
-  // userNameAvailable(username: string) {
-  //      return this.http.post<any>(`${environment.url}/user`, {
-  //        username:username,
-  //      });
-  //    }
+
    
 
   create(user:User) {

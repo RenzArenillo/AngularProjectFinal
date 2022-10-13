@@ -1,5 +1,4 @@
 export interface Profile {
- // id: number,
   username: any,
   firstname: string,
   middlename: string,

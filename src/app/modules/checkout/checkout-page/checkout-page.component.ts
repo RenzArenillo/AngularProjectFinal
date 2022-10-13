@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Route, Router } from '@angular/router';
-import { Cart } from 'src/app/assets/models/cart';
-import { Order } from 'src/app/assets/models/order';
-import { User } from 'src/app/assets/models/users';
-import { OrdersService } from 'src/app/orders.service';
+import { OrdersService } from 'src/app/core/services/order/orders.service';
+import { Cart } from 'src/app/models/cart';
+import { Order } from 'src/app/models/order';
+import { User } from 'src/app/models/users';
 import { CartService } from '../../products/services/cart.service';
 import { ProductsService } from '../../products/services/products.service';
 
@@ -105,7 +105,6 @@ export class CheckoutPageComponent implements OnInit {
           productCategory: product.productCategory,
           productImage: product.productImage,
           unitsSold: product.unitsSold + data.productQuantity,
-          // productQuantity: product.productQuantity,
         }
         this.productsService.update(productUpdate, product.id!.toString())
 
@@ -117,16 +116,12 @@ export class CheckoutPageComponent implements OnInit {
 
   }
 
-  // getProduct(id: number) {
-  //   this.productsService.getProduct(id).subscribe(product => this.editProduct(product))
-  // }
 
 
 
 
 
   cancelOrder() {
-    // this.listService.saveList("")
     this.router.navigate(['/dashboard']);
   }
 

@@ -10,18 +10,6 @@ export interface User {
   email: string;
   birthdate: Date;
   interestsLists: string[]
-  // interestsLists: {
-  //   clothes: boolean,
-  //   bagsAndAccessories: boolean,
-  //   shoes: boolean,
-  //   technology: boolean,
-  //   appliances: boolean,
-  //   sports: boolean
-  // };
-  // cart: [{
-  //   productId: number,
-  //   quantity: 
-  // }
-  // ]
+
   active: boolean
 }

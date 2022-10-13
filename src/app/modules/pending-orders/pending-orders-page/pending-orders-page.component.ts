@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Order } from 'src/app/assets/models/order';
-import { OrdersService } from 'src/app/orders.service';
+import { OrdersService } from 'src/app/core/services/order/orders.service';
+import { Order } from 'src/app/models/order';
 
 @Component({
   selector: 'app-pending-orders-page',
@@ -11,7 +11,6 @@ export class PendingOrdersPageComponent implements OnInit {
 
   public orders: Order[] = []
 
-  //input ito from somewhere
   user!: any
 
 
@@ -31,7 +30,6 @@ export class PendingOrdersPageComponent implements OnInit {
   filteredOrders(filter:string) {
     this.orderService.getFilteredOrders((this.user.id!).toString(), filter).subscribe(data => {this.orders = data;})
   }
-  //
 
 
 }

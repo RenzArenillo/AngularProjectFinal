@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Product } from 'src/app/assets/models/product';
+import { Product } from 'src/app/models/product';
 
 @Component({
   selector: 'app-product-modal',
@@ -13,7 +13,6 @@ export class ProductModalComponent implements OnInit {
     productCategory: '',
     unitsSold: 0,
     productImage: '',
-    // productQuantity: 0
   };
   @Output() emitter = new EventEmitter();
 

@@ -11,7 +11,6 @@ import { ForgetPwComponent } from '../forget-pw/forget-pw.component';
 
 export class ForgetRedirComponent implements OnInit {
 
-  // uname: any;
   nameStr? = ''
   emailStr? = ''
   pwStr? = ''

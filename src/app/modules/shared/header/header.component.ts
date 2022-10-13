@@ -1,9 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { User } from 'src/app/assets/models/users';
+import { User } from 'src/app/models/users';
 import { LoginService } from '../../login/services/login.service';
 import { CartService } from '../../products/services/cart.service';
 
-// import { CartService } from 'src/app/modules/product/services/cart.service';
 
 @Component({
   selector: 'app-header',

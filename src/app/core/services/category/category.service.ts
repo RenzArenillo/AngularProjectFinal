@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Category } from 'src/app/assets/models/category';
+import { Category } from 'src/app/models/category';
 
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -12,7 +12,7 @@ export class CategoryService {
   private _jsonURL = 'http://localhost:3000/categories';
   constructor(private http: HttpClient) {
     this.getJSON().subscribe((data) => {
-      this.categories = data; // returns data
+      this.categories = data; 
     });
   }
 

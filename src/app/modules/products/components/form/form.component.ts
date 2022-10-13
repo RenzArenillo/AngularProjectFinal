@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Product } from 'src/app/assets/models/product';
+import { Product } from 'src/app/models/product';
 import { ProductsService } from '../../services/products.service';
 
 @Component({
@@ -26,7 +26,6 @@ export class FormComponent implements OnInit {
       productPrice: ['', [Validators.required]],
       productCategory: ['', [Validators.required]],
       productImage: ['', [Validators.required]],
-      // productQuantity: ['', [Validators.required]]
 
     })
 
@@ -58,7 +57,6 @@ export class FormComponent implements OnInit {
       productPrice: product.productPrice,
       productCategory: product.productCategory,
       productImage: product.productImage,
-      // productQuantity: product.productQuantity
     })
     this.unitsSold = product.unitsSold
   }
@@ -71,7 +69,6 @@ export class FormComponent implements OnInit {
       productCategory: this.productsForm.get('productCategory')?.value,
       productImage: this.productsForm.get('productImage')?.value,
       unitsSold: this.unitsSold,
-      // productQuantity: this.productsForm.get('productQuantity')?.value,
     }
     
     if (this.params) {

@@ -14,7 +14,6 @@ import { FormComponent } from './modules/products/components/form/form.component
 import { ProductsComponent } from './modules/products/products.component';
 import { ProfileItemComponent } from './modules/profile/components/profile-item/profile-item.component';
 import { SignupComponent } from './modules/signup/pages/signup/signup.component';
-import { TesthomeComponent } from './modules/testhome/testhome.component';
 
 const routes: Routes = [
   {
@@ -31,7 +30,7 @@ const routes: Routes = [
   },
   {
     path: 'userlist',
-    component: AdminUserlistComponent, // for admin
+    component: AdminUserlistComponent, 
   },
   {
     path: 'dashboard',
@@ -44,7 +43,6 @@ const routes: Routes = [
   {
     path: 'product',
     component: ProductsComponent,
-    //canActivate: [AdminGuard],
   },
   {
     path: 'login',
@@ -65,17 +63,12 @@ const routes: Routes = [
   {
     path: 'profile',
     component: ProfileItemComponent,
-    // loadChildren: () => import('./modules/profile/profile.module').then(m => m.ProfileModule)
   },
   {
     path: 'cart',
     component: CartPageComponent,
   },
 
-  // {
-  //   path: 'product',
-  //   component: ProductPageComponent
-  // }
   {
     path: 'productsform',
     component: FormComponent

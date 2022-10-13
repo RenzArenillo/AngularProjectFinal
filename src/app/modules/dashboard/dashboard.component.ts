@@ -1,10 +1,10 @@
 import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
-import { Category } from 'src/app/assets/models/category';
-import { Login } from 'src/app/assets/models/login';
-import { Product } from 'src/app/assets/models/product';
-import { User } from 'src/app/assets/models/users';
-import { CategoryService } from 'src/app/assets/services/category/category.service';
-import { ProductService } from 'src/app/assets/services/product/product.service';
+import { Category } from 'src/app/models/category';
+import { Login } from 'src/app/models/login';
+import { Product } from 'src/app/models/product';
+import { User } from 'src/app/models/users';
+import { CategoryService } from 'src/app/core/services/category/category.service';
+import { ProductService } from 'src/app/core/services/product/product.service';
 import { LoginService } from '../login/services/login.service';
 import { CartService } from '../products/services/cart.service';
 

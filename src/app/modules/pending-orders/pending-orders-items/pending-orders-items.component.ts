@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Order } from 'src/app/assets/models/order';
+import { Order } from 'src/app/models/order';
 
 @Component({
   selector: '[app-pending-orders-items]',

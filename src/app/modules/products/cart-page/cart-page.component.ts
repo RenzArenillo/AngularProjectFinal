@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { Cart } from 'src/app/assets/models/cart';
-import { Product } from 'src/app/assets/models/product';
-import { ProductChin } from 'src/app/assets/models/productChin';
+import { Cart } from 'src/app/models/cart';
+import { Product } from 'src/app/models/product';
+import { ProductChin } from 'src/app/models/productChin';
 import { CartService } from '../services/cart.service';
 
 @Component({
