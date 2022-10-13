@@ -105,7 +105,7 @@ export class CheckoutPageComponent implements OnInit {
           productCategory: product.productCategory,
           productImage: product.productImage,
           unitsSold: product.unitsSold + data.productQuantity,
-          productQuantity: product.productQuantity,
+          // productQuantity: product.productQuantity,
         }
         this.productsService.update(productUpdate, product.id!.toString())
 

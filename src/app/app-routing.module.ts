@@ -88,6 +88,11 @@ const routes: Routes = [
     path: 'checkout/:id',
     component: CheckoutPageComponent,
   },
+  
+  {
+    path: "adduser",
+    component: AddUserComponent
+  },
 ];
 
 @NgModule({

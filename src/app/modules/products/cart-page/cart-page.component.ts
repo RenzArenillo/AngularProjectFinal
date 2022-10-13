@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Cart } from 'src/app/assets/models/cart';
 import { Product } from 'src/app/assets/models/product';
 import { ProductChin } from 'src/app/assets/models/productChin';
 import { CartService } from '../services/cart.service';
@@ -11,7 +12,7 @@ import { CartService } from '../services/cart.service';
 export class CartPageComponent implements OnInit {
 
   productQuantity: number = 1;
-  products:Product[] = [];
+  products:Cart[] = [];
   totalAmount!:number;
   
   constructor(private cartService: CartService) { }

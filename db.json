@@ -3,11 +3,10 @@
     {
       "productId": 1,
       "productName": "Acer Laptop",
-      "productPrice": 25000,
+      "productPrice": 35000,
       "productCategory": "Technology",
       "productImage": "https://i.pinimg.com/originals/0b/5f/c8/0b5fc864c174f4bea7e93892e5eeb00a.jpg",
       "unitsSold": 4330,
-      "productQuantity": 1,
       "id": "1"
     },
     {
@@ -41,14 +40,13 @@
       "id": "4"
     },
     {
-      "id": "5",
       "productId": 5,
       "productName": "Basketball",
       "productPrice": 2500,
       "productCategory": "Sports",
       "productImage": "https://i.pinimg.com/736x/07/2a/7e/072a7ef3c39deccee1f51e90706fc024.jpg",
-      "unitsSold": 5,
-      "productQuantity": 1
+      "unitsSold": 11,
+      "id": "5"
     },
     {
       "productId": 6,
@@ -106,8 +104,7 @@
       "productPrice": 2500,
       "productCategory": "Clothes",
       "productImage": "https://images.unsplash.com/photo-1580694915740-33306cfdfd88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Z3Vlc3N8ZW58MHx8MHx8&w=1000&q=80",
-      "unitsSold": 4,
-      "productQuantity": 1,
+      "unitsSold": 8,
       "id": "11"
     },
     {
@@ -611,6 +608,44 @@
       "paymentMethod": "card",
       "orderStatus": "Pending",
       "id": 11
+    },
+    {
+      "userId": "1",
+      "orderedItems": [
+        {
+          "productId": 5,
+          "productName": "Basketball",
+          "productPrice": 2500,
+          "productImage": "https://i.pinimg.com/736x/07/2a/7e/072a7ef3c39deccee1f51e90706fc024.jpg",
+          "productQuantity": 6
+        }
+      ],
+      "orderQuantity": 6,
+      "orderTotalPrice": 15000,
+      "orderAddress": "Manila",
+      "orderDate": "2022/10/13",
+      "paymentMethod": "cash",
+      "orderStatus": "Pending",
+      "id": 12
+    },
+    {
+      "userId": "16",
+      "orderedItems": [
+        {
+          "productId": 11,
+          "productName": "Guess",
+          "productPrice": 2500,
+          "productImage": "https://images.unsplash.com/photo-1580694915740-33306cfdfd88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Z3Vlc3N8ZW58MHx8MHx8&w=1000&q=80",
+          "productQuantity": 4
+        }
+      ],
+      "orderQuantity": 4,
+      "orderTotalPrice": 10000,
+      "orderAddress": "Manila",
+      "orderDate": "2022/10/13",
+      "paymentMethod": "cash",
+      "orderStatus": "Pending",
+      "id": 13
     }
   ],
   "user": [
@@ -619,10 +654,10 @@
       "userType": "Customer",
       "userName": "catdog",
       "userPassword": "catdog",
-      "firstName": "Joseeeeeee",
+      "firstName": "Joseeee",
       "middleName": "Somee",
       "lastName": "Rizale",
-      "mobileNumber": "09163842993",
+      "mobileNumber": "009163842993",
       "email": "joserizal@gmail.com",
       "birthdate": "1998-11-05",
       "interestsLists": [
@@ -644,7 +679,7 @@
       "interestsLists": [
         "Clothes"
       ],
-      "active": false
+      "active": true
     },
     {
       "id": 3,
@@ -816,6 +851,54 @@
       "active": true,
       "userType": "Customer",
       "id": 13
+    },
+    {
+      "firstName": "test",
+      "middleName": "",
+      "lastName": "test",
+      "userName": "test123",
+      "email": "rarenillo@77global.biz",
+      "mobileNumber": "9164855881",
+      "userPassword": "test123",
+      "birthdate": "2022-10-10",
+      "interestsLists": [
+        ""
+      ],
+      "active": true,
+      "userType": "Customer",
+      "id": 14
+    },
+    {
+      "userName": "admin123",
+      "userPassword": "admin123",
+      "firstName": "Admin",
+      "middleName": "",
+      "lastName": "Test",
+      "email": "adminako@gmail.com",
+      "mobileNumber": "1234518764",
+      "userType": "Admin",
+      "birthdate": "2022-09-27",
+      "interestsLists": [
+        ""
+      ],
+      "active": true,
+      "id": 15
+    },
+    {
+      "firstName": "Renz Carlo",
+      "middleName": "Llanes",
+      "lastName": "Arenillo",
+      "userName": "Renz123",
+      "email": "rarenillo@77global.biz",
+      "mobileNumber": "09164855881",
+      "userPassword": "renz123",
+      "birthdate": "2022-10-03",
+      "interestsLists": [
+        ""
+      ],
+      "active": true,
+      "userType": "Customer",
+      "id": 16
     }
   ]
 }

@@ -12,7 +12,7 @@ import { CartService } from '../../products/services/cart.service';
 })
 export class HeaderComponent implements OnInit {
   // for testing purposes
-
+  // user!: User
   loggedIn = true;
   userType = this.loggedIn ? 'admin' :  'customer' ; //change 1st customer to admin
 
@@ -31,6 +31,8 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.user = this.loginService.getUser();
+      // this.user = JSON.parse(localStorage.getItem('user')|| '{}');
+
     this.cartService.getProducts().subscribe((res) => {
       // this.totalItem = res.length;
       // this.totalItem = this.cartService.incrementCart(this.cartItems);
@@ -42,5 +44,9 @@ export class HeaderComponent implements OnInit {
       }, 0);
     });
     // this.totalQuantity = this.cartService.getTotalQuantity();
+  }
+
+  alert() {
+    alert('You have signed out from Chopee!')
   }
 }
