@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginGuard } from './core/guards/login/login.guard';
 
 import { AddUserComponent } from './modules/admin-userlist/add-user/add-user.component';
 import { AdminUserlistComponent } from './modules/admin-userlist/admin-userlist.component';
@@ -19,7 +20,8 @@ import { SignupComponent } from './modules/signup/pages/signup/signup.component'
 const routes: Routes = [
   {
     path: '',
-    component: DashboardComponent,
+    redirectTo: 'dashboard',
+    pathMatch: 'full'
   },
   {
     path: 'checkout',
@@ -40,6 +42,10 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent,
+  },
+  {
+    path: '',
+    component: DashboardComponent,
   },
   {
     path: 'product',
@@ -87,6 +93,7 @@ const routes: Routes = [
     path: "adduser",
     component: AddUserComponent
   },
+
 ];
 
 @NgModule({
