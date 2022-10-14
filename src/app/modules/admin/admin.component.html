@@ -1,0 +1,15 @@
+<div class="bg-gray-200 flex justify-center">
+  <div class="w-[80%] pt-8">
+    <select
+      class="px-10 py-2 hover:bg-blue-400 bg-blue-600 text-white rounded-md"
+      [(ngModel)]="selectedCategory"
+    >
+      <option [ngValue]="null" [disabled]="true" class="bg-gray-500 text-white">Tables</option>
+      <option *ngFor="let form of forms" class="bg-gray-500 text-white">
+        {{ form }}
+      </option>
+    </select>
+  </div>
+</div>
+<app-admin-userlist *ngIf="selectedCategory === 'Users'"></app-admin-userlist>
+<app-products *ngIf="selectedCategory === 'Products'"></app-products>
