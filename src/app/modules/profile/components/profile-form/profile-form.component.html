@@ -73,7 +73,6 @@
           id="number"
           class="w-full rounded-md"
           placeholder="Mobile Number"
-          
         />
         <div
           *ngIf="(profileForm.get('number')?.errors?.['required'] && profileForm.get('number')?.touched)"
@@ -124,23 +123,88 @@
         </div>
       </div>
 
-<!-- 
-      <mat-form-field class="example-chip-list" appearance="fill">
-        <mat-label>Favorite Fruits</mat-label>
-        <mat-chip-list #chipList aria-label="Fruit selection">
-          <mat-chip *ngFor="let item of user.interestsLists" (removed)="remove(fruit)">
-            {{item}}
+      <!-- <div class="form-group space-y-1">
+        <label for="email" class="block px-1 text-sm text-gray-600"
+          >List of Interests:
+        </label>
+        <input
+          formControlName="email"
+          type="text"
+          id="email"
+          class="w-full rounded-md"
+          placeholder="Interests"
+        />
+       
+      </div> -->
+
+      <div class="form-group space-y-1">
+        <ng-container formArrayName="interestsLists">
+          <label for="interestsLists">Interests</label>
+          <div *ngFor="let _ of ff.controls; index as i" class="input-group mb-3">
+            <input
+              [formControlName]="i"
+              class="form-control"
+              placeholder="Comment {{ i + 1 }}"
+              required
+            />
+            <button
+              type="button"
+              class="btn"
+              (click)="removeInterest(i)"
+            >
+              <mat-icon>delete</mat-icon>
+            </button>
+            <button
+              type="button"
+              class="btn"
+              (click)="addInterestForm()"
+            >
+              <mat-icon>add</mat-icon>
+            </button>
+          </div>
+
+  
+        </ng-container>
+      </div>
+
+
+
+
+      <!-- <mat-form-field class="example-chip-list" appearance="fill">
+        <mat-label>List of Interests</mat-label>
+        <mat-chip-list formArrayName="listOfInterests" #chipList aria-label="Interest selection">
+          <mat-chip *ngFor="let_ of ff.controls; index as i" (removed)="removeInterest(i)">
+            {{i}}
             <button matChipRemove>
               <mat-icon>cancel</mat-icon>
             </button>
           </mat-chip>
-          <input placeholder="New fruit..."
+          <input placeholder="New interest..."
+                 [matChipInputFor]="chipList"
+                 [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                 [matChipInputAddOnBlur]="addOnBlur"
+                 (matChipInputTokenEnd)="addInterest()">  
+        </mat-chip-list>
+      </mat-form-field> -->
+
+      <!-- <mat-form-field class="example-chip-list" appearance="fill">
+        <mat-chip-list #chipList aria-label="Fruit selection">
+          <mat-chip *ngFor="let fruit of fruits" (removed)="remove(fruit)">
+            {{fruit.name}}
+            <button matChipRemove>
+              <mat-icon>cancel</mat-icon>
+            </button>
+          </mat-chip>
+          <input placeholder="New interest..."
                  [matChipInputFor]="chipList"
                  [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
                  [matChipInputAddOnBlur]="addOnBlur"
                  (matChipInputTokenEnd)="add($event)">
         </mat-chip-list>
       </mat-form-field> -->
+
+
+
     </div>
   </form>
 </div>

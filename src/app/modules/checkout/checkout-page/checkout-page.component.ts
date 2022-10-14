@@ -116,11 +116,6 @@ export class CheckoutPageComponent implements OnInit {
 
   }
 
-
-
-
-
-
   cancelOrder() {
     this.router.navigate(['/dashboard']);
   }

@@ -19,7 +19,7 @@ export class ProfileItemComponent implements OnInit {
     mobileNumber: '',
     email: '',
     birthdate: new Date(),
-    interestsLists: [],
+    interestsLists: [''],
     active: true,
     userType: '',
     userPassword: ''
@@ -50,6 +50,7 @@ export class ProfileItemComponent implements OnInit {
     mobileNumber: string;
     email: string;
     birthDate: any;
+    interestsLists: []
   }) {
     this.showModal = false;
 
@@ -60,7 +61,7 @@ export class ProfileItemComponent implements OnInit {
     this.userUpdate.mobileNumber = user.mobileNumber;
     this.userUpdate.email = user.email;
     this.userUpdate.birthdate = user.birthDate;
-
+    this.userUpdate.interestsLists = user.interestsLists;
     console.log(this.userUpdate);
     
     this.userService.update2(this.userUpdate, user.id)

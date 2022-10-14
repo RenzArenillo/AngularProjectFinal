@@ -1,30 +1,41 @@
-<div class="min-w-[800px] bg-gray-200 h-screen py-16 flex justify-center">
+<div class="min-w-[800px] h-screen py-16 flex justify-center">
   <div class="lg:w-[80%]">
-    <div
-      class="min-h-max w-full py-4 items-center border-2 border-b-0 border-cyan-500 shadow-sm flex justify-between"
-    >
-      <span class="ml-5 text-cyan-600 uppercase">Products</span>
-
-      <div class="mx-4 space-x-2 flex">
-        <div class="mr-auto rounded-md overflow-hidden w-full flex justify-end">
+    <div class="min-h-max w-full py-4 items-center">
+      <div class="space-x-2 flex">
+        <div
+          class="ml-28 mr-auto rounded-md overflow-hidden w-72 flex justify-end"
+        >
           <input
             type="text"
-            class="px-2 py-1 rounded-l-md focus:outline-0 w-[450px]"
-            name="searchInput" [(ngModel)]="searchInput"
+            class="px-2 py-1 rounded-l-md"
+            name="searchInput"
+            [(ngModel)]="searchInput"
             placeholder="Search product"
           />
-          <button class="bg-cyan-500 hover:bg-cyan-600 px-2 py-1" (click) = "search(searchInput)">
-            <i class="fa fa-search text-white" ></i>
+          <button
+            class="bg-stone-400 hover:bg-stone-500 px-2 py-1"
+            (click)="search(searchInput)"
+          >
+            <i class="fa fa-search text-white hover:text-orange-400"></i>
           </button>
         </div>
 
-        <select class="px-2 py-1 hover:bg-blue-400 bg-blue-600 text-white rounded-md w-full" [(ngModel)]="selectedCategory" (change)="valueSelected()"> 
-          <option [ngValue]="null" [disabled]="true" >Filter Product</option>
-          <option *ngFor="let category of categories" class="bg-gray-500 text-white">{{category}}</option>
+        <select
+          class="px-2 py-1 border-none hover:bg-stone-500 bg-stone-400 text-white hover:text-orange-400 rounded-md w-52"
+          [(ngModel)]="selectedCategory"
+          (change)="valueSelected()"
+        >
+          <option [ngValue]="null" [disabled]="true">Filter Product</option>
+          <option
+            *ngFor="let category of categories"
+            class="bg-stone-200 text-black"
+          >
+            {{ category }}
+          </option>
         </select>
 
         <button
-          class="px-2 py-1 bg-blue-600 hover:bg-blue-400 text-white rounded-md w-full"
+          class="px-2 py-1 bg-stone-400 hover:bg-stone-500 text-white rounded-md w-56"
           (click)="addProduct()"
         >
           <i class="fas fa-add"></i> Add Product
@@ -32,7 +43,7 @@
       </div>
     </div>
     <app-table
-      [products]="products" 
+      [products]="products"
       (emittter)="emitAction($event)"
     ></app-table>
   </div>

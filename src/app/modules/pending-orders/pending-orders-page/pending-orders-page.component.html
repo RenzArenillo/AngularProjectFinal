@@ -1,66 +1,55 @@
-<!-- <br/>
-<h2 align="center" class="text-amber-600"><b>ORDERS</b></h2>
-<br/>
-<div align = "center">
-  <button class="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-1 px-1 " (click)="allOrders()" >All</button>
-  <button class="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-1 px-1 " (click)="filteredOrders('Pending')" >Pending</button>
-  <button class="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-1 px-1 " (click)="filteredOrders('Completed')">Completed</button>
-</div>
-
-<table align="center" class="border-double border-2 border-indigo-600">
-  <thead>
-    <tr class="border-double border-2 border-indigo-600 bg-teal-300"> 
-      <th style="width: 10%;">Order ID</th>
-      <th style="width: 20%;">Date Ordered</th>
-      <th style="width: 20%;">Status</th>
-      <th style="width: 20%;">Quantity</th>
-      <th style="width: 20%;">Total Price</th>
-      <th style="width: 10%;"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let data of orders; let i = index" app-pending-orders-items [order]="data"></tr>
-  </tbody>
-</table>
-
-
- -->
-
-
-<div class="min-w-[800px] bg-gray-200 h-screen py-16 flex justify-center">
-  <div class="lg:w-[80%]">
-    <div
-      class="min-h-max w-full py-4 items-center border-2 border-cyan-500 shadow-sm flex justify-between"
+<div class="overflow-x-auto">
+  
+  <div
+    class="min-w-screen min-h-screen bg-stone-100 flex grid items-center justify-center font-sans overflow-hidden"
+  >
+  <h1 class="text-3xl font-bold tracking-wider text-center mb-16">MY ORDERS</h1>
+  <div class="space-x-2 flex justify-center">
+    <button
+      class="px-2 py-1 w-28 bg-stone-400 hover:bg-stone-500 text-white hover:text-orange-400 uppercase rounded-md font-semibold w-full"
+      (click)="allOrders()"
     >
-      <span class="ml-5 text-cyan-600 uppercase font-bold ">ORDERS</span>
-      <div class="mx-4 space-x-2 flex">
-        <button  class="px-2 py-1 bg-blue-600 hover:bg-blue-800 text-white rounded-md font-bold w-full" (click)="allOrders()" >All</button>
-        <button  class="px-2 py-1 bg-blue-600 hover:bg-blue-800 text-white rounded-md font-bold w-full" (click)="filteredOrders('Pending')" >Pending</button>
-        <button  class="px-2 py-1 bg-blue-600 hover:bg-blue-800 text-white rounded-md font-bold w-full" (click)="filteredOrders('Completed')">Completed</button>
+      All
+    </button>
+    <button
+      class="px-2 py-1 w-28 bg-stone-400 hover:bg-stone-500 text-white hover:text-orange-400 uppercase rounded-md font-semibold w-full"
+      (click)="filteredOrders('Pending')"
+    >
+      Pending
+    </button>
+    <button
+      class="px-2 py-1 w-28 bg-stone-400 hover:bg-stone-500  text-white hover:text-orange-400 uppercase rounded-md font-semibold w-full"
+      (click)="filteredOrders('Completed')"
+    >
+      Completed
+    </button>
+  </div>
+    <div class="w-full lg:w-5/6 -mt-12 mb-24">
+      <div class="bg-white shadow-md rounded my-6">
+        <table class="min-w-max w-full table-auto">
+          <thead>
+            <tr
+              class="bg-black text-white uppercase text-base tracking-wider leading-normal grid grid-cols-6 gap-2 py-2"
+            >
+              <th class="py-3 px-6 text-center ml-6">Order ID</th>
+              <th class="py-3 px-6 text-center ml-6">Date Ordered</th>
+              <th class="py-3 px-6 text-center ml-16">Status</th>
+              <th class="py-3 px-6 text-center">Quantity</th>
+              <th class="py-3 px-6 text-center">Total Price</th>
+              
+            </tr>
+          </thead>
+          <tbody class="text-gray-600 text-base font-light">
+            <tr
+              *ngFor="let data of orders; let i = index"
+              app-pending-orders-items
+              [order]="data"
+              class="grid grid-cols-6 px-2 py-1 text-center h-16"
+            ></tr>
+          </tbody>
+        </table>
       </div>
     </div>
-    <table
-      align="center"
-      class="min-w-[500px] overflow-auto w-full border-2 border-cyan-500"
-    >
-      <thead class="bg-cyan-600">
-        <tr class="text-gray-800 grid grid-cols-6 gap-2 py-2">
-          <th class="text-white">Order ID</th>
-          <th class="text-white">Date Ordered</th>
-          <th class="text-white">Status</th>
-          <th class="text-white">Quantity</th>
-          <th class="text-white">Total Price</th>
-          <th ></th>
-        </tr>
-      </thead>
-      <tbody class="bg-grey-light flex flex-col overflow-y-auto" style="height: 60vh;">
-        <tr
-        *ngFor="let data of orders; let i = index" app-pending-orders-items [order]="data"
-        class="grid grid-cols-6 px-2 py-1 text-center"
-        [ngClass]="i % 2 == 0 ? '' : 'bg-cyan-200'"
-        >
-        </tr>
-      </tbody>
-    </table>
   </div>
 </div>
+

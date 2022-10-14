@@ -2,8 +2,13 @@ import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import {MatChipInputEvent} from '@angular/material/chips';
 import { formatDate } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormArray, FormControl } from '@angular/forms';
 import { User } from 'src/app/models/users';
+import { ProfileService } from '../../services/profile.service';
+
+// export interface Fruit {
+//   name: string;
+// }
 
 @Component({
   selector: 'app-profile-form',
@@ -18,17 +23,18 @@ export class ProfileFormComponent implements OnInit {
   profileForm: FormGroup;
   myDate: any;
   userBirthdate = '';
-  listOfInterests: FormArray
-  constructor(formBuilder: FormBuilder) {
-    this.profileForm = formBuilder.group({
+  ff: FormArray;
+  constructor(private fb: FormBuilder, profileService: ProfileService) {
+    this.profileForm = fb.group({
       firstName: ['', [Validators.required]],
       middleName: ['', [Validators.required]],
       lastName: ['', [Validators.required]],
       number: ['', [Validators.required]],
       email: ['', [Validators.required]],
       birthDate: ['', [Validators.required]],
+      interestsLists: this.fb.array([''])
     });
-    this.listOfInterests = this.profileForm.get('listOfInterest') as FormArray;
+    this.ff = this.profileForm.get('interestsLists') as FormArray;
   }
 
   ngOnInit(): void {
@@ -42,14 +48,59 @@ export class ProfileFormComponent implements OnInit {
       firstName: user.firstName,
       middleName: user.middleName,
       lastName: user.lastName,
-      number: '0' + user.mobileNumber,
+      number:  user.mobileNumber,
       email: user.email,
       birthDate: formatDate(new Date(), this.userBirthdate, 'en'),
-      listOfInterests: user.interestsLists
+      interestsLists: user.interestsLists
     });
   }
 
-  submit() {
+  // addInterest(event: MatChipInputEvent): void {
+  //   const value = (event.value || '').trim();
+
+  //   // Add our interest
+  //   if (value) {
+  //     this.ff.push({name: value});
+  //   }
+
+  //   // Clear the input value
+  //   event.chipInput!.clear();
+  // }
+
+  // removeInterest(i:number){
+  //    this.ff.removeAt(this.ff.value.findIndex(i))
+  // }
+
+  addInterestForm() {
+    this.ff.push(new FormControl())
+  }
+
+  // deleteInterest(i:any) {
+  //   this.ff.removeAt(i)
+  // }
+
+  addNewInterest() {
+    (this.profileForm.get('interestsLists') as FormArray).push(
+      new FormControl()
+    );
+  }
+  get interests():FormArray{
+    return this.profileForm.get("interestsLists") as FormArray
+  }
+ 
+  newInterest():FormGroup{
+    return this.fb.group({interest: ''})
+  }
+
+  addInterest(){
+    this.interests.push(this.newInterest())
+  }
+
+  removeInterest(i:number){
+    this.interests.removeAt(i);
+  }
+
+  submit() { 
     const editedUser = {
       id: this.user.id,
       userName: this.user.userName,
@@ -59,7 +110,7 @@ export class ProfileFormComponent implements OnInit {
       mobileNumber: this.profileForm.get('number')?.value,
       email: this.profileForm.get('email')?.value,
       birthDate: this.profileForm.get('birthDate')?.value,
-      listOfInterests: this.profileForm.get('listOfInterest')?.value
+      interestsLists: this.profileForm.get('interestsLists')?.value
     };
 
     this.userEmitter.emit(editedUser);
@@ -70,8 +121,24 @@ export class ProfileFormComponent implements OnInit {
   }
 
 
-  addOnBlur = true;
-  readonly separatorKeysCodes = [ENTER, COMMA] as const;
+  // addOnBlur = true;
+  // readonly separatorKeysCodes = [ENTER, COMMA] as const;
+  // fruits: Fruit[] = [{name: 'Lemon'}, {name: 'Lime'}, {name: 'Apple'}];
 
+  // add(event: MatChipInputEvent): void {
+  //   const value = (event.value || '').trim();
 
-}
+  //   // Add our fruit
+  //   if (value) {
+  //     this.ff.push({name: value});
+  //   }
+
+  //   // Clear the input value
+  //   event.chipInput!.clear();
+  // }
+
+  // remove(i:number){
+  //   this.ff.removeAt(i)
+  // }
+
+} 

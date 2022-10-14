@@ -20,7 +20,7 @@ export class DashboardComponent implements OnInit {
   category!: Category;
 
   @Output() emittter = new EventEmitter();
-  userType: string = '';
+  userType: string = 'Admin';
   filter: string = '';
   dropDown: boolean = false;
   user: User | any;

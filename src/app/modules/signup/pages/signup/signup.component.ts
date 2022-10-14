@@ -1,7 +1,7 @@
 import { formatDate } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CustomValidatorService } from '../../services/custom-validator.service';
 
@@ -14,12 +14,13 @@ import { CustomValidatorService } from '../../services/custom-validator.service'
 export class SignupComponent implements OnInit {
 
   signUpForm!: FormGroup
-
+  ff: FormArray 
   constructor(private fb: FormBuilder, private router: Router, private http: HttpClient, private customValidator: CustomValidatorService) { 
+    this.ff = this.signUpForm.get('listOfInterest') as FormArray
   }
 
+  //from txt
   ngOnInit(): void {
-
     this.signUpForm = this.fb.group({
       firstName: ['', [Validators.required]],
       middleName: [''],
@@ -29,12 +30,15 @@ export class SignupComponent implements OnInit {
       mobileNumber: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
       userPassword: ['', [Validators.required, Validators.minLength(5)]],
       confirmPassword: ['', [Validators.required, Validators.minLength(5)]],
-      birthdate: ['', [Validators.required]]
+      birthdate: ['', [Validators.required]],
+      listOfInterest: this.fb.array([])
     })
-
+    this.ff = this.signUpForm.get('listOfInterest') as FormArray
   }
+  //
 
   submitButton(){ 
+    //added from txt
     const user = {
       firstName: this.signUpForm.get('firstName')?.value,
       middleName: this.signUpForm.get('middleName')?.value,
@@ -44,7 +48,7 @@ export class SignupComponent implements OnInit {
       mobileNumber: this.signUpForm.get('mobileNumber')?.value,
       userPassword: this.signUpForm.get('userPassword')?.value,
       birthdate: this.signUpForm.get('birthdate')?.value,
-      interestsLists: [""],
+      interestsLists: this.signUpForm.get('listOfInterest')?.value,
       active: true,
       userType: "Customer"
     }
