@@ -13,6 +13,8 @@
           <div class="w-full mt-11">
             <div class="form-horizontal w-3/4 mx-auto">
               <div class="flex flex-col mt-8">
+                <br><span *ngIf="pwStr" class="text-center text-white font-semibold text-2xl"><p>Password:&nbsp;&nbsp;</p><p>{{pwStr}}</p></span><br>
+
                 <button
                   type="submit"
                   (click)="getPassword()"

@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   // for testing purposes
   user: User | null
   loggedIn = false;
-  userType = this.loggedIn ? 'admin' :  'customer' ; //change 1st customer to admin
+  userType = this.loggedIn ? 'customer' :  'customer' ; //change 1st customer to admin
 
   //
   dropDown: boolean = false;

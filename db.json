@@ -63,7 +63,7 @@
       "productPrice": 12000,
       "productCategory": "Technology",
       "productImage": "https://images.unsplash.com/photo-1613235577937-9ac3eed992fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2Fub24lMjBjYW1lcmF8ZW58MHx8MHx8&w=1000&q=80",
-      "unitsSold": 9,
+      "unitsSold": 10,
       "id": "7"
     },
     {
@@ -233,6 +233,15 @@
       "unitsSold": 0,
       "productQuantity": 2,
       "id": "24"
+    },
+    {
+      "productId": 25,
+      "productName": "Yellow Jacket",
+      "productPrice": 900,
+      "productCategory": "Pets",
+      "productImage": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBQSEhgUFhIVGRQYGhgcHRocGhocGRwYHx4dHh0YHiEeIy4lJCQrHxgdJjgmKy8xNTU1GiQ+QDszPy40NTEBDAwMEA8QHxISHzQlIys0MTYxNTQ1NDQ+MTE0NDQ0MTY2NjQ0NDQ0NDQ4PzQ0NDQ0NDo0NDQ0NjQ0NDE0NDQ0NP/AABEIAMEBBgMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABQYBBAcDAv/EADsQAAIBAgQEAwYEBQQCAwAAAAABAgMRBAUSITFBUWEGInETgZGhscEjMkJSB2LR4fCCorLxFHIVFjP/xAAZAQEAAwEBAAAAAAAAAAAAAAAAAQIDBAX/xAArEQADAAIBAwIFAwUAAAAAAAAAAQIDESEEEjFBUSJhcYGRE6GxBRQywdH/2gAMAwEAAhEDEQA/AOzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwU5+KqlPMJYWrCKpuSjGSumk1eMnfZp3SI2C5AAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGALkbmGYxpptySSV2+luP2K1SlbZKWyRuNaKDjPHF76IrZvftvx/oRX/wBtrt7T+nqR3p+Bo6oDnGG8Z1Va7T9foWTKfFNOqrS8r68vX0JVIaLGDXq4mMY6tSta977W63ITMvFNGlFSTc7v9Fmls3du9rFtkFjOT4mu8ZnbjHeEKkIe6n+Z/FSLhl3i6hVUrzSaV7Pbl8HvcqH8J6ftK9XES42e/wDPOV9vcpfEq+SUdYANDM81o4aOqpNR6LjJ+iLEG+YOf4rxvWrScMJh3KS5tapetlsvma0sjzXFv8Wpog1wcrJdtMf6Fdgv1XMqEPzVqa9ZR/qaVTxLg48cRDbpd/RFaw38O42TqYmTdrNRVlf1b+xJUPAeFjxdSW1t5JfRDbJJjAZ5Qry006l5b7Wa4eqJQ0Mvyqjh7+zgot8Xxb979DfJW/UgAAkAAAAAAAAAAAAAAAAwD5nJJXbskQ3oGUZI3D5xRnqtK2njfZW6pnhiMzlJfhrb91vL63ez/wBOoxfURraey/6db00SGLrKEHJ24dbbnMvEGKq10knH2al53d3fGzS57vhdG1nefQUnDW6k+DSd4x7Sk1b3JJ9in57mb0OE6mmD30RXThw3+hy3md0lo6Jw6nbZJ4HG5bVp6ZxhCa2bcnGXZqXPqR+WYPDTlNzxtSMVOSik4RvC70tNptrZ79n6kPluWPGt6PJCDfmlbduz4Li+3Ro0c7jUozcHGyT2fO3RP1YiU6cqmn7exlXHodArZXhEvLmUoy/ndOa+ST5dTUrYarh0pK1SG/npvVG3dcVw7ruc+/8AkpuMYSflje3v78eRs4DHzg3aUtPFpPyvs0n06mixXHPdv6lNp+h0jOcVKjhqcZy803ez4Rit7JcneS39SOrTUlGEJapz23e3C7b7I8fHilPDwqK9l9JJNfT5lIyjOp0qifGyaV+j4ojBVVhb9efyKSVfIumOySVOMpqr5dEtl5fOot23vs7NLu0SngSu6dOEqbapyk09t77b/X5ELjMzVfB1PK4yUU7XvGSuk97Xvvw7mz4YzSnTwjw9pOpLU9rJK6239y4dTHFedS+9be/2LtT6F5zDxVVrVFQwkdUnfzLdtLZy32jHu+PY2sB4QjP8TFuVWq23pc5OCXJcbv6b24G54My2lSw0JxitdSKcpW3b6eiLEejK3yzJnjhsNClHTCEYRXKKSXyPcAuQAAAAAAAAAAAAAAAAAAAAAYB4Ov8AtV+/CPx/pcj8RjF+Xecr20ryxT6N8W+q362M7yKVtkqW/Bu18ZCN7u7XFLe3ryXvsVjxBmdecLU4xhRl+uTblLtGOyt3v0tfe3zmOa0qKTqyjOSflhFfhxa5KKu5yXo+yRWs0zKvi5JJSjHorOdurf5YL4t9UcGfqNy1vSZ04sXO9bPuviaGErJqUqs1aSTs+XHTtFc99vUko0MZmPGXs6L42bs10ctnL0jpXFNviQ/iXw48NhFW1JzavaN7KVk7tt6pytfd9OBKfwr8R+0w9TD1ZXnh/NFvjKlLh66ZXXo4kYsXnu4XllsmRaTXLPTGeG6FBxildRXm6y7WW0V2XzObeNoRVaMIRUUo6tKvZOTb+yOk5zmi9rGL4zcnbpGK/ujnefVI1MZNppxiorquG66cfocvS5LyZ3XidPX5F/4afkzkmbU8Lhmmm6jk3p5ttK2/JWRB5xmVTFTUpu0V+WK4Jfd92bEqerazt6ElkOQLE1VGV1TW82trr9q7t7XO9xiw92avPuc/NfCiqwpO/DY2cFGOvS+Duv6+p1jOMFqwlWjCEVCMG4xS2Tim7Je74nJoyUJxbTcLLddePDny27kdN1S6iW0taL3j7WuTo2BnHFYH2U35tLhLrGcdk/ikznWKy5wk01aSbT9V9i25Ji0qmq1ozspLp+2Tt0vZ+7oSWd5J7RucF5ua/d0fqRGVYr7a8PwVqdraKtlt/Zzi+DhNfJo6bk3h2gqcE6a1LS9VrN9bvnfuc+wChGpGDcbuSVu11e/bkdXy3dXKddbTlSTjS52WDJcIqNCFNXtHVa/G2ptfKxIHxSVor0R9npT4RkzIALEAAAAAAAAAAAAAAAGAYZFYjNE5aaacn1X+WXqytUpXJKTZIVa6j3fRGhj8dGlHVUlFR/bzv0S/U+xHV8U4qUpTirX1OLuo9nJ8/T4lUxGKlWqKVKHDhOd5NJ/q33lJ+qilsnds483UtLU+TfHh3y/BY8XnkJRcpScIcoX0yl0cn+ldtnw35ENWzKvXfs6EJK6srR82noobaV3nbhupG9lfhSU2p1pyX/L3bWj0ulfuy34PBU6MdMIKK7cW+rfFvuzLHhyZPivgmriOJ5Knlfg5J+0ryblbdJ3bXSUuS/ljZLkZzqUE1GEVGEY7JKyu92/7lozSropSfN7fH+xz7HYqMm03xaXffY5P6lqEscrzrb9S+HdPuZ5574iWMwlSioJKNrPUtWqO9kuL2uveRHgjKYw1YmTWqcXGK6Q1XlJ+rirdkeWNnh8O9T0JJdr+iPitmTlgVOHlpznKnLbzRjZq6/27dC+XJebF2Twm0t/L2EzM1s0/EWZSnXjOLtFRejrZ3TZA4dPW072487b8Pr/mycxKl7ajTjePtYOSe+zjf81+l7fEkfDeTqbqKUVOTkrOLTskvW/F9Nzsx9uOFKXjgyrbe2aVHL5SXlV/87f5sWLKqMsO4Nx8k9m+cX+m/bivVotHhvw5oeqUHFcVqXmuyw1MBTb0aVZx3Vi2TF+pDmvDKqtPaKdgqjc6m/Ca/wCK/uUrMcHChOalKMYa5Wjzabukl/nA6bmOU08MtcdVpN6ru6vbb7/Ag8R4Gp4+9ZVZRlqScdtLSS997O55/T4rxdS8fppG1UqhUU7IcJKo/aXSi20k9tly3243+BY8dgK7peRyhDnJqW0eF1JK1r+n9LdlHg+jR3l5muEVtBe7mSuY4NVdNKW1GSacVtqaW0G1ula72/b8fQrC6Xc/sZd68HPcryChBWdNSbTTlLebb4u/J+hv5GqlCtHCSkpObk4Sb39mrXuv3b26O3I3/YOlU0tWi76W/wBqbTi+6at8HzNfw3S/8rM54hX0YaEqafLXLTdL/Sv9xx9NF1kavktTSXB0BIyAeyc4AAAAAAAAAAAAAABg8cRXjBXlKy+r6JcW+yNTNM0hQVvzTfCK4+r6LuVTE4+dSVn+JUl+iKeiK6bbyXpt1vxMryKfqXmGzezDOXVmoQb9m035U5XW35pLZLfryI7E5yqf4VOEpS4JRteTfJaG/gvkSGD8P1qnmrT0p8Y7N+ll5Vbu5eiJ/A5XSoJ6IJN8ZcZP1b393A56jLkfsjVVEfMq+CyStiGpVouMeKptppfBW+r7ri7Pg8rp099KcutuHdd+7uyQSBtjwTPPl+5neWq+SMmQDczI/OHajN7bL+30ZxnP8RJ1HCGptNXSfN8F8zr/AIjnag11aXw3+xznF4WGuU7eZ8+bsrI8Xrc0zn01vS/c7enT7dlYxWW2oNcZznFLna7tb3XJLD5PL/wK1GclqlUUlpvt+Xr/AOt/ebNW0Ix2v5l9zcniG6ctvKrauy23+pyPqbcpL32XUruOd1MLiKMtN249ntblde+/wLn/AA9xU4qUPyye9mt+L/rwI2hQ9s5Sako3tFvbUuvpyJrKIxpST2TXNnd/c7+Glz8jHST2jsUOC9ER9OtfFSjfhBbe9HtlOKVWjGSd9rP1Rp4JKWLqvRZpJKXXhc7stb7NerX8GMrzv2NvOIasPNfymt4cglh0v5pXfV3e791jbzP/APCpw/JLjw4MifCGI105p2upX9zS+6K1x1CfumiVzjf1LEedWnqXdNNeqPUwdTWzIj8fl8atCVOV94ys1tJN38yfJ7kR4FpRhh5RjGMdNSV0uN3Ztt8W27u7bLOV7KvwMVVovaM3rj0vzV+tmvgYX8Ny/Tx/w1nmWvXyWIAHQZAAAAAAAAAAAAGDUxaqyVqbjFv9Ule3pHn72bgIa2CuRyCOq85SqSe8m24xcurtv12uS2CwMKKtGKTfFpJfJG4CqhJ7LOmzIALlQAAAAYAIPOF7SrCj1u/v9Iv4lIxELrcu2DhKeNqydtEYqK63dvsn8Sm/xIdXDNSpxWmo35uj5xt7zxc/SvNu15bf4R1Ran4fkQlbFwjOEHKKlyu/kb7mrbTSd+G2/DZkBgMkUGqlSWuo2nd/p7L38yctZWSW74PmcGRQmlL3r1NpT3yQ+bwxL8sNMYvo/N6Nv7Hnl+Vxg053nN83dq/YlsbQqTjpjKMXf8zTbXdGhVzWnR00oaqlRWjs+L7vqdGLJVSlKX2/2zKkkzpPhHE2g4PZcV6r+30N/wAP+Z1ZXk9U3tJbpr/soeQ4+tri5RjBJrbizouSr8Nt8XJu/XuehhdVUp+mzOtJP56NrFw1U5K7V4tXXFbcV3K14OhKE61OStZra6ai91b15f6S2MhMsyqdPEVK0pq07+VXdru9rvo9jpyRTyTS9N7+hSaSlpk6ADoMzBEZ5hpSjGUIXqqUbNWTtvzfJcbEuClwrWmSm09oIyAXIAAAAAAAAAAAAAAAAAAAAAAAABgyYAIfJIy1V3JK7qNe5f8AZnxNlaxWHlC15RalH/2jvb3q695nKPz1/MmvaOy6db/5yJU58Mp4u36/yXt6rZymcLpPkQ88xpOtpU5OUbXio3XNPfhtcvPjTKZQozq0Y8m5Jcuskjn+Q5co03Nq85N3fo2kvlf3njX06wKqvnnSOub7nwSFRznUjF2jTs783JrhF9tzVzCnSoyU4Ri6sntBLeTdvpb5vqSNRpadTS39Dyx2OjBxjCKlUl+Vcl3bOfHVdy0uPwvuQz0lioUVF1JKLdtr8+i6l78IZpGtTlFLaNmr8Wuf2+JyCGFksQp4pve7XOHouxfPDuPUJxkuG3pZ/wBj08FTipc736+n2MaW0dJB8xd1dcz6PWMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADB5156YSl+1N/BXPQ+KkFJNNXTTTXVPiiH4CIzw9StRU27yqNzb7sljSwGC9jFx1ykrtpSttd3str2NwpjnthItT22w1cpmc+H/ZPVSj+G224r9Le91/L9C6Ap1GCc0dtExbl7RwzxBg51q8KKbUV5pWbV+vy+pJQwcUk9NpQSV/QuviXwzCo41qcWqsZK9t4uNrO65bdCu4zA1IucZU5RdtnbyyvzTPG6rDkxqYXhLlnTFTW36kVj8NCdtcm1F30L9T+p6Zfrk1NrTG/liuCjy4cyLyHBtKcpTbnqX5uS/Sl67/AOIncNH2a0S2u3Z9U97fYwy1+l8Ce2i0z3cnScpr+0owl2t8NjdK14SxacZU2915l6c/sWU9/pcn6mJV8jkue2mjIAOgoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYPipTTVmk13Vz0MENbBD1PDuGctXslGXWLa+KvZ/A+n4foNWcW/V3JYGVYMVPdSmWV0vDIPA+G6NGqqsZTuk7RcvLuTgMMvGOYWpWiKp09tn0AC5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB//Z",
+      "unitsSold": 0,
+      "id": "FRvZJEw"
     }
   ],
   "categories": [
@@ -521,7 +530,7 @@
       "orderAddress": "aaaa",
       "orderDate": "2022/10/13",
       "paymentMethod": "cash",
-      "orderStatus": "Pending",
+      "orderStatus": "Completed",
       "id": 7
     },
     {
@@ -539,7 +548,7 @@
       "orderAddress": "Dalandan St., Manila ",
       "orderDate": "2022/10/13",
       "paymentMethod": "cash",
-      "orderStatus": "Pending",
+      "orderStatus": "Completed",
       "id": 8
     },
     {
@@ -565,7 +574,7 @@
       "orderAddress": "Manila",
       "orderDate": "2022/10/13",
       "paymentMethod": "cash",
-      "orderStatus": "Pending",
+      "orderStatus": "Completed",
       "id": 9
     },
     {
@@ -586,141 +595,6 @@
       "paymentMethod": "cash",
       "orderStatus": "Pending",
       "id": 10
-    },
-    {
-      "userId": "2",
-      "orderedItems": [
-        {
-          "productId": 3,
-          "productName": "Nike",
-          "productPrice": 3000,
-          "productImage": "https://wallpapercave.com/wp/wp2896922.jpg",
-          "productQuantity": 4
-        }
-      ],
-      "orderQuantity": 4,
-      "orderTotalPrice": 12000,
-      "orderAddress": "dad",
-      "orderDate": "2022/10/13",
-      "paymentMethod": "card",
-      "orderStatus": "Pending",
-      "id": 11
-    },
-    {
-      "userId": "1",
-      "orderedItems": [
-        {
-          "productId": 5,
-          "productName": "Basketball",
-          "productPrice": 2500,
-          "productImage": "https://i.pinimg.com/736x/07/2a/7e/072a7ef3c39deccee1f51e90706fc024.jpg",
-          "productQuantity": 6
-        }
-      ],
-      "orderQuantity": 6,
-      "orderTotalPrice": 15000,
-      "orderAddress": "Manila",
-      "orderDate": "2022/10/13",
-      "paymentMethod": "cash",
-      "orderStatus": "Pending",
-      "id": 12
-    },
-    {
-      "userId": "16",
-      "orderedItems": [
-        {
-          "productId": 11,
-          "productName": "Guess",
-          "productPrice": 2500,
-          "productImage": "https://images.unsplash.com/photo-1580694915740-33306cfdfd88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Z3Vlc3N8ZW58MHx8MHx8&w=1000&q=80",
-          "productQuantity": 4
-        }
-      ],
-      "orderQuantity": 4,
-      "orderTotalPrice": 10000,
-      "orderAddress": "Manila",
-      "orderDate": "2022/10/13",
-      "paymentMethod": "cash",
-      "orderStatus": "Pending",
-      "id": 13
-    },
-    {
-      "userId": "15",
-      "orderedItems": [
-        {
-          "productId": 3,
-          "productName": "Nike",
-          "productPrice": 3000,
-          "productImage": "https://wallpapercave.com/wp/wp2896922.jpg",
-          "productQuantity": 1
-        },
-        {
-          "productId": 7,
-          "productName": "Canon",
-          "productPrice": 12000,
-          "productImage": "https://images.unsplash.com/photo-1613235577937-9ac3eed992fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2Fub24lMjBjYW1lcmF8ZW58MHx8MHx8&w=1000&q=80",
-          "productQuantity": 2
-        },
-        {
-          "productId": 15,
-          "productName": "Volleyball",
-          "productPrice": "500",
-          "productImage": "https://sportsmatik.com/uploads/matik-sports-corner/equipage/volleyball-ball_1605077648.jpg",
-          "productQuantity": 3
-        }
-      ],
-      "orderQuantity": 6,
-      "orderTotalPrice": 28500,
-      "orderAddress": "Manila",
-      "orderDate": "2022/10/13",
-      "paymentMethod": "cash",
-      "orderStatus": "Pending",
-      "id": 14
-    },
-    {
-      "userId": "1",
-      "orderedItems": [
-        {
-          "productId": 3,
-          "productName": "Nike",
-          "productPrice": 3000,
-          "productImage": "https://wallpapercave.com/wp/wp2896922.jpg",
-          "productQuantity": 4
-        },
-        {
-          "productId": 1,
-          "productName": "Acer Laptop",
-          "productPrice": 35000,
-          "productImage": "https://i.pinimg.com/originals/0b/5f/c8/0b5fc864c174f4bea7e93892e5eeb00a.jpg",
-          "productQuantity": 1
-        }
-      ],
-      "orderQuantity": 5,
-      "orderTotalPrice": 47000,
-      "orderAddress": "sss",
-      "orderDate": "2022/10/13",
-      "paymentMethod": "cash",
-      "orderStatus": "Pending",
-      "id": 15
-    },
-    {
-      "userId": "1",
-      "orderedItems": [
-        {
-          "productId": 1,
-          "productName": "Acer Laptop",
-          "productPrice": 35000,
-          "productImage": "https://i.pinimg.com/originals/0b/5f/c8/0b5fc864c174f4bea7e93892e5eeb00a.jpg",
-          "productQuantity": 4
-        }
-      ],
-      "orderQuantity": 4,
-      "orderTotalPrice": 140000,
-      "orderAddress": "Manila",
-      "orderDate": "2022/10/13",
-      "paymentMethod": "cash",
-      "orderStatus": "Pending",
-      "id": 16
     }
   ],
   "user": [
@@ -729,11 +603,11 @@
       "userType": "Customer",
       "userName": "catdog",
       "userPassword": "catdog",
-      "firstName": "Joseeee",
-      "middleName": "Somee",
-      "lastName": "Rizale",
-      "mobileNumber": "009163842993",
-      "email": "joserizal@gmail.com",
+      "firstName": "Carl",
+      "middleName": "Some",
+      "lastName": "Mizale",
+      "mobileNumber": "9163842993",
+      "email": "cd567@gmail.com",
       "birthdate": "1998-11-05",
       "interestsLists": [
         "Clothes"
@@ -833,11 +707,11 @@
       "id": 7
     },
     {
-      "firstName": "Renz",
-      "middleName": "ssss",
-      "lastName": "Arenillo",
-      "userName": "aasaa",
-      "email": "rarenillo@77global.biz",
+      "firstName": "Carlo",
+      "middleName": "Nilo",
+      "lastName": "Llanes",
+      "userName": "cll",
+      "email": "clenillo@77global.biz",
       "mobileNumber": "9164855881",
       "userPassword": "s",
       "birthdate": "2022-10-11",

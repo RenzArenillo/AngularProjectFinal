@@ -14,9 +14,9 @@ import { CustomValidatorService } from '../../services/custom-validator.service'
 export class SignupComponent implements OnInit {
 
   signUpForm!: FormGroup
-  ff: FormArray 
+  // ff: FormArray 
   constructor(private fb: FormBuilder, private router: Router, private http: HttpClient, private customValidator: CustomValidatorService) { 
-    this.ff = this.signUpForm.get('listOfInterest') as FormArray
+    // this.ff = this.signUpForm.get('listOfInterest') as FormArray
   }
 
   //from txt
@@ -33,7 +33,7 @@ export class SignupComponent implements OnInit {
       birthdate: ['', [Validators.required]],
       listOfInterest: this.fb.array([])
     })
-    this.ff = this.signUpForm.get('listOfInterest') as FormArray
+    // this.ff = this.signUpForm.get('listOfInterest') as FormArray
   }
   //
 

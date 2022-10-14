@@ -1,16 +1,17 @@
 <div
-  class="wrapper text-gray-900 m-3"
+  class="wrapper text-gray-900 m-3 max-w-[400px]"
   title="{{ product.productName }}"
   (click)="emit(product)"
 >
-  <div>
+  <div class="grid place-items-center overflow-hidden"
+  >
     <img
       src="{{ product.productImage }}"
       alt="{{ product.productName }}"
-      class="w-full object-cover object-center rounded-lg shadow-md"
+      class=" overflow-hidden w-[250px] max-h-[300px] object-cover object-center rounded-lg shadow-md"
     />
 
-    <div class="relative px-4 -mt-10">
+    <div class="relative px-4 w-[230px] -mt-10">
       <div class="bg-white p-6 rounded-lg shadow-lg">
         <h4 class="mt-1 text-xl font-semibold uppercase leading-tight truncate">
           {{ product.productName }}
